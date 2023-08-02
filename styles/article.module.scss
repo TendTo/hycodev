@@ -1,0 +1,42 @@
+.container {
+  height: 24rem;
+  background-color: rgb(214,224,233,0.6);
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-content: center;
+
+}
+
+.heading {
+  display: inline-block;
+  width: 40rem;
+  flex: 0 0 100%;
+  margin: 1rem 0 0 0;
+}
+
+.image {
+  object-fit:fill;
+  width: 19rem;
+  height: 14rem;
+}
+
+.container_image{
+  height: 14rem;
+  width: 19rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.container_text{
+  width: 30rem;
+  padding: 0 0 0 2rem;
+  font-size: 0.9rem;
+}
+
+.container_content{
+  padding: 1rem 4rem;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}

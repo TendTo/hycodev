@@ -1,0 +1,28 @@
+.container {
+  max-height: 10rem;
+  min-height: 10rem;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.heading{
+  position: absolute;
+  color: white;
+  padding: 0 4rem;
+  font-size: 3rem;
+  font-weight: 700;
+  z-index: 3;
+}
+
+.backdrop {
+  background-color: rgb(91,103,99,0.5);
+  position: absolute;
+  z-index: 2;
+  max-height: 12rem;
+  min-height: 12rem;
+  width: 100vw;
+}

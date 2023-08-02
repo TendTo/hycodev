@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap");
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.container_text {
+  width: 30rem;
+  padding: 12rem 12rem 8rem 4rem;
+  margin: 0;
+  display: inline-block;
+  position: absolute;
+}
+
+.wrapper_showcase {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  align-content: flex-end;
+  transition: 0.75s;
+  transform: translateX(2%);
+  .topic {
+    &__backdrop {
+      background-color: rgb(91, 103, 99, 0.4);
+      position: absolute;
+      z-index: 4;
+      height: 100%;
+      width: 100vw;
+      opacity: 1;
+      transition: 0.75s;
+    }
+    &__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      position: relative;
+      height: 100vh;
+      width: 8rem;
+      margin: 0;
+      padding: 0;
+      overflow: clip;
+      transition: 0.75s;
+      z-index: 2;
+      transform: skew(5deg);
+      filter: brightness(75%);
+      //filter: blur(0px) brightness(75%);
+      &:hover {
+        transition: 0.75s;
+        width: 60rem;
+        filter: brightness(100%);
+      }
+      &:hover ~ .topic__image {
+        transition: 0.75s;
+      }
+      &:hover .topic__text {
+        opacity: 1;
+        transition: 0.75s;
+      }
+      &:hover .topic__backdrop {
+        opacity: 0;
+        transition: 0.75s;
+      }
+    }
+    &__text {
+      display: flex;
+      flex-flow: column;
+      align-content: space-between;
+      justify-content: space-between;
+      margin: 4rem 4rem;
+      float: start;
+      width: 50%;
+      min-height: 15rem;
+      position: absolute;
+      opacity: 0;
+      transition: 0.75s;
+      transform: skew(-5deg);
+    }
+
+    &__link {
+      background-color: rgba(163, 162, 180, 0.33);
+      padding: 0.5rem 2rem;
+      border-radius: 0.25rem;
+      margin-top: 1rem;
+      color: white;
+      width: 5rem;
+    }
+  }
+}
+/* Add this as a global typography style*/
+.heading_primary {
+  font-size: 4rem;
+  font-weight: 700;
+  text-shadow: #6ab3f3 4px 2px, #74bea6 8px 4px;
+  margin: 0;
+}
+
+.heading_slide {
+  font-size: 4rem;
+  font-weight: 600;
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  margin: 0;
+}
+
+.paragraph_slide {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+}
+.slide {
+  overflow: clip;
+  height: 100%;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

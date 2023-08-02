@@ -1,0 +1,59 @@
+.container {
+  height: 22rem;
+  background-color: rgb(226,226,226,1);
+  margin: 0;
+  padding: 1rem;
+  min-width: 24rem;
+}
+
+.researcher {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 1rem;
+  &__photo{
+    height: 7.5rem;
+    width: 7.5rem;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transition: 1s;
+  }
+}
+.spin {
+  position: absolute;    height: 6.85rem;
+  width: 6.85rem;
+  z-index: 5;
+  border: 7px solid #1C9E74;
+  border-radius: 50%;
+  border-right-color: #0189FF;
+  border-bottom-color: #0189FF;
+  &:hover {
+    transform: rotate(180deg);
+    transition: 1s;
+  }
+}
+.column {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.heading {
+  margin: 0;
+}
+
+.paragraph {
+  margin: 0;
+}
+
+.image{
+  height: 9rem;
+  width: 9rem;
+}
