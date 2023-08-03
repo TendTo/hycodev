@@ -25,6 +25,11 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.container_down}>
+        <button className={styles.container_down__button}>
+          <div className={styles.container_down__arrow}></div>
+        </button>
+      </div>
       <div className={styles.background}>
         <Image
           src={"/../public/images/background.png"}
@@ -35,8 +40,8 @@ export default function Home() {
       <div className={styles.container_text}>
         <h1 className={styles.heading_primary}>HyCoDeV Lab</h1>
         <p>
-          This is the Hybrid Systems: Control, Design and Verification Lab,
-          where we research about Formal Methods for control and verification.
+          Where we research about formal methods for control, design and
+          verification of hybrid systems.
         </p>
         <p>Hover over the images to discover the several application areas</p>
       </div>
