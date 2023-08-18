@@ -1,0 +1,53 @@
+@import "../src/scss/abstracts/mixins";
+@import "../src/scss/abstracts/variables";
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-items: center;
+  width: 16rem;
+}
+
+.image {
+  object-fit: fill;
+  width: 16rem;
+  height: 12rem;
+  &_container {
+    position: relative;
+    max-width: 15rem;
+    max-height: 11rem;
+    min-width: 15rem;
+
+    width: 15rem;
+    height: 11rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  &_category {
+    width: 100%;
+    position: absolute;
+    z-index: 4;
+    height: 2.25rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    color: $color-white;
+    background-color: rgb($color-black, 0.25);
+
+    &__text {
+      margin: 0;
+    }
+  }
+}
+
+.description {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+}

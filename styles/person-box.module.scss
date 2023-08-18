@@ -25,14 +25,15 @@
     color: #393939;
     text-align: center;
   }
-  &_profile{
-    transform: scale(1.1)
+  &_profile {
+    transform: scale(1.1);
   }
 }
 
 .wrapper {
   &_profile {
-
+    display: flex;
+    align-items: flex-end;
     position: relative;
     width: 8rem;
     height: 8rem;
@@ -41,6 +42,5 @@
     margin-bottom: 0.5rem;
   }
   &_names {
-
   }
 }

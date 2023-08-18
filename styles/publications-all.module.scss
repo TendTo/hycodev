@@ -1,0 +1,41 @@
+.container {
+}
+.content {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.article {
+  &_wrapper {
+    //display: flex;
+    //padding: 2rem 1rem;
+  }
+}
+.list {
+  &_wrapper {
+    //background-color: #3c97e7;
+    padding: 4rem 0;
+    width: 16rem;
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem;
+  }
+
+  &_item {
+    height: 2rem;
+    width: 16rem;
+    padding-left: 4.25rem;
+    border: none;
+    text-align: start;
+    background-color: transparent;
+    transition: 0.5s;
+
+    &_active {
+    }
+    &:hover {
+      transition: 0.5s;
+      background-color: rgb(#d9d9d9, 0.75);
+    }
+  }
+}

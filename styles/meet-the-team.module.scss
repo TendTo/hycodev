@@ -1,10 +1,14 @@
+@import "../src/scss/abstracts/variables";
+@import "../src/scss/abstracts/mixins";
+
 .container {
   margin-top: 4rem;
-  padding: 1rem 8rem;
-  background-image: url("../public/images/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  padding: 2rem 8rem;
+  //background-image: url("../public/images/background.png");
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  //background-attachment: fixed;
+  overflow: hidden;
 }
 .heading {
   font-size: 2.75rem;
@@ -24,6 +28,7 @@
   flex-flow: row;
   align-items: center;
   justify-content: flex-start;
+  margin: 1rem 0;
 }
 
 .column {
@@ -42,7 +47,7 @@
 .image_wrapper {
   position: relative;
   margin-right: 2rem;
-  height: 24rem;
+  height: 26rem;
   width: 20rem;
   display: flex;
   justify-items: flex-start;
@@ -53,11 +58,11 @@
 }
 
 .button {
-  background-color: rgba(163, 162, 180, 0.33);
-  padding: 0.5rem 2rem;
+  background-color: rgba(28, 158, 116, 1);
+  padding: 0.7rem 2rem;
   border-radius: 0.25rem;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
   color: white;
-  width: 8rem;
+  width: 10rem;
   border: none;
 }

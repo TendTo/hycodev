@@ -13,9 +13,7 @@ export default function theTeam() {
   return (
     <div>
       <div>{/*banner*/}</div>
-      <div>
-        <MeetTheTeam></MeetTheTeam>
-      </div>
+      <div>{<MeetTheTeam></MeetTheTeam>}</div>
       <div>
         <div className={styles.category}>
           <h3 className={styles.category_heading}>Academics</h3>

@@ -10,11 +10,29 @@
   flex-flow: wrap column;
   justify-content: center;
   justify-items: center;
-  width: 30rem;
+  width: 34rem;
   height: 100vh;
-  padding-left: 8rem;
+  padding-left: 6rem;
   margin: 0;
   position: absolute;
+  &_logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &_button {
+    border: none;
+    background-color: rgba(206, 232, 255, 0.33);
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    //height: 3rem;
+    padding: 0.75rem;
+    width: 15rem;
+    color: #3c97e7;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: 0 1px 10px rgb(0, 0, 0, 0.25);
+  }
 }
 
 .wrapper_showcase {
@@ -24,14 +42,15 @@
   align-content: flex-end;
   transition: 0.75s;
   transform: translateX(2%);
+
   .topic {
     &__backdrop {
-      background-color: rgb(91, 103, 99, 0.4);
+      background-color: rgba(22, 22, 22, 0.33);
       position: absolute;
-      z-index: 4;
+      z-index: 0;
       height: 100%;
       width: 100vw;
-      opacity: 1;
+      opacity: 0;
       transition: 0.75s;
     }
     &__image {
@@ -47,12 +66,12 @@
       overflow: clip;
       transition: 0.75s;
       z-index: 2;
-      transform: skew(5deg);
+      //transform: skew(5deg);
       filter: brightness(75%);
       //filter: blur(0px) brightness(75%);
       &:hover {
         transition: 0.75s;
-        width: 65rem;
+        width: 60rem;
         filter: brightness(100%);
       }
       &:hover ~ .topic__image {
@@ -63,7 +82,7 @@
         transition: 0.75s;
       }
       &:hover .topic__backdrop {
-        opacity: 0;
+        opacity: 1;
         transition: 0.75s;
       }
     }
@@ -94,9 +113,10 @@
 }
 /* Add this as a global typography style*/
 .heading_primary {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
-  text-shadow: #6ab3f3 4px 2px, #74bea6 8px 4px;
+  text-shadow: rgba(56, 236, 178, 0.45) 4px 2px,
+    rgba(45, 157, 255, 0.35) 8px 4px;
   margin: 0;
 }
 
@@ -129,8 +149,9 @@
   position: fixed;
   z-index: 4;
   bottom: 0;
-  background-color: rgb(255, 255, 255, 0.4);
-  height: 4rem;
+  background-color: rgb(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  height: 3rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -151,4 +172,10 @@
     background-color: transparent;
     border: none;
   }
+}
+.lines {
+  position: absolute !important;
+  z-index: 99;
+  pointer-events: none !important;
+  background: transparent;
 }

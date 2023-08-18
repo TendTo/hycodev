@@ -1,22 +1,18 @@
 import styles from "../../../styles/meet-the-team.module.scss";
 import Image from "next/image";
+import InteractiveLines from "../interactive-lines/page";
+import global from "../../../styles/globals.scss";
 
 export default function MeetTheTeam() {
   return (
     <div className={styles.container}>
-      {/*<div className={styles.background}>*/}
-      {/*  <Image*/}
-      {/*    src={"/../public/images/background.png"}*/}
-      {/*    alt={"ew"}*/}
-      {/*    fill={true}*/}
-      {/*  />*/}
-      {/*</div>*/}
       <div className={styles.row}>
-        <h1 className={styles.heading}>Meet the team</h1>
+        <h1 className={global.heading_primary}>Meet the team</h1>
         <p className={styles.category}>Leader</p>
         <p className={styles.category}>Academics</p>
         <p className={styles.category}>Researchers</p>
         <p className={styles.category}>Doctoral Trainees</p>
+        <InteractiveLines></InteractiveLines>
       </div>
       <div className={styles.row}>
         <div className={styles.column}>
@@ -29,7 +25,7 @@ export default function MeetTheTeam() {
           </div>
         </div>
         <div className={styles.column}>
-          <h2 className={styles.heading__second}>Sadegh Soudjani</h2>
+          <h2 className={global.heading_primary}>Sadegh Soudjani</h2>
           <h3 className={styles.heading__third}>Associate Professor</h3>
           <p>
             [Input description about Sadegh here] This is the Hybrid Systems:

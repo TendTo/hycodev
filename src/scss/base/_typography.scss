@@ -1,0 +1,20 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+.heading_primary {
+  color: $color-black;
+  font-size: 4.2rem;
+
+  &__white {
+    @extend .heading_primary;
+    color: $color-white;
+  }
+}
+
+.heading_secondary {
+}
+
+.heading_tertiary {
+}
+
+.paragraph {
+}
