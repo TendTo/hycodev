@@ -1,23 +1,65 @@
-.category {
-  padding: 2rem 8rem;
-  background-color: rgba(77, 169, 165, 0.2);
-  &:nth-child(even) {
-    background-color: transparent;
-  }
-  &_heading {
-    font-weight: 700;
-    font-size: 1.5rem;
-  }
+@import "../scss/abstracts/variables.module";
 
-  &_row {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-  }
+.container {
+  padding: 2rem 16rem;
+}
+
+.category {
+  padding: 2rem 0rem;
 }
 
 .display {
   display: flex;
   flex-flow: row;
   min-height: 80rem;
+}
+
+.banner__wrapper {
+  max-height: 25rem;
+  min-height: 25rem;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.team {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.roles {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 100% 1 1;
+}
+.list {
+  &_wrapper {
+    position: relative;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+  }
+
+  &_item {
+    position: sticky;
+    height: 4rem;
+    border: none;
+    text-align: start;
+    background-color: transparent;
+    transition: 0.5s;
+    color: $color-dark-grey;
+    &__active {
+      @extend .list_item;
+      color: $color-pale-blue !important;
+      text-decoration: underline $color-light-blue;
+    }
+    &:hover {
+      transition: 0.5s;
+      background-color: rgb($color-grey, 0.1);
+      border-radius: 1rem;
+    }
+  }
 }

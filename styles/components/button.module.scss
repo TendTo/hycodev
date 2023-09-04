@@ -1,0 +1,20 @@
+.button {
+  border: none;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem 4rem;
+  width: auto;
+  color: #3c97e7 !important;
+  box-shadow: 0 1px 10px rgb(0, 0, 0, 0.25);
+  transition: 0.25s;
+  &:hover {
+    background-color: rgba(206, 232, 255, 0.33);
+    transition: 0.25s;
+  }
+
+  &__bordered {
+    @extend.button;
+    border: 0.2rem solid rgb(#3c97e7, 0.75);
+  }
+}

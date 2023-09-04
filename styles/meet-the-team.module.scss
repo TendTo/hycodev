@@ -1,68 +1,44 @@
-@import "../src/scss/abstracts/variables";
-@import "../src/scss/abstracts/mixins";
+@import "scss/abstracts/variables.module";
+@import "scss/abstracts/mixins.module";
 
 .container {
-  margin-top: 4rem;
-  padding: 2rem 8rem;
-  //background-image: url("../public/images/background.png");
-  //background-repeat: no-repeat;
-  //background-size: cover;
-  //background-attachment: fixed;
+  padding: 2rem 0rem;
   overflow: hidden;
-}
-.heading {
-  font-size: 2.75rem;
-  margin: 0.25rem;
-  &__second {
-    @extend .heading;
-    font-size: 2rem;
-  }
-
-  &__third {
-    @extend .heading;
-    font-size: 1.2rem;
-  }
-}
-.row {
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 1rem 0;
-}
-
-.column {
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-content: flex-start;
-  align-items: flex-start;
-  width: auto;
 }
 
 .contact_wrapper {
-  width: 28rem;
+  width: 32rem;
 }
 
 .image_wrapper {
   position: relative;
   margin-right: 2rem;
-  height: 26rem;
-  width: 20rem;
+  height: 40rem;
+  width: 32rem;
   display: flex;
-  justify-items: flex-start;
+  box-shadow: $color-grey 0.1rem 0.25rem 1rem;
+  border-radius: 0.5rem;
+  overflow: clip;
 }
 
 .category {
   margin-left: 2rem;
 }
 
-.button {
-  background-color: rgba(28, 158, 116, 1);
-  padding: 0.7rem 2rem;
-  border-radius: 0.25rem;
-  margin-top: 0.25rem;
-  color: white;
-  width: 10rem;
-  border: none;
+.sadegh_box {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  justify-content: center;
+  justify-items: center;
+  height: 40rem;
+  gap: 2rem;
+  width: 120rem;
+  text-align: justify;
+  &__text {
+    border-radius: 0.5rem;
+    padding: 0.65rem 4rem;
+    background-color: rgb($color-grey, 0.07);
+    width: 80rem;
+  }
 }

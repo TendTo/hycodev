@@ -1,42 +1,45 @@
-@import "../src/scss/abstracts/mixins";
-@import "../src/scss/abstracts/variables";
+@import "scss/abstracts/mixins.module";
+@import "scss/abstracts/variables.module";
 
 .container {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  justify-items: center;
-  width: 16rem;
+  justify-items: flex-start;
+  width: 25rem;
 }
 
 .image {
   object-fit: fill;
-  width: 16rem;
-  height: 12rem;
+  width: 25rem;
+  height: 19rem;
   &_container {
     position: relative;
-    max-width: 15rem;
-    max-height: 11rem;
-    min-width: 15rem;
-
-    width: 15rem;
-    height: 11rem;
+    max-width: 23rem;
+    max-height: 18rem;
+    min-width: 23rem;
+    min-height: 18rem;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     overflow: hidden;
+    transition: 0.25s ease-out;
+    &:hover {
+      transition: 0.25s ease-out;
+      transform: scale(1.05);
+    }
   }
   &_category {
     width: 100%;
     position: absolute;
     z-index: 4;
-    height: 2.25rem;
+    height: 4rem;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(0.25rem);
     color: $color-white;
     background-color: rgb($color-black, 0.25);
 
@@ -44,10 +47,4 @@
       margin: 0;
     }
   }
-}
-
-.description {
-  text-align: center;
-  font-size: 1rem;
-  margin: 0;
 }

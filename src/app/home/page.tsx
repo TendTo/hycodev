@@ -4,6 +4,13 @@ import styles from "../../../styles/home.module.scss";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import InteractiveLines from "../interactive-lines/page";
+import typography from "../../../scss/base/_typography.module.scss";
+import utilities from "../../../scss/base/_utilities.module.scss";
+import button from "../../../styles/components/button.module.scss";
+
+import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 function drawLines(canvas, slide, opacity) {
   const centerX = window.innerWidth / 4;
@@ -80,15 +87,6 @@ export default function Home() {
       image: "/../public/images/home/water.png",
     },
   ];
-  // const [hover, setHover] = useState<boolean | null>(null);
-  //
-  // const handleMouseEnter = () => {
-  //     setHover(true);
-  // };
-  //
-  // const handleMouseLeave = () => {
-  //     setHover(false);
-  // };
   const canvasRef = useRef(null);
   const slideRef = useRef(null);
 
@@ -122,12 +120,16 @@ export default function Home() {
       {/*</div>*/}
       <canvas className={styles.lines} ref={canvasRef}></canvas>
       <div className={styles.container_text}>
-        <h1 className={styles.heading_primary}>HyCoDeV Lab</h1>
-        <p>
+        <h1 className={styles.heading_primary + " " + utilities.bot_margin}>
+          HyCoDeV Lab
+        </h1>
+        <p className={typography.paragraph + " " + utilities.bot_margin}>
           Where we research about formal methods for control, design and
           verification of hybrid systems.
         </p>
-        <div className={styles.container_text_logos}>
+        <div
+          className={styles.container_text_logos + " " + utilities.bot_margin}
+        >
           <Image
             src={"/../public/images/home/mpi-sws.png"}
             width={200}
@@ -143,7 +145,7 @@ export default function Home() {
             key={"/../public/images/home/ncl_logo.png"}
           ></Image>
         </div>
-        <button className={styles.container_text_button}>
+        <button className={button.button + " " + typography.paragraph}>
           Explore our research areas
         </button>
       </div>
@@ -205,4 +207,115 @@ function setOpacityNormal(canvasRef, slideRef) {
     drawLines(canvas, slide, true);
   }
   console.log("entered");
+}
+
+function three() {
+  // import "./style.css";
+
+  const gltfLoader = new GLTFLoader();
+  // Canvas
+  const canvas = document.querySelector("canvas.webgl");
+
+  // Scene
+  const scene = new THREE.Scene();
+
+  //Hycodev Logo
+
+  gltfLoader.load("../../../public/hycodev.gltf", (gltf) => {
+    scene.add(gltf.scene);
+  });
+
+  // Objects
+  const geometry = new THREE.TorusGeometry(0.7, 0.2, 16, 100);
+
+  // Materials
+
+  const material = new THREE.MeshBasicMaterial();
+  material.color = new THREE.Color(0xff0000);
+
+  // Mesh
+  const sphere = new THREE.Mesh(geometry, material);
+  scene.add(sphere);
+
+  // Lights
+
+  const pointLight = new THREE.PointLight(0xffffff, 0.1);
+  pointLight.position.x = 2;
+  pointLight.position.y = 3;
+  pointLight.position.z = 4;
+  scene.add(pointLight);
+
+  /**
+   * Sizes
+   */
+  const sizes = {
+    width: window.innerWidth,
+    height: window.innerHeight,
+  };
+
+  window.addEventListener("resize", () => {
+    // Update sizes
+    sizes.width = window.innerWidth;
+    sizes.height = window.innerHeight;
+
+    // Update camera
+    camera.aspect = sizes.width / sizes.height;
+    camera.updateProjectionMatrix();
+
+    // Update renderer
+    renderer.setSize(sizes.width, sizes.height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  });
+
+  /**
+   * Camera
+   */
+  // Base camera
+  const camera = new THREE.PerspectiveCamera(
+    75,
+    sizes.width / sizes.height,
+    0.1,
+    100
+  );
+  camera.position.x = 0;
+  camera.position.y = 0;
+  camera.position.z = 2;
+  scene.add(camera);
+
+  // Controls
+  // const controls = new OrbitControls(camera, canvas)
+  // controls.enableDamping = true
+
+  /**
+   * Renderer
+   */
+  const renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+  });
+  renderer.setSize(sizes.width, sizes.height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+  /**
+   * Animate
+   */
+
+  const clock = new THREE.Clock();
+
+  const tick = () => {
+    const elapsedTime = clock.getElapsedTime();
+
+    // Update objects
+    sphere.rotation.y = 0.5 * elapsedTime;
+
+    // Update Orbital Controls
+    // controls.update()
+
+    // Render
+    renderer.render(scene, camera);
+
+    // Call tick again on the next frame
+    window.requestAnimationFrame(tick);
+  };
+
+  tick();
 }

@@ -1,20 +1,36 @@
+@import "../scss/abstracts/variables.module";
+
 .container {
-  height: 22rem;
-  background-color: rgb(226,226,226,1);
+  height: 50rem;
+  //background-color: rgb(226, 226, 226, 1);
   margin: 0;
-  padding: 1rem;
+  padding: 4rem 2rem;
   min-width: 24rem;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.researchers {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  gap: 2rem;
 }
 
 .researcher {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
   width: 100%;
-  padding: 0 1rem;
-  &__photo{
-    height: 7.5rem;
-    width: 7.5rem;
+  &__photo {
+    height: 9.5rem;
+    width: 9.5rem;
     position: relative;
     border-radius: 50%;
     overflow: hidden;
@@ -25,15 +41,17 @@
   }
 }
 .spin {
-  position: absolute;    height: 6.85rem;
-  width: 6.85rem;
+  position: absolute;
+  height: 10rem;
+  width: 10rem;
   z-index: 5;
-  border: 7px solid #1C9E74;
+  transform: translateY(-0.25rem);
+  border: 7px solid $color-pale-green;
   border-radius: 50%;
-  border-right-color: #0189FF;
-  border-bottom-color: #0189FF;
+  border-right-color: $color-pale-green;
+  border-bottom-color: $color-pale-blue;
   &:hover {
-    transform: rotate(180deg);
+    transform: rotate(180deg) translateY(0.25rem);
     transition: 1s;
   }
 }
@@ -41,19 +59,9 @@
   display: flex;
   flex-flow: column;
   flex-wrap: wrap;
-  justify-content: center;
-  padding: 2rem;
 }
 
-.heading {
-  margin: 0;
-}
-
-.paragraph {
-  margin: 0;
-}
-
-.image{
-  height: 9rem;
-  width: 9rem;
+.image {
+  height: 10rem;
+  width: 10rem;
 }

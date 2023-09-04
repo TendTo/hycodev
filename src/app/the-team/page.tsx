@@ -1,81 +1,88 @@
-import {
-  academics,
-  researchers,
-  collaborators,
-  doctoralTrainees,
-  pastMembersInterns,
-} from "./members";
+"use client";
+
+import { Staff } from "./members";
+
 import styles from "../../../styles/the-team.module.scss";
-import PersonBox from "../person-box/page";
+import PersonBox from "../components/person-profile";
 import MeetTheTeam from "../meet-the-team/page";
+import typography from "../../../scss/base/_typography.module.scss";
+import utilities from "../../../scss/base/_utilities.module.scss";
+import Image from "next/image";
+import { useState } from "react";
+import Divider from "../components/divider";
 
 export default function theTeam() {
+  const splitRoles = Staff.flatMap((box) => box.role);
+  const roles = Array.from(new Set(splitRoles));
+  const [selectedRole, setSelectedRole] = useState("");
+  const filteredStaff = selectedRole
+    ? Staff.filter((publicationBox) =>
+        publicationBox.role.includes(selectedRole)
+      )
+    : Staff;
   return (
     <div>
-      <div>{/*banner*/}</div>
-      <div>{<MeetTheTeam></MeetTheTeam>}</div>
-      <div>
+      <div className={styles.banner__wrapper}>
+        <Image
+          style={{ objectFit: "cover" }}
+          src="/../public/images/the_team.jpg"
+          fill={true}
+          quality={100}
+        />
+      </div>
+      <div className={styles.container}>
+        {<MeetTheTeam></MeetTheTeam>}
+        <Divider />
         <div className={styles.category}>
-          <h3 className={styles.category_heading}>Academics</h3>
-          <div className={styles.category_row}>
-            {academics.map((academic, index) => (
-              <PersonBox
-                image={academic.image}
-                name={academic.name}
-                role={academic.title}
-                link={academic.link}
-              />
-            ))}
+          <h3 className={typography.heading_secondary__light}>The Team</h3>
+          <div
+            className={
+              styles.team +
+              " " +
+              utilities.bot_margin__big +
+              " " +
+              styles.list_wrapper
+            }
+          >
+            <button
+              onClick={() => setSelectedRole("")}
+              className={
+                !selectedRole
+                  ? styles.list_item__active + " " + typography.paragraph
+                  : styles.list_item + " " + typography.paragraph
+              }
+            >
+              All
+            </button>
+            {roles.map((role, id) => {
+              const isSelected = role === selectedRole;
+              return (
+                <button
+                  key={id}
+                  onClick={() => setSelectedRole(role)}
+                  className={
+                    isSelected
+                      ? styles.list_item__active + " " + typography.paragraph
+                      : styles.list_item + " " + typography.paragraph
+                  }
+                >
+                  {role}
+                </button>
+              );
+            })}
+            {/*<p className={typography.paragraph}>Researchers</p>*/}
+            {/*<p className={typography.paragraph}>PhD Students</p>*/}
+            {/*<p className={typography.paragraph}>Collaborators</p>*/}
+            {/*<p className={typography.paragraph}>Interns</p>*/}
+            {/*<p className={typography.paragraph}>Past Members</p>*/}
           </div>
-        </div>
-        <div className={styles.category}>
-          <h3 className={styles.category_heading}>Researchers</h3>
-          <div className={styles.category_row}>
-            {researchers.map((researcher, index) => (
+          <div className={styles.team}>
+            {filteredStaff.map((researcher, index) => (
               <PersonBox
                 image={researcher.image}
                 name={researcher.name}
                 role={researcher.title}
                 link={researcher.link}
-              />
-            ))}
-          </div>
-        </div>
-        <div className={styles.category}>
-          <h3 className={styles.category_heading}>Doctoral Trainees</h3>
-          <div className={styles.category_row}>
-            {doctoralTrainees.map((phd, index) => (
-              <PersonBox
-                image={phd.image}
-                name={phd.name}
-                role={phd.title}
-                link={phd.link}
-              />
-            ))}
-          </div>
-        </div>
-        <div className={styles.category}>
-          <h3 className={styles.category_heading}>Collaborators</h3>
-          <div className={styles.category_row}>
-            {collaborators.map((collaborator, index) => (
-              <PersonBox
-                image={collaborator.image}
-                name={collaborator.name}
-                role={collaborator.title}
-                link={collaborator.link}
-              />
-            ))}
-          </div>
-        </div>
-        <div className={styles.category}>
-          <h3 className={styles.category_heading}>Past Members & Interns</h3>
-          <div className={styles.category_row}>
-            {pastMembersInterns.map((pastMembersIntern, index) => (
-              <PersonBox
-                image={pastMembersIntern.image}
-                name={pastMembersIntern.name}
-                role={pastMembersIntern.title}
-                link={pastMembersIntern.link}
               />
             ))}
           </div>

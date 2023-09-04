@@ -1,5 +1,9 @@
-import Navigation from "./navigation/page";
+"use client";
+
+import Navigation from "./components/navigation";
 import global from "../../styles/globals.scss";
+import { Providers } from "./providers";
+
 import React from "react";
 export const metadata = {
   title: "Next.js",
@@ -12,12 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body>
-        <div className={global.container}>
-          <Navigation />
-          {children}
-        </div>
+        <Providers>
+          <div className={global.container}>
+            <Navigation />
+            {children}
+          </div>
+        </Providers>
       </body>
     </html>
   );

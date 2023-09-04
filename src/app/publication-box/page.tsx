@@ -1,24 +1,36 @@
 import styles from "../../../styles/publication-box.module.scss";
 import Image from "next/image";
-export default function PublicationBox() {
+import typography from "../../../scss/base/_typography.module.scss";
+import utilities from "../../../scss/base/_utilities.module.scss";
+export default function PublicationBox({ image, category, title, alt, link }) {
   return (
     <div className={styles.container}>
       <div className={styles.image_container}>
         <Image
           className={styles.image}
-          src={"/../public/images/article.png"}
+          src={image}
           width={706}
           height={534}
-          alt={"asda"}
+          alt={alt}
         />
         <div className={styles.image_category}>
-          <h4 className={styles.image_category__text}>POWER SYSTEMS</h4>
+          <h3 className={typography.heading_tertiary__white}>{category}</h3>
         </div>
       </div>
       <div>
-        <p className={styles.description}>
-          Formal Methods for Control and Verification in Power Systems
-        </p>
+        <a href={link}>
+          <p
+            className={
+              typography.paragraph +
+              " " +
+              utilities.top_margin__small +
+              " " +
+              utilities.text_center
+            }
+          >
+            {title}
+          </p>
+        </a>
       </div>
     </div>
   );

@@ -6,10 +6,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "@chakra-ui/next-js": "^2.1.5",
+    "@chakra-ui/react": "^2.8.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@react-three/drei": "^9.80.1",
-    "@react-three/fiber": "^8.13.6",
+    "@react-three/fiber": "^8.13.7",
     "@types/three": "^0.155.0",
-    "next": "latest",
+    "framer-motion": "^10.16.2",
+    "gray-matter": "^4.0.3",
+    "next": "13.4.0",
     "prettier": "^3.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -19,6 +25,8 @@
   "devDependencies": {
     "@types/node": "20.4.1",
     "@types/react": "18.2.14",
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.29",
     "typescript": "5.1.6"
   }
 }

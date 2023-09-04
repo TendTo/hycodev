@@ -1,0 +1,87 @@
+@import "../abstracts/variables.module";
+@import "../abstracts/mixins.module";
+
+.heading_primary {
+  color: $color-black;
+  font-size: 4rem;
+  font-weight: 700;
+  &__white {
+    @extend .heading_primary;
+    color: $color-white;
+  }
+}
+
+.heading_secondary {
+  color: $color-black;
+  font-size: 2.4rem;
+  font-weight: 700;
+  &__white {
+    @extend .heading_secondary;
+    color: $color-white;
+  }
+  &__light {
+    @extend .heading_secondary;
+    color: $color-dark-grey;
+  }
+}
+
+.heading_tertiary {
+  color: $color-black;
+  font-size: 2rem;
+  font-weight: 600;
+  &__white {
+    @extend .heading_tertiary;
+    color: $color-white;
+  }
+  &__light {
+    @extend .heading_tertiary;
+    color: $color-dark-grey;
+  }
+  &_thick {
+    @extend .heading_tertiary;
+    font-weight: 700;
+  }
+}
+
+.paragraph {
+  color: $color-black;
+  font-size: 1.5rem;
+  font-weight: 400;
+  &__lighter {
+    @extend .paragraph;
+    color: $color-grey;
+  }
+
+  &__white {
+    @extend .paragraph;
+    color: $color-white;
+  }
+
+  &_highlighted {
+    @extend .paragraph;
+    font-weight: 700;
+    &__white {
+      @extend .paragraph_highlighted;
+      color: $color-white;
+    }
+    &__lighter {
+      @extend .paragraph_highlighted;
+      color: $color-grey;
+    }
+  }
+
+  &__underlined {
+    @extend .paragraph;
+    text-decoration: underline;
+  }
+
+  &__small {
+    @extend .paragraph;
+    font-size: 1.25rem;
+    color: $color-dark-grey;
+    &__lighter {
+      @extend .paragraph__small;
+      color: $color-grey;
+    }
+  }
+}
