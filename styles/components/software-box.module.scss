@@ -1,0 +1,32 @@
+@import "../../scss/abstracts/mixins.module";
+
+.container {
+  margin: 4rem;
+  width: 123rem;
+  height: 45rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8rem;
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+  &__image {
+    width: 45rem;
+    height: 32rem;
+    min-height: 15rem;
+    position: relative;
+    transition: 0.25s;
+    &:hover {
+      scale: 1.05;
+      transition: 0.25s;
+    }
+  }
+  &__text {
+    width: 70rem;
+  }
+}

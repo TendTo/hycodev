@@ -59,3 +59,30 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: grey;
 }
+@include respond(phone) {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .example {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+@font-face {
+  font-family: sansCond;
+  src: url("../public/fonts/sansCond.ttf");
+}
+.swiper-pagination-bullet-active {
+  background-color: $color-light-blue !important;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: $color-light-blue !important;
+
+  @include respond(phone) {
+    scale: 0.75;
+  }
+}

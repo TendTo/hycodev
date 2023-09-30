@@ -1,4 +1,5 @@
-module.exports = {
+const nextConfig = {
+  reactStrictMode: false,
   async redirects() {
     return [
       {
@@ -9,3 +10,5 @@ module.exports = {
     ];
   },
 };
+
+module.exports = nextConfig;

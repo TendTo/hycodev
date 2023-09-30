@@ -1,0 +1,25 @@
+@import "../../scss/abstracts/variables.module";
+
+.container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: $color-white;
+  width: 100vw;
+  height: 85vh;
+  animation: 6s ease-in drop forwards;
+  z-index: 200;
+}
+@keyframes drop {
+  0% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+}

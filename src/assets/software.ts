@@ -1,0 +1,31 @@
+export const software = [
+  // {
+  //     id: "",
+  //     image: "/../public/images/software/",
+  //     heading: "",
+  //     category: "",
+  //     text: "",
+  //     linkPaper: "",
+  //     linkDownload: "",
+  // },
+  {
+    id: "1",
+    image: "/../public/images/software/faust.png",
+    heading: "FAUST2",
+    category: "Matlab toolbox",
+    text: "FAUST2 is a software tool that generates formal abstractions of (possibly non-deterministic) discrete-time Markov processes (dtMP) defined over uncountable (continuous) state spaces. A dtMP model is specified in MATLAB and abstracted as a finite-state Markov chain or Markov decision processes. The abstraction procedure runs in MATLAB and employs parallel computations and fast manipulations based on vector calculus. The abstract model is formally put in relationship with the concrete dtMP via a user-defined maximum threshold on the approximation error introduced by the abstraction procedure. FAUST2 allows exporting the abstract model to well-known probabilistic model checkers, such as PRISM or MRMC. Alternatively, it can handle internally the computation of PCTL properties (e.g. safety or reach-avoid) over the abstract model, and refine the outcomes over the concrete dtMP via a quantified error that depends on the abstraction procedure and the given formula.",
+    linkPaper: "",
+    linkDownload: "",
+    reverse: false,
+  },
+  {
+    id: "2",
+    image: "/../public/oliver.gif",
+    heading: "SySCoRe",
+    category: "Software tool",
+    text: "SySCoRe is a MATLAB toolbox for temporal logic control synthesis of discrete-time continuous-state stochastic dynamical systems. The fully automated implementation starts from a system description and a temporal logic specification and computes a robust controller alongside robust quantified bounds on the probability of satisfying the given property based on space discretization. The tool is based on establishing simulation relations between stochastic processes based on coupling the underlying stochastic distributions. The main advantage of SySCoRe compared to alternative tools is that the computed error does not grow linearly in time, which makes the tool applicable to infinite horizon properties and unbounded disturbances. The current version of SySCoRe supports nonlinear dynamics, complex co-safe temporal logic specifications over infinite horizons, model-order reduction, arbitrary (possibly unbounded) additive disturbance, and fast tensor computations.",
+    linkPaper: "",
+    linkDownload: "",
+    reverse: true,
+  },
+];

@@ -1,0 +1,51 @@
+.bot_margin {
+  margin-bottom: 2rem;
+
+  &__small {
+    margin-bottom: 1rem;
+  }
+
+  &__big {
+    margin-bottom: 4rem;
+  }
+}
+
+.top_margin {
+  margin-top: 2rem;
+
+  &__small {
+    margin-top: 1rem;
+  }
+
+  &__big {
+    margin-top: 4rem;
+  }
+}
+
+.left_margin {
+  margin-left: 2rem;
+
+  &__small {
+    margin-left: 1rem;
+  }
+
+  &__big {
+    margin-left: 4rem;
+  }
+}
+
+.right_margin {
+  margin-right: 2rem;
+
+  &__small {
+    margin-right: 1rem;
+  }
+
+  &__big {
+    margin-right: 4rem;
+  }
+}
+
+.text_center {
+  text-align: center;
+}

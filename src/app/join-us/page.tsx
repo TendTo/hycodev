@@ -2,10 +2,8 @@
 
 import typography from "../../../scss/base/_typography.module.scss";
 import utilities from "../../../scss/base/_utilities.module.scss";
-import styles from "../../../styles/join-us.module.scss";
-import PublicationDropdown from "../publications-dropdown/page";
-import Banner from "../components/banner";
-import { OpenPositions } from "./positions";
+import styles from "../../../styles/page-join-us.module.scss";
+import { OpenPositions } from "../../assets/open-positions";
 import Image from "next/image";
 import {
   Accordion,
@@ -18,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 
 import button from "../../../styles/components/button.module.scss";
+import Divider from "../../components/divider";
 export default function joinUs() {
   return (
     <div className={styles.container}>
@@ -46,7 +45,9 @@ export default function joinUs() {
           {" "}
           Open Calls
         </h2>
-        <div className={styles.container_accordion}>
+        <div
+          className={styles.container_accordion + " " + utilities.bot_margin}
+        >
           <Accordion style={{ width: "100%" }} allowToggle>
             {OpenPositions.map((position, id) => {
               return (
@@ -95,7 +96,6 @@ export default function joinUs() {
             })}
           </Accordion>
         </div>
-
         <h2
           className={typography.heading_secondary + " " + utilities.bot_margin}
         >

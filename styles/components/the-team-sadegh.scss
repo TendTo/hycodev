@@ -1,0 +1,44 @@
+@import "../../scss/abstracts/variables.module";
+@import "../../scss/abstracts/mixins.module";
+
+.container {
+  padding: 2rem 0rem;
+  overflow: hidden;
+}
+
+.contact_wrapper {
+  width: 32rem;
+}
+
+.image_wrapper {
+  position: relative;
+  margin-right: 2rem;
+  height: 40rem;
+  width: 32rem;
+  display: flex;
+  box-shadow: $color-grey 0.1rem 0.25rem 1rem;
+  border-radius: 0.5rem;
+  overflow: clip;
+}
+
+.category {
+  margin-left: 2rem;
+}
+
+.sadegh_box {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  justify-content: center;
+  justify-items: center;
+  height: 40rem;
+  gap: 2rem;
+  width: 120rem;
+  text-align: justify;
+  &__text {
+    border-radius: 0.5rem;
+    padding: 2.25rem 4rem;
+    background-color: rgb($color-grey, 0.07);
+    width: 80rem;
+  }
+}

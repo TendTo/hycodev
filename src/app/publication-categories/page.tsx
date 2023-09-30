@@ -1,6 +1,6 @@
 import styles from "../../../styles/publications-all.module.scss";
 import typography from "../../../scss/base/_typography.module.scss";
-import { PublicationArticles } from "../publications-all/publications";
+import { PublicationArticles } from "../../assets/publications";
 
 type Props = {
   selectedCategory: string;

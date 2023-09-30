@@ -1,0 +1,72 @@
+@import "../../scss/abstracts/variables.module";
+.container {
+  background-color: rgb(#8b8787, 0.1);
+  width: 100vw;
+  height: 50rem;
+  position: relative;
+  &__article {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    width: 36rem;
+    height: 37.07rem;
+    border-radius: 1rem;
+    background-color: $color-white;
+    box-shadow: 0 4px 4px rgba($color-black, 0.25);
+    margin: 0 6rem;
+  }
+
+  &__pageTitle {
+    display: flex;
+    flex-flow: column;
+    padding: 0 8rem;
+    &__filter {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+}
+
+.text {
+  &__heading {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+  &__body {
+    text-align: justify;
+    margin-bottom: 0.5rem;
+    color: #636761;
+  }
+  &__authors {
+  }
+  &__link {
+    text-decoration: underline $color-light-blue;
+    color: $color-light-blue;
+    font-weight: 600;
+  }
+}
+
+.button_clip {
+  background-color: rgb($color-light-grey, 0.4);
+  height: 36rem;
+  width: 12rem;
+  position: absolute;
+  transform: translateY(20%);
+  z-index: 11;
+
+  &__left {
+    @extend .button_clip;
+    left: 0;
+    clip-path: ellipse(50% 50% at 0% 50%);
+  }
+  &__right {
+    @extend .button_clip;
+    right: 0;
+    clip-path: ellipse(60% 50% at 110% 50%);
+  }
+}
+
+.swiper-button-prev {
+  color: white !important;
+}

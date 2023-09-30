@@ -1,15 +1,15 @@
 "use client";
 
-import { Staff } from "./members";
+import { Staff } from "../../assets/hycodev-members";
 
-import styles from "../../../styles/the-team.module.scss";
-import PersonBox from "../components/person-profile";
-import MeetTheTeam from "../meet-the-team/page";
+import styles from "../../../styles/page-the-team.module.scss";
+import PersonBox from "../../components/person-profile";
+import TheTeamSadegh from "../../components/the-team-sadegh";
 import typography from "../../../scss/base/_typography.module.scss";
 import utilities from "../../../scss/base/_utilities.module.scss";
 import Image from "next/image";
 import { useState } from "react";
-import Divider from "../components/divider";
+import Divider from "../../components/divider";
 
 export default function theTeam() {
   const splitRoles = Staff.flatMap((box) => box.role);
@@ -31,7 +31,7 @@ export default function theTeam() {
         />
       </div>
       <div className={styles.container}>
-        {<MeetTheTeam></MeetTheTeam>}
+        {<TheTeamSadegh />}
         <Divider />
         <div className={styles.category}>
           <h3 className={typography.heading_secondary__light}>The Team</h3>
