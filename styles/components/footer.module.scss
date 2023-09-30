@@ -1,0 +1,97 @@
+@import "../../scss/abstracts/variables.module";
+@import "../../scss/abstracts/mixins.module";
+.container {
+  min-height: 20rem;
+  width: 100vw;
+  @include respond(phone) {
+    min-height: 40rem;
+  }
+  &__socialmedia {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 4rem;
+    gap: 0.5rem;
+    @include respond(phone) {
+      margin-right: 0;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+  &__site {
+    display: flex;
+    flex-flow: row;
+    gap: 2rem;
+    @include respond(phone) {
+      justify-items: center;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column wrap;
+    }
+  }
+  &__top {
+    height: 15rem;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+    @include respond(phone) {
+      flex-flow: row wrap;
+      height: 40rem;
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+
+  &__bottom {
+    height: 5rem;
+    background-color: #1c9e74;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include respond(phone) {
+      height: 10rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__logo {
+    margin-left: 4rem;
+    @include respond(phone) {
+      margin-left: 0;
+    }
+  }
+}
+
+.link {
+  border-right: 0.15rem solid $color-light-grey;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  &:first-of-type {
+    padding-left: 0;
+  }
+  &:last-of-type {
+    border: 0;
+  }
+}
+
+.paragraph {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: $color-light-grey;
+}
+
+.logo {
+  filter: drop-shadow(2px 4px 2px rgb($color-black, 0.25));
+}

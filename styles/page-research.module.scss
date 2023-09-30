@@ -1,0 +1,32 @@
+.container {
+  //background-image: url("../public/images/background.png");
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  //background-attachment: fixed;
+  position: relative;
+  &__content {
+    position: absolute;
+    top: 18rem;
+    z-index: 5;
+  }
+  &_related {
+    margin-bottom: 12rem;
+    margin-top: 6rem;
+  }
+}
+.banner {
+  padding: 0 0rem;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  gap: 4rem;
+  width: 100vw;
+}
+
+.image {
+  background-image: url("../public/images/background.png");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-attachment: scroll;
+  min-height: 30rem;
+}

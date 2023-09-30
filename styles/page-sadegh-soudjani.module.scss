@@ -1,0 +1,47 @@
+@import "../scss/abstracts/variables.module";
+
+.container {
+  padding: 2rem 15rem;
+  &_fact_boxes {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 2rem;
+    height: 30rem;
+  }
+  &_sadegh {
+    height: 50rem;
+    width: 40rem;
+    position: relative;
+  }
+  &_introduction {
+    display: flex;
+    gap: 4rem;
+    height: 50rem;
+    flex-flow: column wrap;
+    width: 80rem;
+    justify-content: flex-start;
+  }
+}
+
+.accordion {
+  &__content {
+  }
+}
+
+.list {
+  list-style-type: circle !important;
+  padding: 0 2rem;
+  list-style-position: inside;
+}
+
+.fact_box {
+  background-color: $color-white;
+  border: solid 0.2rem $color-light-blue;
+  border-radius: 1rem;
+  width: 26rem;
+  padding: 2rem 2rem 2rem 2rem;
+  list-style-type: circle !important;
+  list-style-position: inside;
+}

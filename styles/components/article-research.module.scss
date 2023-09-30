@@ -1,0 +1,54 @@
+@import "../../scss/abstracts/variables.module";
+
+.container {
+  padding: 4rem 6rem 2rem 4rem;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 20rem;
+  max-height: 38rem;
+  width: 100vw;
+  clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+  background: linear-gradient(rgb(#000000, 0.5) 50%, rgb(#000000, 0.9));
+  //backdrop-filter: blur(1px);
+  filter: drop-shadow(0px 0px 5px rgb($color-black, 0.25));
+  &_text {
+    width: 60rem;
+  }
+
+  &_content {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 4rem;
+    //gap: 2rem;
+    align-items: center;
+    text-align: justify;
+  }
+
+  &_image {
+    min-height: 23rem;
+    height: 23rem;
+    min-width: 30rem;
+    width: 30rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+  }
+}
+
+.heading {
+  display: inline-block;
+  width: 40rem;
+  flex: 0 0 100%;
+  margin: 1rem 0 0 0;
+}
+
+.image {
+  object-fit: fill;
+  height: 23rem;
+  width: 30rem;
+}
+
+.divider {
+  height: 100%;
+  border: 1px solid #8d8b8c;
+}
