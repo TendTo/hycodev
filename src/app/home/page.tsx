@@ -52,7 +52,6 @@ export default function Home() {
   }
   return (
     <div className={styles.container}>
-      <SplashScreen />
       <div className={styles.container_text}>
         <div className={styles.mobile_text}>
           <h1 className={styles.heading_primary + " " + utilities.bot_margin}>

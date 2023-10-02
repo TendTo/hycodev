@@ -5,6 +5,7 @@ import ArticleResearch from "../../../components/article-research";
 import typography from "../../../../scss/base/_typography.module.scss";
 
 import RelatedPublicationsList from "../../../components/related-publications";
+import ProjectBox from "../../../components/project-box";
 
 export default async function PublicationArticle({ params }) {
   const data = await getPostById(params.id);
@@ -40,6 +41,7 @@ export default async function PublicationArticle({ params }) {
       <div className={styles.container_related}>
         <RelatedPublicationsList />
       </div>
+      <ProjectBox />
     </div>
   );
 }

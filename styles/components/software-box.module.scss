@@ -1,4 +1,5 @@
 @import "../../scss/abstracts/mixins.module";
+@import "../../scss/abstracts/variables.module";
 
 .container {
   margin: 4rem;
@@ -9,11 +10,22 @@
   flex-direction: column;
   justify-content: center;
   gap: 8rem;
-
+  @include respond(phone) {
+    width: 45rem;
+    flex-flow: column-reverse wrap;
+    height: auto;
+    margin: 0;
+    padding: 0rem 2rem;
+    align-items: center;
+    gap: 4rem;
+  }
   &__buttons {
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
+    @include respond(phone) {
+      justify-content: space-between;
+    }
   }
   &__image {
     width: 45rem;
@@ -25,8 +37,15 @@
       scale: 1.05;
       transition: 0.25s;
     }
+    @include respond(phone) {
+      width: 38rem;
+      height: 27.15rem;
+    }
   }
   &__text {
-    width: 70rem;
+    width: 65rem;
+    @include respond(phone) {
+      width: 40rem;
+    }
   }
 }

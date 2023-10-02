@@ -1,7 +1,7 @@
-import styles from "../../../styles/publication-box.module.scss";
+import styles from "../../styles/publication-box.module.scss";
 import Image from "next/image";
-import typography from "../../../scss/base/_typography.module.scss";
-import utilities from "../../../scss/base/_utilities.module.scss";
+import typography from "../../scss/base/_typography.module.scss";
+import utilities from "../../scss/base/_utilities.module.scss";
 export default function PublicationBox({ image, category, title, alt, link }) {
   return (
     <div className={styles.container}>

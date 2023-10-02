@@ -1,4 +1,4 @@
-import styles from "../../styles/components/the-team-sadegh.scss";
+import styles from "../../styles/components/the-team-sadegh.module.scss";
 import Image from "next/image";
 import typography from "../../scss/base/_typography.module.scss";
 import utilities from "../../scss/base/_utilities.module.scss";

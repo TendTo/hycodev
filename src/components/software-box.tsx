@@ -1,8 +1,11 @@
+"use client";
+
 import styles from "../../styles/components/software-box.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
 import utilities from "../../scss/base/_utilities.module.scss";
 import button from "../../styles/components/button.module.scss";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const SoftwareBox = ({
   reverse,
@@ -23,8 +26,23 @@ const SoftwareBox = ({
       flexWrap: "wrap",
     };
   }
+  const [width, setWindowWidth] = useState(0);
+
+  useEffect(() => {
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+  const updateDimensions = () => {
+    const width = window.innerWidth;
+    setWindowWidth(width);
+  };
   return (
-    <section className={styles.container} style={flexWrapSetting}>
+    <section
+      className={styles.container}
+      style={width < 600 ? {} : flexWrapSetting}
+    >
       <div className={styles.container__image}>
         <Image src={image} fill={true} quality={100}></Image>
       </div>

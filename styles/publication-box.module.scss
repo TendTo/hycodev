@@ -7,12 +7,19 @@
   align-items: center;
   justify-items: flex-start;
   width: 25rem;
+  @include respond(phone) {
+    width: 100vw;
+  }
 }
 
 .image {
   object-fit: fill;
   width: 25rem;
   height: 19rem;
+  @include respond(phone) {
+    width: 100vw;
+    object-fit: cover;
+  }
   &_container {
     position: relative;
     max-width: 23rem;
@@ -28,6 +35,13 @@
     &:hover {
       transition: 0.25s ease-out;
       transform: scale(1.05);
+    }
+    @include respond(phone) {
+      width: 100vw;
+      max-width: unset;
+      max-height: 18rem;
+      min-width: unset;
+      min-height: 18rem;
     }
   }
   &_category {
@@ -45,6 +59,9 @@
 
     &__text {
       margin: 0;
+    }
+    @include respond(phone) {
+      width: 100vw;
     }
   }
 }

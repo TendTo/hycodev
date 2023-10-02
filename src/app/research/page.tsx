@@ -3,10 +3,10 @@
 import styles from "../../../styles/publications-all.module.scss";
 import { PublicationArticles } from "../../assets/publications";
 import CustomBanner from "../../components/custom-banner";
-import PublicationBox from "../publication-box/page";
+import PublicationBox from "../../components/publication-box";
 import typography from "../../../scss/base/_typography.module.scss";
 import utilities from "../../../scss/base/_utilities.module.scss";
-import PublicationCategories from "../publication-categories/page";
+import PublicationCategories from "../../components/publication-categories";
 import { useState } from "react";
 
 export default function PublicationsAll() {

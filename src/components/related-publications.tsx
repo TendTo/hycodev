@@ -7,10 +7,23 @@ import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
+import { useState } from "react";
 
 const RelatedPublications = () => {
+  const [alphabetical, setAlphabetical] = useState(false);
+  const [chronological, setChronological] = useState(true);
+
+  const setA = () => {
+    setAlphabetical(true);
+    setChronological(false);
+  };
+  const setC = () => {
+    setChronological(true);
+    setAlphabetical(false);
+  };
+
   return (
-    <div>
+    <div className={styles.container__page}>
       <div className={styles.container__pageTitle}>
         <h2 className={typography.heading_secondary}>Related Publications</h2>
         <div
@@ -20,14 +33,24 @@ const RelatedPublications = () => {
             styles.container__pageTitle__filter
           }
         >
-          <p className={typography.paragraph__small}>Chronological</p>
-          <p className={typography.paragraph__small}>Alphabetical</p>
+          <button
+            className={typography.paragraph__small + " " + styles.button}
+            style={chronological ? { color: "#0189FF" } : { color: "#636761" }}
+            onClick={setC}
+          >
+            Chronological
+          </button>
+          <button
+            className={typography.paragraph__small + " " + styles.button}
+            style={alphabetical ? { color: "#0189FF" } : { color: "#636761" }}
+            onClick={setA}
+          >
+            Alphabetical
+          </button>
         </div>
       </div>
 
       <div className={styles.container}>
-        <div className={styles.button_clip__left}></div>
-        <div className={styles.button_clip__right}></div>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}

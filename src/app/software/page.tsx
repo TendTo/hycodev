@@ -20,7 +20,7 @@ export default function Software() {
     <div className={styles.container}>
       <CustomBanner
         title={"Software"}
-        source={"/../public/software_new.jpg"}
+        source={"/../public/images/software_new.jpg"}
         size={size}
         backdrop={backdrop}
       ></CustomBanner>

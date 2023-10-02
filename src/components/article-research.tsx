@@ -9,19 +9,51 @@ import "swiper/scss/navigation";
 import "swiper/scss/scrollbar";
 
 import ResearcherBoxResearch from "./researcher-box-research";
+import { Navigation, Scrollbar } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const ArticleResearch = ({ text, title, articleImages, people }) => {
   return (
     <div className={styles.container}>
       <div className={styles.container_content}>
         <div className={styles.container_image}>
-          <Image
-            className={styles.image}
-            src={articleImages[1].link}
-            alt={articleImages[1].alt}
-            width={706}
-            height={534}
-          ></Image>
+          <Swiper
+            modules={[Navigation, Scrollbar]}
+            spaceBetween={50}
+            slidesPerView={1}
+            navigation
+            scrollbar={{ draggable: true }}
+            onSlideChange={() => console.log("slide change")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {articleImages.map((image, id) => {
+              return (
+                <SwiperSlide
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    flexFlow: "column wrap",
+                  }}
+                  key={id}
+                >
+                  <div
+                    className={styles.container_image + " " + "swiper-slide"}
+                  >
+                    <Image
+                      className={styles.image}
+                      src={image.link}
+                      alt={image.alt}
+                      width={706}
+                      height={534}
+                    ></Image>
+                  </div>
+                  <p className={typography.paragraph__small}>
+                    Figure {id + 1}. {image.alt}
+                  </p>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
         <div className={styles.container_text}>
           {text.map((data, i, text) => {

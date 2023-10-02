@@ -4,14 +4,15 @@
   //background-size: cover;
   //background-attachment: fixed;
   position: relative;
+  margin-bottom: 4rem;
   &__content {
     position: absolute;
     top: 18rem;
     z-index: 5;
   }
   &_related {
-    margin-bottom: 12rem;
-    margin-top: 6rem;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
   }
 }
 .banner {

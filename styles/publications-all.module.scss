@@ -1,23 +1,31 @@
 @import "../scss/abstracts/variables.module";
-
+@import "../scss/abstracts/mixins.module";
 .container {
 }
 .content {
   display: flex;
   position: relative;
-  //flex-flow: wrap;
+  @include respond(phone) {
+    flex-flow: wrap column;
+  }
 }
 
 .article {
   &_wrapper {
     //display: flex;
     padding: 4rem 6rem;
+    @include respond(phone) {
+      padding: 0;
+    }
   }
   &_boxes {
     display: flex;
     flex-flow: wrap row;
     gap: 4rem;
     transform: translateX(-1rem);
+    @include respond(phone) {
+      justify-content: center;
+    }
   }
 }
 .list {
@@ -31,6 +39,12 @@
     display: flex;
     flex-flow: column wrap;
     gap: 2rem;
+    @include respond(phone) {
+      width: 100vw;
+      min-height: 20rem;
+      height: auto;
+      padding: 2rem 0;
+    }
   }
 
   &_item {
@@ -42,7 +56,9 @@
     text-align: start;
     background-color: transparent;
     transition: 0.5s;
-
+    @include respond(phone) {
+      width: 100vw;
+    }
     &__active {
       @extend .list_item;
       background-color: $color-white;

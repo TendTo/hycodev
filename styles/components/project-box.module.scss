@@ -1,0 +1,90 @@
+@import "../../scss/abstracts/mixins.module";
+@import "../../scss/abstracts/variables.module";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+
+  &__projectBox {
+    width: 90rem;
+    height: 40.5rem;
+    background-color: $color-white;
+    position: relative;
+    filter: drop-shadow(0 0.5rem 1rem rgb($color-black, 0.25));
+    border-radius: 1rem;
+    margin: 4rem;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: auto;
+    aspect-ratio: 1.4/1;
+    height: 40.5rem;
+    position: absolute;
+    //transform: translateY(25%);
+    z-index: 0;
+    float: left;
+  }
+  &__content {
+    display: flex;
+    height: 40.5rem;
+    //padding: 2rem 1rem;
+    gap: 3rem;
+    justify-content: flex-end;
+    align-items: center;
+    clip-path: circle(100% at 92% 50%);
+    background: linear-gradient(
+      270deg,
+      white 32%,
+      rgba(255, 255, 255, 0.65) 100%
+    );
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  &__list {
+    width: 32rem;
+    justify-content: center;
+    align-content: flex-end;
+    display: flex;
+    gap: 2rem;
+    flex-flow: column;
+
+    &__item {
+      border-radius: 0.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background-color: $color-light-blue;
+      padding: 1rem;
+      width: 90%;
+      box-shadow: (0px 0.25rem 0.5rem rgb($color-black, 0.25));
+      transition: 0.2s;
+      &:hover {
+        scale: 1.05;
+        transition: 0.2s;
+      }
+    }
+  }
+  &__summary {
+    width: 32rem;
+    display: flex;
+    flex-flow: column;
+  }
+}
+.divider {
+  height: 34rem;
+  width: 0.2rem;
+  border-radius: 0.25rem;
+  background-color: #d9d9d9;
+}
+.arrow {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  border: 0.25rem solid $color-white;
+  transform: rotate(45deg);
+  border-bottom-style: none;
+  border-left-style: none;
+}

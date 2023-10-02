@@ -192,7 +192,7 @@ export const PublicationArticles = [
   {
     id: "3",
     title: "Power and Energy Systems",
-    category: "",
+    category: "Example Driven",
     year: "2023",
     image: [
       {
@@ -225,7 +225,7 @@ export const PublicationArticles = [
   {
     id: "4",
     title: "Data-Driven Control",
-    category: "",
+    category: "Example Driven",
     year: "2023",
     image: [
       {

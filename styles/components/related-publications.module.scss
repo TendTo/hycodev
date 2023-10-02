@@ -1,9 +1,17 @@
 @import "../../scss/abstracts/variables.module";
 .container {
-  background-color: rgb(#8b8787, 0.1);
+  background-color: rgb(#8b8787, 0.15);
   width: 100vw;
-  height: 50rem;
+  height: 54rem;
   position: relative;
+  box-shadow: 0 0.25rem 1rem rgb($color-black, 0.25);
+
+  &__page {
+    //background-image: url("../../public/images/background.png");
+    //background-repeat: no-repeat;
+    //background-size: cover;
+    //background-attachment: fixed;
+  }
   &__article {
     display: flex;
     flex-flow: column;
@@ -47,26 +55,34 @@
   }
 }
 
-.button_clip {
-  background-color: rgb($color-light-grey, 0.4);
-  height: 36rem;
-  width: 12rem;
-  position: absolute;
-  transform: translateY(20%);
-  z-index: 11;
+//.button_clip {
+//  background-color: rgb($color-light-grey, 0.4);
+//  height: 36rem;
+//  width: 12rem;
+//  position: absolute;
+//  transform: translateY(20%);
+//  z-index: 11;
+//
+//  &__left {
+//    @extend .button_clip;
+//    left: 0;
+//    clip-path: ellipse(50% 50% at 0% 50%);
+//  }
+//  &__right {
+//    @extend .button_clip;
+//    right: 0;
+//    clip-path: ellipse(60% 50% at 110% 50%);
+//  }
+//}
 
-  &__left {
-    @extend .button_clip;
-    left: 0;
-    clip-path: ellipse(50% 50% at 0% 50%);
-  }
-  &__right {
-    @extend .button_clip;
-    right: 0;
-    clip-path: ellipse(60% 50% at 110% 50%);
-  }
+.swiper-button-prev .swiper-button-next {
+  width: 8rem;
 }
 
-.swiper-button-prev {
-  color: white !important;
+.button {
+  transition: 0.25s;
+  border-radius: 0.25rem;
+  &:hover {
+    background-color: rgb($color-light-grey, 0.15);
+  }
 }

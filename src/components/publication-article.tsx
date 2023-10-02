@@ -120,11 +120,6 @@ const Article = ({ text, title, articleImages, people }) => {
         </div>
       </div>
       <Divider />
-      <div>
-        <h2 className={typography.heading_secondary}>Related Publications</h2>
-        <p className={typography.paragraph__small}>See All</p>
-        <RelatedPublicationsList />
-      </div>
     </div>
   );
 };

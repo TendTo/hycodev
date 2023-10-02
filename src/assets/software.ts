@@ -20,7 +20,7 @@ export const software = [
   },
   {
     id: "2",
-    image: "/../public/oliver.gif",
+    image: "/../public/models/oliver.gif",
     heading: "SySCoRe",
     category: "Software tool",
     text: "SySCoRe is a MATLAB toolbox for temporal logic control synthesis of discrete-time continuous-state stochastic dynamical systems. The fully automated implementation starts from a system description and a temporal logic specification and computes a robust controller alongside robust quantified bounds on the probability of satisfying the given property based on space discretization. The tool is based on establishing simulation relations between stochastic processes based on coupling the underlying stochastic distributions. The main advantage of SySCoRe compared to alternative tools is that the computed error does not grow linearly in time, which makes the tool applicable to infinite horizon properties and unbounded disturbances. The current version of SySCoRe supports nonlinear dynamics, complex co-safe temporal logic specifications over infinite horizons, model-order reduction, arbitrary (possibly unbounded) additive disturbance, and fast tensor computations.",

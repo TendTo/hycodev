@@ -16,7 +16,6 @@ const CustomBanner = ({ title, source, size, backdrop }) => {
         fill={true}
         quality={100}
       />
-      {/*<InteractiveLines />*/}
       <h1 className={typography.heading_primary__white + " " + styles.heading}>
         {title}
       </h1>
