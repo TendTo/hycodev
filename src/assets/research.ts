@@ -26,17 +26,36 @@ export const IntroductionArticles = [
   //       ],
   //     },
   //   ],
+  //   projects: [
+  //     {
+  //       image: "",
+  //       title: "",
+  //       paragraph: "",
+  //       researchers: "",
+  //       papers: [
+  //         {
+  //           title: "",
+  //           link: "",
+  //         },
+  //       ],
+  //     },
+  //   ],
   // },
   {
     id: "communication-systems",
     category: "Communication Systems",
+    white: "true",
     image: [
       {
-        link: "/../public/images/home/saucer.png",
+        link: "/../public/images/home/saucer.jpg",
         alt: "Package Delivery",
       },
       {
-        link: "/../public/images/publications/syscore_2.png",
+        link: "/../public/images/publications/b3.png",
+        alt: "Package Delivery",
+      },
+      {
+        link: "/../public/images/publications/b5.png",
         alt: "Satisfaction Probability",
       },
     ],
@@ -45,21 +64,21 @@ export const IntroductionArticles = [
       {
         name: "Omid Akbarzadeh",
         role: "PhD Student",
-        contact: "ben@newcastle.ac.uk",
+        contact: "o.akbarzadeh2@newcastle.ac.uk",
         image: "/../public/images/people/omid_akbarzadeh.png",
       },
       {
         name: "Sadegh Soudjani",
         role: "Researcher",
-        contact: "ben@newcastle.ac.uk",
+        contact: "",
         image: "/../public/images/people/sadegh_soudjani_square.jpg",
       },
     ],
     sections: [
       {
         paragraphs: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam ex sit amet velit blandit maximus. Sed vulputate vitae mi nec placerat. Integer ut venenatis nisl. Sed consectetur nisi diam, id sollicitudin mauris tristique ut. Donec porttitor velit nec pretium egestas. Pellentesque maximus tempus metus in dignissim.",
-          "Nam et mi sit amet sapien maximus ornare sed ac ex. Quisque suscipit velit in ante sodales, sit amet finibus lacus semper.  Donec porttitor velit nec pretium egestas. Pellentesque maximus tempus metus in dignissim. Nam et mi sit amet sapien maximus ornare sed ac ex. Donec porttitor velit nec pretium egestas.",
+          "Verification of Cyber-Physical Systems (CPS) with Communication Networks aims to ensure reliable, safe, and secure operation of complex systems integrating physical processes and networks. It's vital for applications like autonomous vehicles, smart grids, healthcare devices, and industrial automation. The challenge is developing methods to verify their intended behavior and prevent failures or vulnerabilities.",
+          "Addressing the CPS-network challenge involves formal methods for rigorous analysis, early issue detection, and error reduction. Testing and simulation assess system performance under various conditions. Real-time requirements are crucial, especially for safety in applications like autonomous vehicles. Maintaining network resilience through advanced security and fault-tolerant mechanisms is an ongoing challenge.",
         ],
       },
     ],
@@ -67,9 +86,10 @@ export const IntroductionArticles = [
   {
     id: "power-systems",
     category: "Power Systems",
+    white: "true",
     image: [
       {
-        link: "/../public/images/home/energy_systems.png",
+        link: "/../public/images/home/energy_systems.jpg",
         alt: "Package Delivery",
       },
       {
@@ -82,13 +102,13 @@ export const IntroductionArticles = [
       {
         name: "Ben Wooding",
         role: "PhD Student",
-        contact: "ben@newcastle.ac.uk",
+        contact: "b.wooding1@newcastle.ac.uk",
         image: "/../public/images/people/ben_wooding.png",
       },
       {
         name: "Sadegh Soudjani",
         role: "Researcher",
-        contact: "ben@newcastle.ac.uk",
+        contact: "",
         image: "/../public/images/people/sadegh_soudjani_square.jpg",
       },
     ],
@@ -104,36 +124,37 @@ export const IntroductionArticles = [
   {
     id: "water-treatment-systems",
     category: "Water Treatment Systems",
+    white: "",
     image: [
       {
-        link: "/../public/images/home/water.png",
+        link: "/../public/images/home/water.jpg",
         alt: "Package Delivery",
       },
       {
-        link: "/../public/images/publications/syscore_2.png",
+        link: "/../public/images/publications/water_treatment.jpg",
         alt: "Satisfaction Probability",
       },
     ],
     relatedArticles: "",
     researchers: [
       {
-        name: "Oliver Schön",
+        name: "Anna Laino",
         role: "PhD Student",
-        contact: "ben@newcastle.ac.uk",
-        image: "/../public/images/people/oliver_schon.jpg",
+        contact: "a.s.laino2@newcastle.ac.uk",
+        image: "/../public/images/people/anna_laino.jpg",
       },
       {
         name: "Sadegh Soudjani",
         role: "Researcher",
-        contact: "ben@newcastle.ac.uk",
+        contact: "",
         image: "/../public/images/people/sadegh_soudjani_square.jpg",
       },
     ],
     sections: [
       {
         paragraphs: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam ex sit amet velit blandit maximus. Sed vulputate vitae mi nec placerat. Integer ut venenatis nisl. Sed consectetur nisi diam, id sollicitudin mauris tristique ut. Donec porttitor velit nec pretium egestas. Pellentesque maximus tempus metus in dignissim.",
-          "Nam et mi sit amet sapien maximus ornare sed ac ex. Quisque suscipit velit in ante sodales, sit amet finibus lacus semper.  Donec porttitor velit nec pretium egestas. Pellentesque maximus tempus metus in dignissim. Nam et mi sit amet sapien maximus ornare sed ac ex. Donec porttitor velit nec pretium egestas.",
+          "The primary objective of this research is to evaluate the ability of Water Resource Recovery Facilities (WRRFs) to endure and recover from ongoing challenges like climate change and population growth, as well as sudden and severe stressors such as extreme weather events. The resilience of WRRFs is compromised by the aging infrastructure, which was designed in the early 20th century. This outdated infrastructure may not withstand stressors, potentially leading to service disruptions and environmental harm.",
+          "The current literature lacks a comprehensive method for quantifying resilience, and previous metrics are tailored to specific cases. To explore resilience, the study selected the GPS-X software to model a WRRF case. However, mastering the software was a steep learning curve. Data collection from field operators presented its own set of challenges, including gaps in data quality, which were addressed through interpolation. Flowmeter calibration issues significantly impacted the model's accuracy, especially concerning sludge retention time and ammonia levels.",
         ],
       },
     ],
@@ -141,13 +162,14 @@ export const IntroductionArticles = [
   {
     id: "quantum-systems",
     category: "Quantum Systems",
+    white: "true",
     image: [
       {
-        link: "/../public/images/home/quantum_computing.png",
+        link: "/../public/images/home/quantum_computing.jpg",
         alt: "Package Delivery",
       },
       {
-        link: "/../public/images/publications/syscore_2.png",
+        link: "/../public/images/publications/quantum.jpg",
         alt: "Satisfaction Probability",
       },
     ],
@@ -156,13 +178,13 @@ export const IntroductionArticles = [
       {
         name: "Marco Lewis",
         role: "PhD Student",
-        contact: "ben@newcastle.ac.uk",
+        contact: "m.j.lewis2@newcastle.ac.uk",
         image: "/../public/images/people/marco_lewis.jpg",
       },
       {
         name: "Sadegh Soudjani",
         role: "Researcher",
-        contact: "ben@newcastle.ac.uk",
+        contact: "",
         image: "/../public/images/people/sadegh_soudjani_square.jpg",
       },
     ],
@@ -178,36 +200,37 @@ export const IntroductionArticles = [
   {
     id: "brain-modelling-and-control",
     category: "Brain Modelling and Control",
+    white: "true",
     image: [
       {
-        link: "/../public/images/home/glassbrain.jpeg",
+        link: "/../public/images/home/glassbrain.jpg",
         alt: "Package Delivery",
       },
       {
-        link: "/../public/images/publications/syscore_2.png",
+        link: "/../public/images/publications/brain.jpg",
         alt: "Satisfaction Probability",
       },
     ],
     relatedArticles: "",
     researchers: [
       {
-        name: "Oliver Schön",
+        name: "John Ingham",
         role: "PhD Student",
-        contact: "ben@newcastle.ac.uk",
-        image: "/../public/images/people/oliver_schon.jpg",
+        contact: "j.f.ingham2@newcastle.ac.uk",
+        image: "/../public/images/people/john_ingham.jpg",
       },
       {
         name: "Sadegh Soudjani",
         role: "Researcher",
-        contact: "ben@newcastle.ac.uk",
+        contact: "",
         image: "/../public/images/people/sadegh_soudjani_square.jpg",
       },
     ],
     sections: [
       {
         paragraphs: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam ex sit amet velit blandit maximus. Sed vulputate vitae mi nec placerat. Integer ut venenatis nisl. Sed consectetur nisi diam, id sollicitudin mauris tristique ut. Donec porttitor velit nec pretium egestas. Pellentesque maximus tempus metus in dignissim.",
-          "Nam et mi sit amet sapien maximus ornare sed ac ex. Quisque suscipit velit in ante sodales, sit amet finibus lacus semper.  Donec porttitor velit nec pretium egestas. Pellentesque maximus tempus metus in dignissim. Nam et mi sit amet sapien maximus ornare sed ac ex. Donec porttitor velit nec pretium egestas.",
+          "Computation modelling has proven to supplement direct experimental studies in understanding the functions of the healthy and the unhealthy brain, including the mechanisms of epilepsy. Established treatments, with proven benefits, may still have poorly understood mechanisms of action, which we expect would also be illuminated by a modelling approach.",
+          "Once we have models with predictive and explanatory power, it should then be possible to inform the design of smarter, closed-loop feedback regimes to improve the efficacy and reduce the potential harms of a treatment. Following the creation of generalised models, a tailored approach to individual patients could be taken, using their imaging and electrophysiological data, we would hope to produce personalised prognostic forecasts for potential treatments, and subsequent faster and more accurate optimisation of treatment parameters.",
         ],
       },
     ],
@@ -215,9 +238,10 @@ export const IntroductionArticles = [
   {
     id: "fundamentals",
     category: "Fundamentals",
+    white: "true",
     image: [
       {
-        link: "/../public/images/home/fundamental.png",
+        link: "/../public/images/home/fundamental.jpg",
         alt: "Package Delivery",
       },
       {
@@ -230,21 +254,65 @@ export const IntroductionArticles = [
       {
         name: "Oliver Schön",
         role: "PhD Student",
-        contact: "ben@newcastle.ac.uk",
+        contact: "o.schoen2@newcastle.ac.uk",
         image: "/../public/images/people/oliver_schon.jpg",
       },
       {
         name: "Sadegh Soudjani",
         role: "Researcher",
-        contact: "ben@newcastle.ac.uk",
+        contact: "",
         image: "/../public/images/people/sadegh_soudjani_square.jpg",
       },
     ],
     sections: [
       {
         paragraphs: [
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi aliquam ex sit amet velit blandit maximus. Sed vulputate vitae mi nec placerat. Integer ut venenatis nisl. Sed consectetur nisi diam, id sollicitudin mauris tristique ut. Donec porttitor velit nec pretium egestas. Pellentesque maximus tempus metus in dignissim.",
-          "Nam et mi sit amet sapien maximus ornare sed ac ex. Quisque suscipit velit in ante sodales, sit amet finibus lacus semper.  Donec porttitor velit nec pretium egestas. Pellentesque maximus tempus metus in dignissim. Nam et mi sit amet sapien maximus ornare sed ac ex. Donec porttitor velit nec pretium egestas.",
+          "One of the key focal points of our research is the integration of control-theoretic principles, where we are actively working to address issues related to disturbances and the intricate structure of CPS. This is complemented by our exploration of model-based and data-driven techniques, which allow us to harness the power of data to enhance the reliability and robustness of CPS.",
+          "Uncertainty is an ever-present challenge in CPS, and we are dedicated to developing solutions that can thrive in the face of this uncertainty, even when prior knowledge is incomplete or missing. The incorporation of stochasticity into our methods further broadens the scope of our research, enabling us to design CPS that can adapt and respond effectively to inherently probabilistic environments.",
+        ],
+      },
+    ],
+    projects: [
+      {
+        image: "/../public/models/oliver.gif",
+        title: "SySCoRe: Synthesis via Stochastic Coupling Relations",
+        paragraph:
+          "In this research line, we develop SySCoRe, a MATLAB toolbox for temporal logic control synthesis of discrete-time continuous-state stochastic dynamical systems based on stochastic coupling relations.",
+        researchers:
+          "Oliver Schön, Birgit van Huijgevoort, Sofie Haesaert, Sadegh Soudjani",
+        papers: [
+          {
+            title: "ARCH-COMP22 Category Report: Stochastic Models",
+            link: "https://easychair.org/publications/paper/Nzr4",
+          },
+          {
+            title: "SySCoRe: Synthesis via Stochastic Coupling Relations",
+            link: "https://dl.acm.org/doi/10.1145/3575870.3587123",
+          },
+          {
+            title:
+              "Bayesian Approach to Temporal Logic Control of Uncertain Systems",
+            link: "https://arxiv.org/abs/2304.07428",
+          },
+          {
+            title:
+              "Poster Abstract: Data-Driven Correct-by-Design Control of Parametric Stochastic Systems✱",
+            link: "https://dl.acm.org/doi/10.1145/3575870.3589547",
+          },
+          {
+            title:
+              "Verifying the Unknown: Correct-by-Design Control Synthesis for\n" +
+              "Networks of Stochastic Uncertain Systems\n",
+            link: "https://arxiv.org/pdf/2309.01276.pdf",
+          },
+          {
+            title: "ARCH-COMP23 Category Report: Stochastic Models",
+            link: "https://easychair.org/publications/paper/xZ8M",
+          },
+          {
+            title: "Correct-by-Design Control of Parametric Stochastic Systems",
+            link: "https://ieeexplore.ieee.org/document/9992723",
+          },
         ],
       },
     ],

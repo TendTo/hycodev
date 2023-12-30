@@ -100,7 +100,7 @@ export const PublicationArticles = [
     year: "2023",
     image: [
       {
-        link: "",
+        link: "/../public/images/article.png",
         alt: "",
       },
     ],
@@ -149,7 +149,7 @@ export const PublicationArticles = [
     year: "2023",
     image: [
       {
-        link: "",
+        link: "/../public/images/article.png",
         alt: "",
       },
     ],
@@ -196,7 +196,7 @@ export const PublicationArticles = [
     year: "2023",
     image: [
       {
-        link: "",
+        link: "/../public/images/article.png",
         alt: "",
       },
     ],

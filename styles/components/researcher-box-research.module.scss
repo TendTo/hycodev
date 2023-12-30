@@ -1,9 +1,9 @@
 @import "../../scss/abstracts/variables.module";
-
+@import "../../scss/abstracts/mixins.module";
 .container {
   border-radius: 1rem;
-  padding: 4rem 2rem 4rem 2rem;
-  min-width: 30rem;
+  padding: 4rem 1rem 4rem 1rem;
+  min-width: 26rem;
   max-width: 30rem;
   display: flex;
   align-items: flex-start;
@@ -11,6 +11,11 @@
   flex-flow: column;
   height: auto;
   filter: drop-shadow(0px 0px 5px rgb($color-black, 0.25));
+  @include respond(tab) {
+    padding: 0;
+    align-items: center;
+    max-width: unset;
+  }
 }
 
 .researchers {
@@ -18,6 +23,10 @@
   flex-flow: column wrap;
   align-content: center;
   gap: 2rem;
+  @include respond(tab) {
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .researcher {

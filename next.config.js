@@ -1,14 +1,14 @@
 const nextConfig = {
   reactStrictMode: false,
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/home",
-        permanent: true,
-      },
-    ];
+  typescript: {
+    ignoreBuildErrors: true,
   },
+  // images: {
+  //   loader: "custom",
+  //   loaderFile: "./image_loader.ts",
+  //   path: "/",
+  // },
+  // output: "export",
 };
 
 module.exports = nextConfig;

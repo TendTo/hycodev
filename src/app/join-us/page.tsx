@@ -12,18 +12,15 @@ import {
   AccordionPanel,
   Box,
   AccordionIcon,
-  Center,
+  Button,
 } from "@chakra-ui/react";
-
-import button from "../../../styles/components/button.module.scss";
-import Divider from "../../components/divider";
 export default function joinUs() {
   return (
     <div className={styles.container}>
       <div className={styles.container_banner}>
         <div className={styles.container_image}>
           <Image
-            src={"/../public/join_us_backdrop.jpg"}
+            src={"/../public/images/join_us_backdrop.jpg"}
             fill={true}
             objectFit={"cover"}
             quality={100}
@@ -42,12 +39,9 @@ export default function joinUs() {
         <h2
           className={typography.heading_secondary + " " + utilities.bot_margin}
         >
-          {" "}
           Open Calls
         </h2>
-        <div
-          className={styles.container_accordion + " " + utilities.bot_margin}
-        >
+        <div className={styles.container_accordion}>
           <Accordion style={{ width: "100%" }} allowToggle>
             {OpenPositions.map((position, id) => {
               return (
@@ -85,72 +79,83 @@ export default function joinUs() {
                       {position.paragraph3}
                     </p>
 
-                    <button
-                      className={button.button + " " + typography.paragraph}
+                    <Button
+                      size="lg"
+                      style={{ textDecoration: "none" }}
+                      className={
+                        typography.paragraph + " " + utilities.top_margin
+                      }
                     >
                       Apply
-                    </button>
+                    </Button>
                   </AccordionPanel>
                 </AccordionItem>
               );
             })}
           </Accordion>
         </div>
-        <h2
-          className={typography.heading_secondary + " " + utilities.bot_margin}
-        >
-          {" "}
-          Closed Calls
-        </h2>
-        <div className={styles.container_accordion}>
-          <Accordion style={{ width: "100%" }} allowToggle>
-            {OpenPositions.map((position, id) => {
-              return (
-                <AccordionItem key={id}>
-                  <h2>
-                    <AccordionButton>
-                      <AccordionIcon boxSize={12} mr={8} />
-                      <Box as="span" flex="2" textAlign="left">
-                        <h3 className={typography.heading_tertiary}>
-                          {position.title}
-                        </h3>
-                        <div className={typography.paragraph__small}>
-                          <strong>Deadline: </strong>
-                          {position.deadline}
-                          <br />
-                          <strong>Location: </strong>
-                          {position.location}
-                          <br />
-                          <strong>Level: </strong>
-                          {position.level}
-                        </div>
-                      </Box>
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel pb={4} className={utilities.left_margin__big}>
-                    <p className={typography.paragraph}>
-                      {position.paragraph1}
-                    </p>
-                    <br />
-                    <p className={typography.paragraph}>
-                      {position.paragraph2}
-                    </p>
-                    <br />
-                    <p className={typography.paragraph}>
-                      {position.paragraph3}
-                    </p>
+        {/*<h2*/}
+        {/*  className={typography.heading_secondary + " " + utilities.bot_margin}*/}
+        {/*>*/}
+        {/*  Closed Calls*/}
+        {/*</h2>*/}
+        {/*<div className={styles.container_accordion}>*/}
+        {/*  <Accordion style={{ width: "100%" }} allowToggle>*/}
+        {/*    {OpenPositions.map((position, id) => {*/}
+        {/*      return (*/}
+        {/*        <AccordionItem key={id}>*/}
+        {/*          <h2>*/}
+        {/*            <AccordionButton>*/}
+        {/*              <AccordionIcon boxSize={12} mr={8} />*/}
+        {/*              <Box as="span" flex="2" textAlign="left">*/}
+        {/*                <h3 className={typography.heading_tertiary}>*/}
+        {/*                  {position.title}*/}
+        {/*                </h3>*/}
+        {/*                <div className={typography.paragraph__small}>*/}
+        {/*                  <strong>Deadline: </strong>*/}
+        {/*                  {position.deadline}*/}
+        {/*                  <br />*/}
+        {/*                  <strong>Location: </strong>*/}
+        {/*                  {position.location}*/}
+        {/*                  <br />*/}
+        {/*                  <strong>Level: </strong>*/}
+        {/*                  {position.level}*/}
+        {/*                </div>*/}
+        {/*              </Box>*/}
+        {/*            </AccordionButton>*/}
+        {/*          </h2>*/}
+        {/*          <AccordionPanel*/}
+        {/*            pb={4}*/}
+        {/*            className={utilities.top_margin__small}*/}
+        {/*            style={{ marginLeft: "5rem" }}*/}
+        {/*          >*/}
+        {/*            <p className={typography.paragraph}>*/}
+        {/*              {position.paragraph1}*/}
+        {/*            </p>*/}
+        {/*            <br />*/}
+        {/*            <p className={typography.paragraph}>*/}
+        {/*              {position.paragraph2}*/}
+        {/*            </p>*/}
+        {/*            <br />*/}
+        {/*            <p className={typography.paragraph}>*/}
+        {/*              {position.paragraph3}*/}
+        {/*            </p>*/}
 
-                    <button
-                      className={button.button + " " + typography.paragraph}
-                    >
-                      Apply
-                    </button>
-                  </AccordionPanel>
-                </AccordionItem>
-              );
-            })}
-          </Accordion>
-        </div>
+        {/*            <Button*/}
+        {/*              size="lg"*/}
+        {/*              style={{ textDecoration: "none" }}*/}
+        {/*              className={*/}
+        {/*                typography.paragraph + " " + utilities.top_margin*/}
+        {/*              }*/}
+        {/*            >*/}
+        {/*              Apply*/}
+        {/*            </Button>*/}
+        {/*          </AccordionPanel>*/}
+        {/*        </AccordionItem>*/}
+        {/*      );*/}
+        {/*    })}*/}
+        {/*  </Accordion>*/}
+        {/*</div>*/}
       </div>
     </div>
   );

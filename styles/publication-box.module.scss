@@ -4,32 +4,38 @@
 .container {
   display: flex;
   flex-flow: column wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-items: flex-start;
-  width: 25rem;
+  width: 65rem !important;
+  min-width: 65rem !important;
+  max-width: 65rem !important;
+
+  @include respond(tab) {
+    width: 51rem !important;
+    min-width: 51rem !important;
+    max-width: 51rem !important;
+  }
   @include respond(phone) {
-    width: 100vw;
+    width: 38rem !important;
+    min-width: 38rem !important;
+    max-width: 38rem !important;
   }
 }
 
 .image {
-  object-fit: fill;
   width: 25rem;
   height: 19rem;
   @include respond(phone) {
     width: 100vw;
-    object-fit: cover;
   }
   &_container {
     position: relative;
-    max-width: 23rem;
-    max-height: 18rem;
-    min-width: 23rem;
-    min-height: 18rem;
+    width: 23rem;
+    height: 18rem;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     overflow: hidden;
     transition: 0.25s ease-out;
     &:hover {
@@ -38,10 +44,11 @@
     }
     @include respond(phone) {
       width: 100vw;
-      max-width: unset;
-      max-height: 18rem;
-      min-width: unset;
-      min-height: 18rem;
+      //max-width: unset;
+      //max-height: 22rem;
+      //min-width: unset;
+      //min-height: 22rem;
+      border-radius: 0;
     }
   }
   &_category {
@@ -61,7 +68,7 @@
       margin: 0;
     }
     @include respond(phone) {
-      width: 100vw;
+      //width: 100vw;
     }
   }
 }

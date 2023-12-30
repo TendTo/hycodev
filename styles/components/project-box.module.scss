@@ -16,6 +16,16 @@
     border-radius: 1rem;
     margin: 4rem;
     overflow: hidden;
+    @include respond(tab) {
+      height: auto;
+      width: 56rem;
+      margin: 4rem 1rem;
+    }
+    @include respond(phone) {
+      height: auto;
+      width: auto;
+      margin: 4rem 1rem;
+    }
   }
 
   &__image {
@@ -23,14 +33,15 @@
     aspect-ratio: 1.4/1;
     height: 40.5rem;
     position: absolute;
-    //transform: translateY(25%);
     z-index: 0;
     float: left;
+    @include respond(tab) {
+      justify-self: center;
+    }
   }
   &__content {
     display: flex;
     height: 40.5rem;
-    //padding: 2rem 1rem;
     gap: 3rem;
     justify-content: flex-end;
     align-items: center;
@@ -41,16 +52,35 @@
       rgba(255, 255, 255, 0.65) 100%
     );
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @include respond(tab) {
+      clip-path: circle(100% at 50% 50%);
+      gap: 2rem;
+      height: auto;
+      flex-flow: column wrap;
+    }
+    @include respond(phone) {
+      padding-bottom: 2rem;
+      gap: 0;
+      text-align: center;
+    }
   }
 
   &__list {
     width: 32rem;
-    justify-content: center;
-    align-content: flex-end;
-    display: flex;
-    gap: 2rem;
-    flex-flow: column;
-
+    padding: 1rem;
+    overflow: scroll !important;
+    height: 34rem;
+    @include respond(tab) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      width: 48rem;
+      justify-self: center;
+      padding: 2rem;
+    }
+    @include respond(phone) {
+      width: auto;
+    }
     &__item {
       border-radius: 0.1rem;
       display: flex;
@@ -58,6 +88,7 @@
       justify-content: space-around;
       background-color: $color-light-blue;
       padding: 1rem;
+      margin-bottom: 1rem;
       width: 90%;
       box-shadow: (0px 0.25rem 0.5rem rgb($color-black, 0.25));
       transition: 0.2s;
@@ -65,12 +96,23 @@
         scale: 1.05;
         transition: 0.2s;
       }
+      @include respond(tab) {
+        width: 48%;
+      }
     }
   }
   &__summary {
     width: 32rem;
     display: flex;
     flex-flow: column;
+    @include respond(tab) {
+      width: 65%;
+      margin-top: 4rem;
+    }
+    @include respond(phone) {
+      width: auto;
+      margin: 2rem;
+    }
   }
 }
 .divider {
@@ -78,6 +120,9 @@
   width: 0.2rem;
   border-radius: 0.25rem;
   background-color: #d9d9d9;
+  @include respond(tab) {
+    display: none;
+  }
 }
 .arrow {
   display: inline-block;

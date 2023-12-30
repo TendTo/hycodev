@@ -38,6 +38,9 @@
   @include respond(phone) {
     font-size: 1.6rem;
   }
+  @include respond(big-desktop) {
+    font-size: 2.5rem;
+  }
   &__white {
     @extend .heading_tertiary;
     color: $color-white;
@@ -59,6 +62,9 @@
   list-style-type: auto;
   @include respond(phone) {
     font-size: 1.5rem;
+  }
+  @include respond(big-desktop) {
+    font-size: 1.875rem;
   }
   &__lighter {
     @extend .paragraph;
@@ -92,6 +98,9 @@
     @extend .paragraph;
     font-size: 1.25rem;
     color: $color-dark-grey;
+    @include respond(big-desktop) {
+      font-size: 1.56rem;
+    }
     &__lighter {
       @extend .paragraph__small;
       color: $color-grey;

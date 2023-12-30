@@ -1,13 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
-
 @import "../scss/abstracts/_mixins.module.scss";
 @import "../scss/abstracts/_variables.module.scss";
 @import "../scss/base/typography.module.scss";
 @import "../scss/base/_resets.module.scss";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 100 1000;
+  font-stretch: 0% 200%;
+  src: url(https://hycodev.com/_next/public/fonts/OpenSans.ttf)
+    format("truetype");
+}
 
 html,
 body {
@@ -36,7 +44,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 1.5rem;
+  width: 1.25rem;
   margin: 0.1rem;
   border: solid white 5px;
 }

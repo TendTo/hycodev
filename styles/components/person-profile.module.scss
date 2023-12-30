@@ -1,3 +1,5 @@
+@import "../../scss/abstracts/mixins.module";
+
 .member {
   display: flex;
   justify-content: flex-start;
@@ -8,7 +10,11 @@
   overflow: hidden;
   text-align: center;
   height: auto;
-
+  filter: drop-shadow(0 5px 3px rgb(0, 0, 0, 0.2));
+  @include respond(big-desktop) {
+    max-width: 17rem;
+    min-width: 17rem;
+  }
   &_name {
     font-weight: 700;
     font-size: 1rem;
@@ -40,6 +46,10 @@
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 0.5rem;
+    @include respond(big-desktop) {
+      width: 17rem;
+      height: 17rem;
+    }
   }
   &_names {
   }

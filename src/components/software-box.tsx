@@ -6,7 +6,7 @@ import utilities from "../../scss/base/_utilities.module.scss";
 import button from "../../styles/components/button.module.scss";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
+import { Button } from "@chakra-ui/react";
 const SoftwareBox = ({
   reverse,
   image,
@@ -59,24 +59,23 @@ const SoftwareBox = ({
           {text}
         </p>
         <div className={styles.container__buttons}>
-          <a
+          <Button
+            size="lg"
             href={linkPaper}
-            style={{ textDecoration: "none", fontWeight: 600 }}
-            className={
-              button.button__bordered + " " + typography.paragraph__small
-            }
+            style={{ textDecoration: "none" }}
+            className={typography.paragraph}
           >
             Read the paper
-          </a>
-          <a
+          </Button>
+          <Button
+            size="lg"
             href={linkDownload}
-            style={{ textDecoration: "none", fontWeight: 600 }}
-            className={
-              button.button__bordered + " " + typography.paragraph__small
-            }
+            style={{ textDecoration: "none" }}
+            className={typography.paragraph}
+            variant="outline"
           >
             Download
-          </a>
+          </Button>
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
   position: relative;
-  @include respond(phone) {
+  @media screen and (max-width: 900px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,10 +21,14 @@
   align-content: space-around;
   width: 50rem;
   text-align: justify;
-  padding: 0rem 0 0 12rem;
+  padding: 0 0 0 12rem;
   min-height: 60rem;
   position: absolute;
-  @include respond(phone) {
+  @include respond(big-desktop) {
+    width: 60rem;
+    min-height: 75rem;
+  }
+  @media screen and (max-width: 900px) {
     position: relative;
     width: auto;
     padding: 12rem 4rem 2rem 4rem;
@@ -43,22 +47,26 @@
   flex-flow: row;
   justify-content: flex-end;
   align-content: flex-end;
-  transition: 0.75s;
+  transition: 0.1s ease-in;
   transform: translateX(2%) skew(5deg);
   filter: drop-shadow(-20px 0px 8px rgb($color-black, 0.25));
-  @include respond(phone) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
+  //&:hover {
+  //  transform: translateX(0%) skew(0deg);
+  //  transition: 0.2s;
+  //}
 }
 .topic {
   &__backdrop {
-    background-color: rgba(22, 22, 22, 0.6);
+    background-color: rgba(22, 22, 22, 0.75);
     position: absolute;
     z-index: 4;
     height: 100%;
     width: 100vw;
     opacity: 0;
-    transition: 0.75s;
+    transition: 0.75s ease-in-out;
   }
   &__image {
     display: flex;
@@ -66,19 +74,27 @@
     align-items: center;
     align-content: center;
     position: relative;
-    height: 60rem;
+    height: 56rem;
     width: 12rem;
     margin: 0;
     padding: 0;
     overflow: clip;
-    transition: 0.75s;
+    transition: 0.75s ease-in-out;
     z-index: 2;
-    @include respond(phone) {
+    @include respond(big-desktop) {
+      height: 75rem;
+      width: 15rem;
+    }
+    @include respond(tab) {
+      width: 8rem;
+    }
+    @media screen and (max-width: 900px) {
       height: 15rem;
       width: 100vw;
     }
+
     &:hover {
-      transition: 0.75s;
+      transition: 0.75s ease-in-out;
       width: 100rem;
       filter: brightness(100%);
     }
@@ -87,7 +103,7 @@
     }
     &:hover .topic__text {
       opacity: 1;
-      transition: 0.75s;
+      transition: 1s cubic-bezier(0.97, 0.06, 0.3, -0.25);
     }
     &:hover .topic__backdrop {
       opacity: 1;
@@ -100,14 +116,13 @@
     align-content: space-between;
     justify-content: space-between;
     margin: 4rem;
-
     width: 50%;
     min-height: 15rem;
     position: absolute;
     opacity: 0;
-    transition: 0.75s;
+    transition: 0.25s ease-out;
     transform: skew(-5deg);
-    text-align: justify;
+    text-align: left;
     z-index: 5;
   }
   &__link {
@@ -127,43 +142,43 @@
 }
 /* Add this as a global typography style*/
 .heading_primary {
-  font-family: "Barlow Condensed";
-  font-size: 8rem;
+  font-size: 7.5rem;
   font-weight: 700;
-  text-shadow: rgba(56, 236, 178, 0.45) 4px 2px,
-    rgba(45, 157, 255, 0.35) 8px 4px;
+  text-shadow: rgba(56, 236, 178, 0.4) 4px 2px, rgba(45, 157, 255, 0.3) 8px 4px;
   margin: 0;
-  @include respond(phone) {
+  font-family: sansCond;
+  @media screen and (max-width: 900px) {
     display: none;
+  }
+  @include respond(big-desktop) {
+    font-size: 9rem;
   }
 }
 
 .mobile_heading {
   display: none;
-  font-size: 3.2rem;
-  font-weight: 800;
+  font-size: 2.8rem;
+  font-weight: 700;
   color: $color-black;
   line-height: 1.075;
-  font-family: "Barlow Condensed";
   width: 30rem;
-  @include respond(phone) {
+  @media screen and (max-width: 900px) {
     display: block;
   }
 }
 .mobile_logo {
   display: none;
-
   animation: 3s infinite float;
-  @include respond(phone) {
+  @media screen and (max-width: 900px) {
     display: block;
   }
 }
 .heading_slide {
   font-size: 4.5rem;
-  font-weight: 600;
+  font-weight: 700;
   color: white;
-  font-family: "Barlow Condensed", sans-serif;
-  @include respond(phone) {
+  line-height: 1.15;
+  @media screen and (max-width: 900px) {
     font-size: 3.6rem;
   }
 }
@@ -173,8 +188,11 @@
   font-weight: 400;
   color: white;
   margin: 0;
-  @include respond(phone) {
+  @media screen and (max-width: 900px) {
     font-size: 1.2rem;
+  }
+  @include respond(big-desktop) {
+    font-size: 1.875rem;
   }
 }
 .slide {
@@ -199,16 +217,22 @@
   border-radius: 0.75rem;
   z-index: 8;
   top: 62%;
-  left: 36%;
+  right: 62rem;
   background-color: rgb(#cee8ff, 0.6);
   box-shadow: 5px 5px 8px rgb($color-black, 0.3);
   padding: 1rem 4rem;
   transform: scale(1);
   animation: pulse-black 2s infinite;
+  @include respond(big-desktop) {
+    right: 75rem;
+  }
+  @include respond(tab) {
+    right: 40rem;
+  }
   &:hover {
     scale: 1.05;
   }
-  @include respond(phone) {
+  @media screen and (max-width: 900px) {
     color: $color-white !important;
     background-color: $color-light-blue;
     font-weight: 400 !important;
@@ -227,24 +251,8 @@
   }
 }
 
-@keyframes pulse-black {
-  0% {
-    transform: scale(0.98);
-    box-shadow: 0 0 0 0 rgb(#cee8ff, 1);
-  }
-
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgb(#cee8ff, 0);
-  }
-
-  100% {
-    transform: scale(0.98);
-    box-shadow: 0 0 0 0 rgb(#cee8ff, 0);
-  }
-}
 .mobile_text {
-  @include respond(phone) {
+  @media screen and (max-width: 900px) {
     display: flex;
     align-items: center;
     flex-flow: column wrap;
@@ -255,6 +263,7 @@
   height: 50rem;
   width: 100vw;
   position: relative;
+  filter: drop-shadow(0 5px 5px rgb(0, 0, 0, 0.25));
   &__slide {
     position: relative;
     display: flex !important;
@@ -295,5 +304,21 @@
   100% {
     filter: drop-shadow(1px 5px 4px rgb($color-black, 0.25));
     transform: translatey(0px);
+  }
+}
+@keyframes pulse-black {
+  0% {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 0 rgb(#cee8ff, 1);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgb(#cee8ff, 0);
+  }
+
+  100% {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 0 rgb(#cee8ff, 0);
   }
 }

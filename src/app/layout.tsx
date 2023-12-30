@@ -3,7 +3,7 @@
 import Navigation from "../components/navigation";
 import global from "../../styles/globals.scss";
 import { Providers } from "./providers";
-
+import type { NextWebVitalsMetric } from "next/app";
 import React from "react";
 import Footer from "../components/footer";
 import SplashScreen from "../components/splash-screen";
@@ -31,4 +31,9 @@ export default function RootLayout({
       </body>
     </html>
   );
+}
+export function reportWebVitals(metric: NextWebVitalsMetric) {
+  if (metric.label === "web-vital") {
+    console.log(metric); // The metric object ({ id, name, startTime, value, label }) is logged to the console
+  }
 }

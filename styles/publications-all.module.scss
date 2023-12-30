@@ -1,9 +1,46 @@
 @import "../scss/abstracts/variables.module";
 @import "../scss/abstracts/mixins.module";
 .container {
+  &__years {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    flex-flow: row wrap;
+    &__mobile {
+      @extend .container__years;
+      display: none;
+      @include respond(phone) {
+        display: flex;
+      }
+    }
+    &__desktop {
+      @extend .container__years;
+      display: flex;
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
+  &__sorting {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    margin-bottom: 4rem;
+    flex-flow: row nowrap;
+  }
+  &__article {
+    padding: 4rem 8rem;
+    @include respond(phone) {
+      display: flex;
+      align-items: center;
+      flex-flow: wrap column;
+      padding: 2rem;
+      margin-bottom: 8rem;
+    }
+  }
 }
 .content {
-  display: flex;
+  //display: flex;
   position: relative;
   @include respond(phone) {
     flex-flow: wrap column;
@@ -11,20 +48,18 @@
 }
 
 .article {
-  &_wrapper {
-    //display: flex;
-    padding: 4rem 6rem;
-    @include respond(phone) {
-      padding: 0;
-    }
-  }
   &_boxes {
     display: flex;
     flex-flow: wrap row;
-    gap: 4rem;
-    transform: translateX(-1rem);
+    justify-content: space-between;
+    gap: 3rem;
+    @include respond(tab) {
+      gap: 2rem;
+    }
     @include respond(phone) {
       justify-content: center;
+      //align-content: center;
+      //flex-flow: wrap column;
     }
   }
 }
@@ -69,8 +104,23 @@
     }
   }
 }
+@keyframes pulse-black {
+  0% {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 0 rgb(#cee8ff, 1);
+  }
 
-.container_years {
-  display: flex;
-  gap: 2rem;
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgb(#cee8ff, 0);
+  }
+
+  100% {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 0 rgb(#cee8ff, 0);
+  }
+}
+
+.animation {
+  animation: pulse-black 2s infinite;
 }

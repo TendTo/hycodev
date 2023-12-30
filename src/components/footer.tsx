@@ -3,6 +3,7 @@ import typography from "../../scss/base/_typography.module.scss";
 import utilities from "../../scss/base/_utilities.module.scss";
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer className={styles.container}>
@@ -23,50 +24,47 @@ const Footer = () => {
               justifyContent: "space-around",
             }}
           >
-            <h3
-              className={typography.heading_tertiary_thick}
-              style={{ fontStretch: "condensed" }}
-            >
+            <h3 className={typography.paragraph_highlighted}>
               Hybrid Systems: Control, Design and Verification Lab
             </h3>
             <div className={styles.container__links}>
-              <a
+              <Link
                 href={"/the-team"}
                 className={styles.paragraph + " " + styles.link}
               >
                 THE TEAM
-              </a>
-              <a
+              </Link>
+              <Link
                 href={"/publications-all"}
                 className={styles.paragraph + " " + styles.link}
               >
                 PUBLICATIONS
-              </a>
-              <a
+              </Link>
+              <Link
                 href={"/software"}
                 className={styles.paragraph + " " + styles.link}
               >
                 SOFTWARE
-              </a>
-              <a
+              </Link>
+              <Link
                 href={"/join-us"}
                 className={styles.paragraph + " " + styles.link}
               >
                 JOIN US
-              </a>
+              </Link>
             </div>
           </div>
         </div>
 
-        <a href={"https://www.ncl.ac.uk/"} target={"_blank"}>
-          <Image
-            src={"/../public/images/home/ncl_logo.png"}
-            width={100}
-            height={30}
-            quality={100}
-            key={"/../public/images/home/ncl_logo.png"}
-          ></Image>
-        </a>
+        {/*<a href={"https://www.ncl.ac.uk/"} target={"_blank"}>*/}
+        {/*  <Image*/}
+        {/*    src={"/../public/images/home/ncl_logo.png"}*/}
+        {/*    width={100}*/}
+        {/*    height={30}*/}
+        {/*    quality={100}*/}
+        {/*    key={"/../public/images/home/ncl_logo.png"}*/}
+        {/*  ></Image>*/}
+        {/*</a>*/}
         <a href={"https://www.mpi-sws.org/"} target={"_blank"}>
           <Image
             src={"/../public/images/home/mpi-sws.png"}

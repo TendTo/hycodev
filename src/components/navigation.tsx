@@ -20,8 +20,8 @@ const Navigation = () => {
     height: (100 / 3) * 1.25,
   };
   const imageSizeMobile = {
-    width: 392 / 4,
-    height: 100 / 4,
+    width: 392 / 2.5,
+    height: 100 / 2.5,
   };
   const checkHandler = () => {
     setIsOpen(!isOpen);
@@ -61,16 +61,16 @@ const Navigation = () => {
         <Image
           src="/../public/images/logo-hycodev.png"
           alt={"hycodev logo"}
-          width={width < 600 ? imageSizeMobile.width : imageSizeDesktop.width}
+          width={width < 800 ? imageSizeMobile.width : imageSizeDesktop.width}
           height={
-            width < 600 ? imageSizeMobile.height : imageSizeDesktop.height
+            width < 800 ? imageSizeMobile.height : imageSizeDesktop.height
           }
           className={styles.navbar_image}
         />
       </a>
       <div
         style={
-          width < 600
+          width < 800
             ? {
                 display: "flex",
                 width: "4rem",
@@ -97,31 +97,30 @@ const Navigation = () => {
       </div>
       <div
         className={styles.links}
-        style={width >= 600 ? { display: "block" } : { display: "none" }}
+        style={width >= 800 ? { display: "block" } : { display: "none" }}
         animate={isOpen ? "open" : "closed"}
         variants={variants}
       >
         <Link href="/home" className={styles.navbar_item}>
-          HOME
+          Home
         </Link>
         <Link href="/the-team" className={styles.navbar_item}>
-          THE TEAM
+          The Team
         </Link>
         <Link href="/publications-all" className={styles.navbar_item}>
-          PUBLICATIONS
+          Publications
         </Link>
         <Link href="/software" className={styles.navbar_item}>
-          SOFTWARE
+          Software
         </Link>
-
         <Link href="/join-us" className={styles.navbar_item}>
-          JOIN US
+          Join Us
         </Link>
       </div>
       <motion.nav
         className={styles.links}
         style={
-          isOpen && width < 600 ? { display: "block" } : { display: "none" }
+          isOpen && width < 800 ? { display: "block" } : { display: "none" }
         }
         animate={isOpen ? "open" : "closed"}
         variants={variants}
@@ -133,7 +132,7 @@ const Navigation = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link href="/home" className={styles.navbar_item}>
-              HOME
+              Home
             </Link>
           </motion.li>
           <motion.li
@@ -142,7 +141,7 @@ const Navigation = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link href="/the-team" className={styles.navbar_item}>
-              THE TEAM
+              The Team
             </Link>
           </motion.li>
           <motion.li
@@ -151,7 +150,7 @@ const Navigation = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link href="/publications-all" className={styles.navbar_item}>
-              PUBLICATIONS
+              Publications
             </Link>
           </motion.li>
           <motion.li
@@ -160,7 +159,7 @@ const Navigation = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link href="/software" className={styles.navbar_item}>
-              SOFTWARE
+              Software
             </Link>
           </motion.li>
           <motion.li
@@ -169,7 +168,7 @@ const Navigation = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link href="/join-us" className={styles.navbar_item}>
-              JOIN US
+              Join Us
             </Link>
           </motion.li>
         </motion.ul>

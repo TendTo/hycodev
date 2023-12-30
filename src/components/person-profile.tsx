@@ -16,10 +16,17 @@ const PersonProfile = ({ name, role, image, link }) => {
         />
       </div>
       <div className={styles.wrapper_names}>
-        <a href={link} style={{ textDecoration: "none" }}>
-          <p className={typography.paragraph_highlighted}>{name}</p>
-          <p className={typography.paragraph__small}>{role}</p>
-        </a>
+        {link ? (
+          <a href={link} style={{ textDecoration: "none" }}>
+            <p className={typography.paragraph_highlighted}>{name}</p>
+            <p className={typography.paragraph__small}>{role}</p>
+          </a>
+        ) : (
+          <div>
+            <p className={typography.paragraph_highlighted}>{name}</p>
+            <p className={typography.paragraph__small}>{role}</p>
+          </div>
+        )}
       </div>
     </div>
   );

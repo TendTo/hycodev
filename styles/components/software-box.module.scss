@@ -2,23 +2,37 @@
 @import "../../scss/abstracts/variables.module";
 
 .container {
-  margin: 4rem;
   width: 123rem;
   height: 45rem;
   text-align: justify;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 8rem;
+  gap: 4rem;
+  @include respond(tab) {
+    width: 70rem;
+    flex-flow: column-reverse wrap;
+    height: auto;
+    margin: 0;
+    padding: 0 2rem;
+    align-items: center;
+    gap: 4rem;
+  }
   @include respond(phone) {
     width: 45rem;
     flex-flow: column-reverse wrap;
     height: auto;
     margin: 0;
-    padding: 0rem 2rem;
+    padding: 0 2rem;
     align-items: center;
     gap: 4rem;
   }
+  @include respond(big-desktop) {
+    width: 123rem;
+    height: 56.25rem;
+    gap: 5rem;
+  }
+
   &__buttons {
     display: flex;
     justify-content: flex-start;
@@ -44,6 +58,9 @@
   }
   &__text {
     width: 65rem;
+    @include respond(tab) {
+      width: 50rem;
+    }
     @include respond(phone) {
       width: 40rem;
     }

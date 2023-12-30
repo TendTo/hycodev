@@ -1,10 +1,7 @@
 import SoftwareBox from "../../components/software-box";
 import CustomBanner from "../../components/custom-banner";
-import typography from "../../../scss/base/_typography.module.scss";
-import utilities from "../../../scss/base/_utilities.module.scss";
 import styles from "../../../styles/page-software.module.scss";
 import { software } from "../../assets/software";
-import Divider from "../../components/divider";
 
 export default function Software() {
   const backdrop = {
@@ -37,7 +34,6 @@ export default function Software() {
               linkDownload={article.linkDownload}
               reverse={article.reverse}
             />
-            <Divider />
           </div>
         ))}
       </div>

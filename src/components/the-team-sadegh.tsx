@@ -2,14 +2,19 @@ import styles from "../../styles/components/the-team-sadegh.module.scss";
 import Image from "next/image";
 import typography from "../../scss/base/_typography.module.scss";
 import utilities from "../../scss/base/_utilities.module.scss";
-import button from "../../styles/components/button.module.scss";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverBody,
+  PopoverArrow,
+  Button,
+} from "@chakra-ui/react";
 
+import { PhoneIcon, EmailIcon, InfoOutlineIcon } from "@chakra-ui/icons";
 const TheTeamSadegh = () => {
   return (
     <div className={styles.container}>
-      <h1 className={typography.heading_primary + " " + utilities.bot_margin}>
-        Meet the Team
-      </h1>
       <div className={styles.sadegh_box}>
         <div className={styles.image_wrapper}>
           <Image
@@ -19,14 +24,17 @@ const TheTeamSadegh = () => {
           />
         </div>
         <div className={styles.sadegh_box__text}>
-          <h2 className={typography.heading_secondary}>Sadegh Soudjani</h2>
-          <h3
-            className={
-              typography.paragraph__lighter + " " + utilities.bot_margin
-            }
-          >
-            Associate Professor
-          </h3>
+          <div>
+            <h2 className={typography.heading_secondary}>Sadegh Soudjani</h2>
+            <h3
+              className={
+                typography.paragraph__lighter + " " + utilities.bot_margin
+              }
+            >
+              Associate Professor
+            </h3>
+          </div>
+
           <p className={typography.paragraph + " " + utilities.bot_margin}>
             My research aim is to develop an integrated environment for
             programming, verifying, and designing high-performance and scalable
@@ -40,28 +48,89 @@ const TheTeamSadegh = () => {
             Systems & Control, all with distinction.
           </p>
           <div className={styles.contact_wrapper}>
-            <p className={typography.paragraph__small}>
-              <strong>Email:</strong> sadegh.soudjani@ncl.ac.uk
-            </p>
-            <p className={typography.paragraph__small}>
-              <strong>Phone:</strong> +44 191 208 7856
-            </p>
-            <p
-              className={
-                typography.paragraph__small + " " + utilities.bot_margin__small
-              }
+            <div className={styles.contact_wrapper}>
+              <Popover>
+                <PopoverTrigger>
+                  <Button
+                    className={typography.paragraph}
+                    leftIcon={<EmailIcon />}
+                  >
+                    Email
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent>
+                  <PopoverArrow />
+                  <PopoverBody
+                    className={
+                      typography.paragraph + " " + utilities.padding_all
+                    }
+                  >
+                    sadegh.soudjani@ncl.ac.uk
+                  </PopoverBody>
+                </PopoverContent>
+              </Popover>
+              <Popover>
+                <PopoverTrigger>
+                  <Button
+                    className={typography.paragraph}
+                    leftIcon={<PhoneIcon />}
+                  >
+                    Phone
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent>
+                  <PopoverArrow />
+
+                  <PopoverBody className={typography.paragraph}>
+                    +44 191 208 7856
+                  </PopoverBody>
+                </PopoverContent>
+              </Popover>
+              <Popover>
+                <PopoverTrigger>
+                  <Button
+                    className={typography.paragraph}
+                    leftIcon={<InfoOutlineIcon />}
+                  >
+                    Office
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent>
+                  <PopoverArrow />
+                  <PopoverBody className={typography.paragraph}>
+                    6.035, Urban Sciences Building, 1 Science Square, Newcastle
+                    Upon Tyne, NE4 5TG, United Kingdom
+                  </PopoverBody>
+                </PopoverContent>
+              </Popover>
+            </div>
+            <Button
+              className={typography.paragraph__small__white}
+              colorScheme="green"
+              variant="solid"
             >
-              <strong>Office:</strong> 6.035, Urban Sciences Building, 1 Science
-              Square, Newcastle Upon Tyne, NE4 5TG, United Kingdom
-            </p>
-            <a
-              className={button.button + " " + typography.paragraph__small}
-              href={"/sadegh-soudjani"}
-            >
-              Learn More
-            </a>
+              <a href={"/ssoudjani"}>Learn More</a>
+            </Button>
           </div>
         </div>
+        {/*<div className={styles.sadegh_box__text__small}>*/}
+        {/*  <div>*/}
+        {/*    <h2 className={typography.heading_secondary}>Research Interests</h2>*/}
+        {/*  </div>*/}
+        {/*  <ul className={typography.paragraph + " " + utilities.bot_margin}>*/}
+        {/*    <li>Formal Synthesis</li>*/}
+        {/*    <li>*/}
+        {/*      Abstraction and Verification (over probabilistic temporal*/}
+        {/*      specifications)*/}
+        {/*    </li>*/}
+        {/*    <li>Cyber-Physical Systems</li>*/}
+        {/*    <li>Stochastic Hybrid Systems</li>*/}
+        {/*    <li>Smart Grids</li>*/}
+        {/*    <li>Power and Energy Networks</li>*/}
+        {/*    <li>Transportation Systems</li>*/}
+        {/*    <li>Systems Biology</li>*/}
+        {/*  </ul>*/}
+        {/*</div>*/}
       </div>
     </div>
   );
