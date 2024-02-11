@@ -8,6 +8,15 @@ const nextConfig = {
     loaderFile: "./image_loader.ts",
     path: "/",
   },
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/home",
+        permanent: true,
+      },
+    ];
+  },
   // output: "export",
 };
 
