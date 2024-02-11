@@ -3,11 +3,11 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // images: {
-  //   loader: "custom",
-  //   loaderFile: "./image_loader.ts",
-  //   path: "/",
-  // },
+  images: {
+    loader: "custom",
+    loaderFile: "./image_loader.ts",
+    path: "/",
+  },
   // output: "export",
 };
 
