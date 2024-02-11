@@ -10,7 +10,7 @@ const PersonProfile = ({ name, role, image, link }) => {
         <Image
           className={styles.member_profile}
           src={image}
-          alt={name}
+          alt={"Picture of " + name}
           fill={true}
           objectFit="cover"
         />

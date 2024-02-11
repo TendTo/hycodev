@@ -1,6 +1,10 @@
 "use client";
 
-import { Staff, Collaborators } from "../../assets/hycodev-members";
+import {
+  Staff,
+  Collaborators,
+  PastMembers,
+} from "../../assets/hycodev-members";
 
 import styles from "../../../styles/page-the-team.module.scss";
 import PersonBox from "../../components/person-profile";
@@ -21,8 +25,11 @@ import CustomBanner from "../../components/custom-banner";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 export default function theTeam() {
-  const [width, setWindowWidth] = useState(0);
-  const [selectedRole, setSelectedRole] = useState("");
+  useEffect(() => {
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
   function RenderSort() {
     if (width < 600) {
       return (
@@ -92,26 +99,38 @@ export default function theTeam() {
       });
     }
   }
-
-  useEffect(() => {
-    updateDimensions();
-    window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
-
+  function MembersSort(members) {
+    members.sort((a, b) =>
+      a.name.split(" ")[a.name.split(" ").length - 1] >
+      b.name.split(" ")[b.name.split(" ").length - 1]
+        ? 1
+        : b.name.split(" ")[b.name.split(" ").length - 1] >
+          a.name.split(" ")[a.name.split(" ").length - 1]
+        ? -1
+        : 0
+    );
+    return members;
+  }
+  const [width, setWindowWidth] = useState(0);
+  const [selectedRole, setSelectedRole] = useState("");
   const updateDimensions = () => {
     const width = window.innerWidth;
     setWindowWidth(width);
   };
-
   const splitRoles = Staff.flatMap((box) => box.role);
-  const roles = Array.from(new Set(splitRoles));
+  let roles = Array.from(new Set(splitRoles));
+  roles = roles.reverse();
+
+  const staff_sorted = MembersSort(Staff);
+  const collaborators_sorted = MembersSort(Collaborators);
+  const past_members_sorted = MembersSort(PastMembers);
 
   const filteredStaff = selectedRole
-    ? Staff.filter((publicationBox) =>
+    ? staff_sorted.filter((publicationBox) =>
         publicationBox.role.includes(selectedRole)
       )
-    : Staff;
+    : staff_sorted;
+
   const size = {
     size: {
       minHeight: "18rem",
@@ -128,6 +147,7 @@ export default function theTeam() {
         source={"/../public/images/meet_the_team.jpg"}
         size={size}
         backdrop={backdrop}
+        alt={"Photograph of Cozy Office Space With People"}
       ></CustomBanner>
       <div className={styles.container}>
         {<TheTeamSadegh />}
@@ -178,10 +198,28 @@ export default function theTeam() {
               typography.heading_secondary__light + " " + utilities.bot_margin
             }
           >
+            Past Members
+          </h3>
+          <div className={styles.team}>
+            {past_members_sorted.map((researcher, index) => (
+              <PersonBox
+                image={researcher.image}
+                name={researcher.name}
+                role={researcher.title}
+                link={researcher.link}
+              />
+            ))}
+          </div>
+          <Divider class={utilities.bot_margin + utilities.top_margin} />
+          <h3
+            className={
+              typography.heading_secondary__light + " " + utilities.bot_margin
+            }
+          >
             Collaborators
           </h3>
           <div className={styles.team}>
-            {Collaborators.map((researcher, index) => (
+            {collaborators_sorted.map((researcher, index) => (
               <PersonBox
                 image={researcher.image}
                 name={researcher.name}

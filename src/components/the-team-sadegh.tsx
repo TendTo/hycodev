@@ -21,6 +21,7 @@ const TheTeamSadegh = () => {
             src="/../public/images/people/sadegh_soudjani.jpg"
             fill={true}
             objectFit={"cover"}
+            alt={"Picture of Sadegh Soudjani"}
           />
         </div>
         <div className={styles.sadegh_box__text}>
@@ -65,7 +66,7 @@ const TheTeamSadegh = () => {
                       typography.paragraph + " " + utilities.padding_all
                     }
                   >
-                    sadegh.soudjani@ncl.ac.uk
+                    sadegh@mpi-sws.org
                   </PopoverBody>
                 </PopoverContent>
               </Popover>

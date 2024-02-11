@@ -34,14 +34,6 @@ export default function PublicationsAll() {
         publication.year.includes(selectedYear)
       )
     : conv.articles;
-
-  // function sortAsc() {
-  //   const sorted = [...conv.articles].sort((a, b) => {
-  //     return parseInt(a.year) > parseInt(b.year) ? 1 : -1;
-  //   });
-  //   return sorted;
-  // }
-
   return (
     <div className={styles.container}>
       <CustomBanner
@@ -49,6 +41,7 @@ export default function PublicationsAll() {
         source={"/../public/images/publications.jpg"}
         size={size}
         backdrop={backdrop}
+        alt={"Photograph of many books"}
       ></CustomBanner>
       <div className={styles.content}>
         <div className={styles.container__article}>
@@ -60,29 +53,6 @@ export default function PublicationsAll() {
             All Publications
           </h2>
           <div className={styles.container__sorting}>
-            {/*<Menu>*/}
-            {/*  {({ isOpen }) => (*/}
-            {/*    <>*/}
-            {/*      <MenuButton*/}
-            {/*        isActive={isOpen}*/}
-            {/*        as={Button}*/}
-            {/*        rightIcon={<ChevronDownIcon />}*/}
-            {/*      >*/}
-            {/*        {isOpen ? "Sort By" : "Sort By"}*/}
-            {/*      </MenuButton>*/}
-            {/*      <MenuList>*/}
-            {/*        <MenuItem onClick={() => sortAsc()}>*/}
-            {/*          Year (Ascending)*/}
-            {/*        </MenuItem>*/}
-            {/*        <MenuItem>Year (Descending)</MenuItem>*/}
-            {/*        <MenuItem>Citations (Ascending)</MenuItem>*/}
-            {/*        <MenuItem onClick={() => alert("Kagebunshin")}>*/}
-            {/*          Citations (Descending)*/}
-            {/*        </MenuItem>*/}
-            {/*      </MenuList>*/}
-            {/*    </>*/}
-            {/*  )}*/}
-            {/*</Menu>*/}
             <div className={styles.container__years__desktop}>
               {years.map((year, id) => {
                 return (

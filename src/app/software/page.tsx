@@ -17,9 +17,10 @@ export default function Software() {
     <div className={styles.container}>
       <CustomBanner
         title={"Software"}
-        source={"/../public/images/software_new.jpg"}
+        source={"/../public/images/softwaree.jpg"}
         size={size}
         backdrop={backdrop}
+        alt={"Photograph of blurred out code on a computer screens"}
       ></CustomBanner>
       <div className={styles.container__tool}>
         {software.map((article, id) => (

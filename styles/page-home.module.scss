@@ -13,6 +13,12 @@
     justify-items: center;
     flex-flow: column wrap;
   }
+  &__news {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
 }
 
 .container_text {

@@ -1,0 +1,61 @@
+@import "../scss/abstracts/mixins.module";
+
+.container {
+  margin-bottom: 8rem;
+  &__cards {
+    margin: 4rem 8rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+    flex-flow: row wrap;
+    @include respond(phone) {
+      justify-content: center;
+    }
+  }
+  &__text {
+    margin: 4rem 8rem 0rem 8rem;
+    display: flex;
+    flex-flow: wrap column;
+  }
+}
+
+.card {
+  position: relative;
+  height: 20rem;
+  width: 32rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20rem;
+    z-index: 2;
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: wrap column;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.75) 75%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    transition: 0.25s;
+    line-height: 2.25rem;
+    &:hover {
+      backdrop-filter: blur(0.25rem) brightness(60%);
+      transition: 0.25s;
+    }
+  }
+  &__header {
+    position: absolute;
+    height: 4rem;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

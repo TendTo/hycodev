@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "../../styles/components/navigation.module.scss";
 import Image from "next/image";
 import Link from "next/link";
@@ -56,7 +58,7 @@ const Navigation = () => {
     },
   };
   return (
-    <navigation className={styles.container}>
+    <nav className={styles.container}>
       <a href={"/home"}>
         <Image
           src="/../public/images/logo-hycodev.png"
@@ -110,6 +112,9 @@ const Navigation = () => {
         <Link href="/publications-all" className={styles.navbar_item}>
           Publications
         </Link>
+        <Link href="/projects" className={styles.navbar_item}>
+          Projects
+        </Link>
         <Link href="/software" className={styles.navbar_item}>
           Software
         </Link>
@@ -158,6 +163,15 @@ const Navigation = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
+            <Link href="/projects" className={styles.navbar_item}>
+              Projects
+            </Link>
+          </motion.li>
+          <motion.li
+            variants={variantsItem}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <Link href="/software" className={styles.navbar_item}>
               Software
             </Link>
@@ -173,7 +187,7 @@ const Navigation = () => {
           </motion.li>
         </motion.ul>
       </motion.nav>
-    </navigation>
+    </nav>
   );
 };
 export default Navigation;

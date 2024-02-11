@@ -3,7 +3,6 @@
 import styles from "../../styles/components/software-box.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
 import utilities from "../../scss/base/_utilities.module.scss";
-import button from "../../styles/components/button.module.scss";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Button } from "@chakra-ui/react";
@@ -15,6 +14,7 @@ const SoftwareBox = ({
   text,
   linkPaper,
   linkDownload,
+  alt,
 }) => {
   let flexWrapSetting;
   if (reverse) {
@@ -44,7 +44,7 @@ const SoftwareBox = ({
       style={width < 600 ? {} : flexWrapSetting}
     >
       <div className={styles.container__image}>
-        <Image src={image} fill={true} quality={100}></Image>
+        <Image src={image} fill={true} quality={100} alt={alt}></Image>
       </div>
       <div className={styles.container__text}>
         <h1 className={typography.heading_primary} style={{ lineHeight: 1.1 }}>
@@ -61,21 +61,40 @@ const SoftwareBox = ({
         <div className={styles.container__buttons}>
           <Button
             size="lg"
-            href={linkPaper}
             style={{ textDecoration: "none" }}
             className={typography.paragraph}
           >
-            Read the paper
+            <a target="_blank" href={linkPaper}>
+              Read the paper
+            </a>
           </Button>
-          <Button
-            size="lg"
-            href={linkDownload}
-            style={{ textDecoration: "none" }}
-            className={typography.paragraph}
-            variant="outline"
-          >
-            Download
-          </Button>
+          {typeof linkDownload === "object" && linkDownload !== null ? (
+            linkDownload.map((link, id) => {
+              return (
+                <Button
+                  size="lg"
+                  style={{ textDecoration: "none" }}
+                  className={typography.paragraph}
+                  variant="outline"
+                >
+                  <a target="_blank" href={link}>
+                    Download {id}
+                  </a>
+                </Button>
+              );
+            })
+          ) : (
+            <Button
+              size="lg"
+              style={{ textDecoration: "none" }}
+              className={typography.paragraph}
+              variant="outline"
+            >
+              <a target="_blank" href={linkDownload}>
+                Download
+              </a>
+            </Button>
+          )}
         </div>
       </div>
     </section>

@@ -7,6 +7,8 @@ import typography from "../../../scss/base/_typography.module.scss";
 import utilities from "../../../scss/base/_utilities.module.scss";
 import { homeImages } from "../../assets/home-slides";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { News_Items } from "../../assets/news";
+import News from "../../components/news";
 
 // Import Swiper styles
 import "swiper/css";
@@ -30,15 +32,12 @@ export default function Home() {
   };
   const slideRef = useRef(null);
   const [hover, setHover] = useState(-1);
-
   const blurSlide = (i) => {
     setHover(i);
   };
-
   const unblurSlide = () => {
     setHover(-1);
   };
-
   useEffect(() => {
     const slide = slideRef.current;
   }, []);
@@ -56,6 +55,7 @@ export default function Home() {
             height={110 * 1}
             quality={100}
             className={styles.mobile_logo + " " + utilities.bot_margin__small}
+            alt={"HyCoDeV logo"}
           ></Image>
           <h1 className={styles.mobile_heading + " " + utilities.bot_margin}>
             Hybrid Systems: Control, Design and Verification Lab
@@ -76,19 +76,13 @@ export default function Home() {
           <div
             className={styles.container_text_logos + " " + utilities.bot_margin}
           >
-            {/*<Image*/}
-            {/*  src={"/../public/images/home/ncl_logo.png"}*/}
-            {/*  width={200 / 1.75}*/}
-            {/*  height={60 / 1.75}*/}
-            {/*  quality={100}*/}
-            {/*  key={"/../public/images/home/ncl_logo.png"}*/}
-            {/*/>*/}
             <Image
               src={"/../public/images/home/mpi-sws.png"}
               width={350 / 1.75}
               height={60 / 1.75}
               quality={100}
               key={"/../public/images/home/mpi-sws.png"}
+              alt={"Max Planck Institute for Software Systems logo"}
             />
           </div>
         </div>
@@ -153,7 +147,7 @@ export default function Home() {
               style={item.style}
               fill={true}
               quality={80}
-              alt={"energy"}
+              alt={item.alt}
             />
           </div>
         ))}
@@ -174,6 +168,7 @@ export default function Home() {
           height={10}
           style={{ aspectRatio: "2.15/1", scale: "0.75" }}
           quality={100}
+          alt={"Arrow Icon"}
         ></Image>
       </a>
       <Swiper
@@ -223,6 +218,18 @@ export default function Home() {
           );
         })}
       </Swiper>
+      {/*<div className={styles.container_news}>*/}
+      {/*  {News_Items.map((item, id) => {*/}
+      {/*    return (*/}
+      {/*      <News*/}
+      {/*        title={item.title}*/}
+      {/*        description={item.description}*/}
+      {/*        link={item.link}*/}
+      {/*        date={item.date}*/}
+      {/*      ></News>*/}
+      {/*    );*/}
+      {/*  })}*/}
+      {/*</div>*/}
     </div>
   );
 }

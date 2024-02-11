@@ -1,6 +1,5 @@
 import styles from "../../styles/components/footer.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
-import utilities from "../../scss/base/_utilities.module.scss";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
@@ -15,6 +14,7 @@ const Footer = () => {
               width={66}
               height={55}
               quality={100}
+              alt={"HyCoDeV Logo"}
             ></Image>
           </a>
           <div
@@ -56,15 +56,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/*<a href={"https://www.ncl.ac.uk/"} target={"_blank"}>*/}
-        {/*  <Image*/}
-        {/*    src={"/../public/images/home/ncl_logo.png"}*/}
-        {/*    width={100}*/}
-        {/*    height={30}*/}
-        {/*    quality={100}*/}
-        {/*    key={"/../public/images/home/ncl_logo.png"}*/}
-        {/*  ></Image>*/}
-        {/*</a>*/}
         <a href={"https://www.mpi-sws.org/"} target={"_blank"}>
           <Image
             src={"/../public/images/home/mpi-sws.png"}
@@ -72,15 +63,11 @@ const Footer = () => {
             height={30}
             quality={100}
             key={"/../public/images/home/mpi-sws.png"}
+            alt={"Max Planck Institute for Software Systems Logo"}
           ></Image>
         </a>
         <div className={styles.container__socialmedia}>
-          <h3
-            className={typography.paragraph_highlighted}
-            style={{ fontStretch: "condensed" }}
-          >
-            Follow Us
-          </h3>
+          <h3 className={typography.paragraph_highlighted}>Follow us</h3>
           <div className={styles.container__icons}>
             <a href={"https://twitter.com/hycodev1"} target={"_blank"}>
               <Image
@@ -88,6 +75,7 @@ const Footer = () => {
                 width={28}
                 height={28}
                 quality={100}
+                alt={"Twitter Logo"}
               />
             </a>
             <a
@@ -99,6 +87,7 @@ const Footer = () => {
                 width={28}
                 height={28}
                 quality={100}
+                alt={"Youtube Logo"}
               />
             </a>
             <a
@@ -110,6 +99,7 @@ const Footer = () => {
                 width={28}
                 height={28}
                 quality={100}
+                alt={"LinkedIn Logo"}
               />
             </a>
           </div>

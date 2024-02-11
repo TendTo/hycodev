@@ -35,9 +35,7 @@ export default function PublicationBox({
         }}
       >
         <div>
-          <Heading className={typography.heading_tertiary_thick}>
-            {heading}
-          </Heading>
+          <h3 className={typography.heading_tertiary}>{heading}</h3>
           <p className={typography.paragraph__lighter}>{authors}</p>
           <p className={typography.paragraph__lighter}>{publication}</p>
         </div>
@@ -49,10 +47,10 @@ export default function PublicationBox({
               justifyContent: "space-between",
             }}
           >
-            <Button color="blue.600" fontSize="2xl" leftIcon={<EditIcon />}>
+            <Button color="blue.600" fontSize="xl" leftIcon={<EditIcon />}>
               Cited By {citations}
             </Button>
-            <Button color="blue.600" fontSize="2xl" rightIcon={<TimeIcon />}>
+            <Button color="blue.600" fontSize="xl" rightIcon={<TimeIcon />}>
               Year {year}
             </Button>
           </div>
@@ -63,7 +61,7 @@ export default function PublicationBox({
         <ButtonGroup spacing="2">
           <Button
             variant="solid"
-            size="lg"
+            size="md"
             colorScheme="blue"
             className={typography.paragraph__small__white}
           >

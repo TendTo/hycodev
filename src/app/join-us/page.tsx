@@ -24,6 +24,7 @@ export default function joinUs() {
             fill={true}
             objectFit={"cover"}
             quality={100}
+            alt={"Picture of Members of HyCoDeV"}
           ></Image>
         </div>
         <div className={styles.container_banner__text}>

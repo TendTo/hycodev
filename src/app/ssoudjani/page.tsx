@@ -9,10 +9,12 @@ import {
   AccordionItem,
   AccordionPanel,
   Box,
+  Button,
 } from "@chakra-ui/react";
 import button from "../../../styles/components/button.module.scss";
 import styles from "../../../styles/page-sadegh-soudjani.module.scss";
 import Image from "next/image";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function Sadegh() {
   return (
@@ -55,24 +57,6 @@ export default function Sadegh() {
             Planck Institute for Software Systems.
           </p>
         </div>
-        {/*<div className={styles.sadegh_box__text__small}>*/}
-        {/*  <div>*/}
-        {/*    <h2 className={typography.heading_secondary}>Research Interests</h2>*/}
-        {/*  </div>*/}
-        {/*  <ul className={typography.paragraph + " " + utilities.bot_margin}>*/}
-        {/*    <li>Formal Synthesis</li>*/}
-        {/*    <li>*/}
-        {/*      Abstraction and Verification (over probabilistic temporal*/}
-        {/*      specifications)*/}
-        {/*    </li>*/}
-        {/*    <li>Cyber-Physical Systems</li>*/}
-        {/*    <li>Stochastic Hybrid Systems</li>*/}
-        {/*    <li>Smart Grids</li>*/}
-        {/*    <li>Power and Energy Networks</li>*/}
-        {/*    <li>Transportation Systems</li>*/}
-        {/*    <li>Systems Biology</li>*/}
-        {/*  </ul>*/}
-        {/*</div>*/}
       </div>
       <div className={styles.container_introduction}>
         <div className={styles.fact_box}>
@@ -128,6 +112,7 @@ export default function Sadegh() {
         className={styles.accordion}
         style={{ textAlign: "justify" }}
         allowToggle
+        index={[0, 1, 2]}
       >
         <AccordionItem>
           <h2>
@@ -174,12 +159,20 @@ export default function Sadegh() {
               Please send me your full application materials (a complete CV,
               transcripts, and motivation letter).
             </p>
-            <a
-              href="mailto:sadegh.soudjani@ncl.ac.uk"
-              className={button.button + " " + typography.paragraph}
+
+            <Button
+              size="lg"
+              style={{ textDecoration: "none" }}
+              className={typography.paragraph}
+              variant="outline"
             >
-              Apply
-            </a>
+              <a
+                href="mailto:sadegh.soudjani@ncl.ac.uk"
+                className={typography.paragraph}
+              >
+                Apply
+              </a>
+            </Button>
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem>

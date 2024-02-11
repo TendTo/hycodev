@@ -1,0 +1,49 @@
+@import "../../scss/abstracts/variables.module";
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 4rem;
+}
+
+.news_box {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2rem;
+  max-width: 80rem;
+  max-height: 20rem;
+  &:nth-child(odd) .news_box__side {
+    background-color: $color-dark-green;
+  }
+  &:nth-child(even) .news_box__side {
+    background-color: $color-light-blue;
+  }
+  &:hover .news_box__side {
+    width: 3rem;
+    transition: 0.25s;
+  }
+  &__side {
+    height: 100%;
+    width: 1rem;
+    display: flex;
+    transition: 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  &__date {
+    position: absolute;
+    transform: rotate(90deg);
+  }
+  &__text {
+    display: flex;
+    width: 85%;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+}

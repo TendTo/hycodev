@@ -64,3 +64,6 @@ export async function generateStaticParams() {
     id: post.id,
   }));
 }
+
+// @ts-ignore
+export const dynamicParams = false;

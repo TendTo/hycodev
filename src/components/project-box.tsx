@@ -3,7 +3,6 @@ import typography from "../../scss/base/_typography.module.scss";
 import utilities from "../../scss/base/_utilities.module.scss";
 import Image from "next/image";
 const projectBox = (project) => {
-  console.log("Projectaaa:", project);
   return (
     <div className={styles.container}>
       <div className={styles.container__projectBox}>

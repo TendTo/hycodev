@@ -6,19 +6,14 @@
   flex-flow: column wrap;
   align-items: flex-start;
   justify-items: flex-start;
-  width: 65rem !important;
-  min-width: 65rem !important;
-  max-width: 65rem !important;
+  flex: 2 1 45%;
+  width: auto !important;
 
   @include respond(tab) {
-    width: 51rem !important;
-    min-width: 51rem !important;
-    max-width: 51rem !important;
+    flex: 1 1 100%;
   }
   @include respond(phone) {
-    width: 38rem !important;
-    min-width: 38rem !important;
-    max-width: 38rem !important;
+    flex: 1 1 100%;
   }
 }
 

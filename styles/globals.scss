@@ -2,7 +2,7 @@
 @import "../scss/abstracts/_variables.module.scss";
 @import "../scss/base/typography.module.scss";
 @import "../scss/base/_resets.module.scss";
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -13,8 +13,8 @@
   font-style: normal;
   font-weight: 100 1000;
   font-stretch: 0% 200%;
-  src: url(https://hycodev.com/_next/public/fonts/OpenSans.ttf)
-    format("truetype");
+  src: url("../public/fonts/OpenSans.ttf") format("truetype");
+  //https://hycodev.com/_next/public/fonts/OpenSans.ttf
 }
 
 html,
