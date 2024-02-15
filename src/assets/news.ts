@@ -13,4 +13,11 @@ export const News_Items = [
     link: "https://doi.org/10.1007/978-3-031-43835-6_24",
     date: "05 July 2023",
   },
+  {
+    title: "Paper Accepted",
+    description:
+      "Mahmoud Salamati has had a paper accepted in the EMSOFT conference. The paper will also be published in a special issue at ACM transactions. The paper is on neural abstraction-based synthesis with correctness guarantees.",
+    link: "https://doi.org/10.1007/978-3-031-43835-6_24",
+    date: "05 July 2023",
+  },
 ];

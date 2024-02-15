@@ -3,11 +3,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  images: {
-    loader: "custom",
-    loaderFile: "./image_loader.ts",
-    path: "/",
-  },
   async redirects() {
     return [
       {
@@ -16,6 +11,9 @@ const nextConfig = {
         permanent: true,
       },
     ];
+  },
+  images: {
+    domains: ["localhost"],
   },
   // output: "export",
 };

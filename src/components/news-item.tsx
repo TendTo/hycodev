@@ -2,7 +2,7 @@
 
 import styles from "../../styles/components/news.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
-const News = ({ title, description, link, date }) => {
+const NewsItem = ({ title, description, link, date }) => {
   return (
     <div className={styles.news_box}>
       <div className={styles.news_box__side}></div>
@@ -23,4 +23,4 @@ const News = ({ title, description, link, date }) => {
     </div>
   );
 };
-export default News;
+export default NewsItem;

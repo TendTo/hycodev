@@ -12,61 +12,85 @@
     align-content: center;
     justify-items: center;
     flex-flow: column wrap;
+    margin-top: 10rem;
+  }
+  &__desktop {
+    position: relative;
   }
   &__news {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-content: center;
     gap: 2rem;
+    margin: 4rem 2rem;
+    &__items {
+      display: flex;
+      flex-flow: column wrap;
+      gap: 2rem;
+    }
   }
-}
-
-.container_text {
-  display: flex;
-  flex-flow: wrap row;
-  align-content: space-around;
-  width: 50rem;
-  text-align: justify;
-  padding: 0 0 0 12rem;
-  min-height: 60rem;
-  position: absolute;
-  @include respond(big-desktop) {
-    width: 60rem;
-    min-height: 75rem;
-  }
-  @media screen and (max-width: 900px) {
+  &__showcase {
     position: relative;
-    width: auto;
-    padding: 12rem 4rem 2rem 4rem;
-    text-align: center;
-  }
-  &_logos {
     display: flex;
+    flex-flow: row;
+    transition: 0.75s ease-in-out !important;
+    background-color: $color-black;
+    filter: drop-shadow(0 0.25rem 0.5rem rgb($color-black, 0.25))
+      brightness(25%) blur(0.1rem);
+    &:hover {
+      transition: 0.75s ease-in-out !important;
+      filter: drop-shadow(0 0.25rem 0.5rem rgb($color-black, 0.25))
+        brightness(100%) blur(0);
+    }
+    &:hover + .container__text {
+      opacity: 0;
+      transition: 0.5s ease-in-out !important;
+    }
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-flow: wrap column;
     align-items: center;
-    gap: 2rem;
-    justify-content: space-between;
+    justify-items: center;
+    position: absolute;
+    text-align: center;
+    z-index: 5;
+    opacity: 1;
+    transition: 0.5s ease-in-out !important;
+    width: 32rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    @include respond(big-desktop) {
+      width: 60rem;
+      min-height: 75rem;
+    }
+    @media screen and (max-width: 900px) {
+      position: relative;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      flex-flow: column wrap;
+      padding: 0;
+    }
+    &__logos {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      justify-content: space-between;
+    }
   }
 }
 
-.wrapper_showcase {
-  display: flex;
-  flex-flow: row;
-  justify-content: flex-end;
-  align-content: flex-end;
-  transition: 0.1s ease-in;
-  transform: translateX(2%) skew(5deg);
-  filter: drop-shadow(-20px 0px 8px rgb($color-black, 0.25));
-  @media screen and (max-width: 900px) {
-    display: none;
-  }
-  //&:hover {
-  //  transform: translateX(0%) skew(0deg);
-  //  transition: 0.2s;
-  //}
-}
 .topic {
   &__backdrop {
-    background-color: rgba(22, 22, 22, 0.75);
+    background-color: rgba(22, 22, 22, 0.9);
     position: absolute;
     z-index: 4;
     height: 100%;
@@ -80,8 +104,9 @@
     align-items: center;
     align-content: center;
     position: relative;
-    height: 56rem;
-    width: 12rem;
+    height: calc(100vh - 6rem);
+    width: calc(100vw / 6);
+    min-width: calc(100vw / 24);
     margin: 0;
     padding: 0;
     overflow: clip;
@@ -89,19 +114,15 @@
     z-index: 2;
     @include respond(big-desktop) {
       height: 75rem;
-      width: 15rem;
-    }
-    @include respond(tab) {
-      width: 8rem;
+      width: calc(100vw / 6);
     }
     @media screen and (max-width: 900px) {
       height: 15rem;
       width: 100vw;
     }
-
     &:hover {
       transition: 0.75s ease-in-out;
-      width: 100rem;
+      width: calc(100vw);
       filter: brightness(100%);
     }
     &:hover ~ .topic__image {
@@ -122,19 +143,19 @@
     align-content: space-between;
     justify-content: space-between;
     margin: 4rem;
-    width: 50%;
+    width: 60%;
     min-height: 15rem;
     position: absolute;
     opacity: 0;
     transition: 0.25s ease-out;
-    transform: skew(-5deg);
-    text-align: left;
+    text-align: center;
     z-index: 5;
   }
   &__link {
-    background-color: rgba(163, 162, 180, 0.33);
+    background-color: rgba($color-white, 0.2);
     padding: 0.5rem 2rem;
     border-radius: 0.25rem;
+    width: auto;
     margin-top: 2rem;
     color: $color-white !important;
     text-align: center;
@@ -144,20 +165,6 @@
       background-color: rgba(163, 162, 180, 0.5);
       animation: pulse-black 2s infinite;
     }
-  }
-}
-/* Add this as a global typography style*/
-.heading_primary {
-  font-size: 7.5rem;
-  font-weight: 700;
-  text-shadow: rgba(56, 236, 178, 0.4) 4px 2px, rgba(45, 157, 255, 0.3) 8px 4px;
-  margin: 0;
-  font-family: sansCond;
-  @media screen and (max-width: 900px) {
-    display: none;
-  }
-  @include respond(big-desktop) {
-    font-size: 9rem;
   }
 }
 
@@ -173,26 +180,24 @@
   }
 }
 .mobile_logo {
-  display: none;
   animation: 3s infinite float;
+  display: block;
   @media screen and (max-width: 900px) {
-    display: block;
   }
 }
 .heading_slide {
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 700;
-  color: white;
+  color: $color-white;
   line-height: 1.15;
   @media screen and (max-width: 900px) {
     font-size: 3.6rem;
   }
 }
-
 .paragraph_slide {
   font-size: 1.5rem;
   font-weight: 400;
-  color: white;
+  color: $color-dark-white;
   margin: 0;
   @media screen and (max-width: 900px) {
     font-size: 1.2rem;
@@ -254,14 +259,6 @@
     img {
       display: none;
     }
-  }
-}
-
-.mobile_text {
-  @media screen and (max-width: 900px) {
-    display: flex;
-    align-items: center;
-    flex-flow: column wrap;
   }
 }
 
