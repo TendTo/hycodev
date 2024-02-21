@@ -18,7 +18,7 @@ const TheTeamSadegh = () => {
       <div className={styles.sadegh_box}>
         <div className={styles.image_wrapper}>
           <Image
-            src="/../public/images/people/sadegh_soudjani.jpg"
+            src="/images/people/sadegh_soudjani.jpg"
             fill={true}
             objectFit={"cover"}
             alt={"Picture of Sadegh Soudjani"}

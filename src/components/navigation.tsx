@@ -61,7 +61,7 @@ const Navigation = () => {
     <nav className={styles.container}>
       <a href={"/home"}>
         <Image
-          src="/../public/images/logo-hycodev.png"
+          src="/images/logo-hycodev.png"
           alt={"hycodev logo"}
           width={width < 800 ? imageSizeMobile.width : imageSizeDesktop.width}
           height={

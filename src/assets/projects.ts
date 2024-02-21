@@ -35,11 +35,11 @@ export const ProjectArticles = [
     year: "2023",
     image: [
       {
-        link: "/../public/images/publications/syscore_1.png",
+        link: "/images/publications/syscore_1.png",
         alt: "Package Delivery",
       },
       {
-        link: "/../public/images/publications/syscore_2.png",
+        link: "/images/publications/syscore_2.png",
         alt: "Satisfaction Probability",
       },
     ],
@@ -109,7 +109,7 @@ export const ProjectArticles = [
     year: "2023",
     image: [
       {
-        link: "/../public/images/projects/symaware.jpg",
+        link: "/images/projects/symaware.jpg",
         alt: "",
       },
     ],
@@ -123,7 +123,7 @@ export const ProjectArticles = [
     year: "2023",
     image: [
       {
-        link: "/../public/images/projects/code-cps.jpg",
+        link: "/images/projects/code-cps.jpg",
         alt: "",
       },
     ],

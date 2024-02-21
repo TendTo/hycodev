@@ -20,7 +20,7 @@ export default function joinUs() {
       <div className={styles.container_banner}>
         <div className={styles.container_image}>
           <Image
-            src={"/../public/images/join_us_backdrop.jpg"}
+            src={"/images/join_us_backdrop.jpg"}
             fill={true}
             objectFit={"cover"}
             quality={100}

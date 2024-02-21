@@ -60,7 +60,7 @@
   }
   &_image {
     margin-left: 4rem;
-    filter: drop-shadow(2px 4px 2px rgb($color-black, 0.25));
+    //filter: drop-shadow(2px 4px 2px rgb($color-black, 0.25));
     transition: 0.2s;
     &:hover {
       scale: 1.05;

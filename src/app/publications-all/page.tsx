@@ -38,7 +38,7 @@ export default function PublicationsAll() {
     <div className={styles.container}>
       <CustomBanner
         title={"Publications"}
-        source={"/../public/images/publications.jpg"}
+        source={"/images/publications.jpg"}
         size={size}
         backdrop={backdrop}
         alt={"Photograph of many books"}

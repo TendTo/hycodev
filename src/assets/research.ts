@@ -47,15 +47,15 @@ export const IntroductionArticles = [
     white: "true",
     image: [
       {
-        link: "/../public/images/home/saucer.jpg",
+        link: "/images/home/saucer.jpg",
         alt: "Package Delivery",
       },
       {
-        link: "/../public/images/publications/b3.png",
+        link: "/images/publications/b3.png",
         alt: "Package Delivery",
       },
       {
-        link: "/../public/images/publications/b5.png",
+        link: "/images/publications/b5.png",
         alt: "Satisfaction Probability",
       },
     ],
@@ -65,13 +65,13 @@ export const IntroductionArticles = [
         name: "Omid Akbarzadeh",
         role: "PhD Student",
         contact: "o.akbarzadeh2@newcastle.ac.uk",
-        image: "/../public/images/people/omid_akbarzadeh.png",
+        image: "/images/people/omid_akbarzadeh.png",
       },
       {
         name: "Sadegh Soudjani",
         role: "Researcher",
         contact: "",
-        image: "/../public/images/people/sadegh_soudjani_square.jpg",
+        image: "/images/people/sadegh_soudjani_square.jpg",
       },
     ],
     sections: [
@@ -89,11 +89,11 @@ export const IntroductionArticles = [
     white: "true",
     image: [
       {
-        link: "/../public/images/home/energy_systems.jpg",
+        link: "/images/home/energy_systems.jpg",
         alt: "Package Delivery",
       },
       {
-        link: "/../public/images/publications/syscore_2.png",
+        link: "/images/publications/syscore_2.png",
         alt: "Satisfaction Probability",
       },
     ],
@@ -103,13 +103,13 @@ export const IntroductionArticles = [
         name: "Ben Wooding",
         role: "PhD Student",
         contact: "b.wooding1@newcastle.ac.uk",
-        image: "/../public/images/people/ben_wooding.png",
+        image: "/images/people/ben_wooding.png",
       },
       {
         name: "Sadegh Soudjani",
         role: "Researcher",
         contact: "",
-        image: "/../public/images/people/sadegh_soudjani_square.jpg",
+        image: "/images/people/sadegh_soudjani_square.jpg",
       },
     ],
     sections: [
@@ -127,11 +127,11 @@ export const IntroductionArticles = [
     white: "",
     image: [
       {
-        link: "/../public/images/home/water.jpg",
+        link: "/images/home/water.jpg",
         alt: "Package Delivery",
       },
       {
-        link: "/../public/images/publications/water_treatment.jpg",
+        link: "/images/publications/water_treatment.jpg",
         alt: "Satisfaction Probability",
       },
     ],
@@ -141,13 +141,13 @@ export const IntroductionArticles = [
         name: "Anna Laino",
         role: "PhD Student",
         contact: "a.s.laino2@newcastle.ac.uk",
-        image: "/../public/images/people/anna_laino.jpg",
+        image: "/images/people/anna_laino.jpg",
       },
       {
         name: "Sadegh Soudjani",
         role: "Researcher",
         contact: "",
-        image: "/../public/images/people/sadegh_soudjani_square.jpg",
+        image: "/images/people/sadegh_soudjani_square.jpg",
       },
     ],
     sections: [
@@ -165,11 +165,11 @@ export const IntroductionArticles = [
     white: "true",
     image: [
       {
-        link: "/../public/images/home/quantum_computing.jpg",
+        link: "/images/home/quantum_computing.jpg",
         alt: "Package Delivery",
       },
       {
-        link: "/../public/images/publications/quantum.jpg",
+        link: "/images/publications/quantum.jpg",
         alt: "Satisfaction Probability",
       },
     ],
@@ -179,13 +179,13 @@ export const IntroductionArticles = [
         name: "Marco Lewis",
         role: "PhD Student",
         contact: "m.j.lewis2@newcastle.ac.uk",
-        image: "/../public/images/people/marco_lewis.jpg",
+        image: "/images/people/marco_lewis.jpg",
       },
       {
         name: "Sadegh Soudjani",
         role: "Researcher",
         contact: "",
-        image: "/../public/images/people/sadegh_soudjani_square.jpg",
+        image: "/images/people/sadegh_soudjani_square.jpg",
       },
     ],
     sections: [
@@ -203,11 +203,11 @@ export const IntroductionArticles = [
     white: "true",
     image: [
       {
-        link: "/../public/images/home/glassbrain.jpg",
+        link: "/images/home/glassbrain.jpg",
         alt: "Package Delivery",
       },
       {
-        link: "/../public/images/publications/brain.jpg",
+        link: "/images/publications/brain.jpg",
         alt: "Satisfaction Probability",
       },
     ],
@@ -217,13 +217,13 @@ export const IntroductionArticles = [
         name: "John Ingham",
         role: "PhD Student",
         contact: "j.f.ingham2@newcastle.ac.uk",
-        image: "/../public/images/people/john_ingham.jpg",
+        image: "/images/people/john_ingham.jpg",
       },
       {
         name: "Sadegh Soudjani",
         role: "Researcher",
         contact: "",
-        image: "/../public/images/people/sadegh_soudjani_square.jpg",
+        image: "/images/people/sadegh_soudjani_square.jpg",
       },
     ],
     sections: [
@@ -241,11 +241,11 @@ export const IntroductionArticles = [
     white: "true",
     image: [
       {
-        link: "/../public/images/home/fundamental.jpg",
+        link: "/images/home/fundamental.jpg",
         alt: "Package Delivery",
       },
       {
-        link: "/../public/images/publications/syscore_2.png",
+        link: "/images/publications/syscore_2.png",
         alt: "Satisfaction Probability",
       },
     ],
@@ -255,13 +255,13 @@ export const IntroductionArticles = [
         name: "Oliver Schön",
         role: "PhD Student",
         contact: "o.schoen2@newcastle.ac.uk",
-        image: "/../public/images/people/oliver_schon.jpg",
+        image: "/images/people/oliver_schon.jpg",
       },
       {
         name: "Sadegh Soudjani",
         role: "Researcher",
         contact: "",
-        image: "/../public/images/people/sadegh_soudjani_square.jpg",
+        image: "/images/people/sadegh_soudjani_square.jpg",
       },
     ],
     sections: [
@@ -274,7 +274,7 @@ export const IntroductionArticles = [
     ],
     projects: [
       {
-        image: "/../public/models/oliver.gif",
+        image: "/models/oliver.gif",
         title: "SySCoRe: Synthesis via Stochastic Coupling Relations",
         paragraph:
           "In this research line, we develop SySCoRe, a MATLAB toolbox for temporal logic control synthesis of discrete-time continuous-state stochastic dynamical systems based on stochastic coupling relations.",

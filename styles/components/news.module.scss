@@ -1,5 +1,5 @@
 @import "../../scss/abstracts/variables.module";
-
+@import "../../scss/abstracts/mixins.module";
 .container {
   display: flex;
   justify-content: center;
@@ -10,9 +10,13 @@
 .news_box {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: flex-start;
   gap: 2rem;
-  max-width: 80rem;
-  max-height: 20rem;
+  max-width: 64rem;
+  max-height: 16rem;
+  @include respond(phone) {
+    max-height: 20rem;
+  }
   &:nth-child(odd) .news_box__side {
     background-color: $color-dark-green;
   }
@@ -37,7 +41,7 @@
   }
   &__text {
     display: flex;
-    width: 85%;
+    width: 100%;
     flex-flow: column nowrap;
     justify-content: space-around;
   }

@@ -17,7 +17,7 @@ export default async function PublicationArticle({ params }) {
     <div>
       <CustomBanner
         title={"Projects"}
-        source={"/../public/images/software_new.jpg"}
+        source={"/images/software_new.jpg"}
         size={size}
         backdrop={backdrop}
       ></CustomBanner>

@@ -1,7 +1,7 @@
 export const homeImages = [
   {
     id: "0",
-    image: "/../public/images/home/fundamental.jpg",
+    image: "/images/home/fundamental.jpg",
     title: "Fundamentals",
     link: "/research/fundamentals",
     text: "In this section, we present our fundamental work on formal methods for CPS that is trying to push the boundaries on what is possible across all areas of application. This involves tackling challenges related to control-theoretic considerations such as disturbances and system structure; model-based and data-driven approaches; uncertainty and missing prior knowledge; stochasticity; and other.",
@@ -13,7 +13,7 @@ export const homeImages = [
   },
   {
     id: "4",
-    image: "/../public/images/home/energy_systems.jpg",
+    image: "/images/home/energy_systems.jpg",
     title: "Power Systems",
     link: "/research/power-systems",
     text: "As we strive towards net-zero energy systems and increase our renewable energy uses, our power system behaviours become uncertain and new challenges are introduced in balancing the energy supply and demand. As we phase away from large-scale generation devices, we will need nimble controllers that can act quickly to mitigate any issues that arise, as well as approaches which can scale to the size of these massive power systems. ",
@@ -24,7 +24,7 @@ export const homeImages = [
   },
   {
     id: "3",
-    image: "/../public/images/home/quantum_computing.jpg",
+    image: "/images/home/quantum_computing.jpg",
     title: "Quantum Systems",
     link: "/research/quantum-systems",
     alt: "Quantum Computer Illustration",
@@ -35,7 +35,7 @@ export const homeImages = [
   },
   {
     id: "1",
-    image: "/../public/images/home/saucer.jpg",
+    image: "/images/home/saucer.jpg",
     title: "Communication Systems",
     link: "/research/communication-systems",
     text: "Verification of Cyber-Physical Systems (CPS) with Communication Networks explores the critical intersection of CPS and network technologies. It ensures the reliability and secure operation of smart systems, like self-driving cars and industrial automation, by verifying their coordination with communication networks, making It a fascinating field at the forefront of technology and safety. ",
@@ -46,8 +46,8 @@ export const homeImages = [
   },
   {
     id: "2",
-    image: "/../public/images/home/glassbrain.jpg",
-    title: "Brain Modelling and Control",
+    image: "/images/home/glassbrain.jpg",
+    title: "Brain Modelling & Control",
     link: "/research/brain-modelling-and-control",
     text: "Epilepsy is a common neurological condition estimated to have lifetime prevalence of 0.76% worldwide. The condition is life-limiting and occasionally life-threatening. First line treatment is pharmacological, but side effects are common, and it is estimated that up to a third of patients will not be seizure free on medication. Some of these patients may be suitable for resection surgery, if a suitable surgical target can be identified with sufficient confidence. Other modalities include electrical stimulation of the vagus nerve (VNS) and, to a lesser extent, direct stimulation of the brain itself.",
     alt: "Sci-fi Illustration of a Human Brain",
@@ -57,7 +57,7 @@ export const homeImages = [
   },
   {
     id: "5",
-    image: "/../public/images/home/water.jpg",
+    image: "/images/home/water.jpg",
     title: "Water Treatment Systems",
     link: "/research/water-treatment-systems",
     text:

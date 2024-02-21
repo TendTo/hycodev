@@ -144,7 +144,7 @@ export default function theTeam() {
     <div>
       <CustomBanner
         title={"Meet The Team"}
-        source={"/../public/images/meet_the_team.jpg"}
+        source={"/images/meet_the_team.jpg"}
         size={size}
         backdrop={backdrop}
         alt={"Photograph of Cozy Office Space With People"}

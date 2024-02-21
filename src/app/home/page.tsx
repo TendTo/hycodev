@@ -67,7 +67,9 @@ export default function Home() {
               <div className={styles.topic__backdrop}></div>
               <div className={styles.topic__text}>
                 <h1
-                  className={styles.heading_slide + " " + utilities.bot_margin}
+                  className={
+                    styles.heading_slide + " " + utilities.bot_margin__small
+                  }
                 >
                   {item.title}
                 </h1>
@@ -103,7 +105,7 @@ export default function Home() {
         </div>
         <div className={styles.container__text}>
           <Image
-            src={"/../public/images/icons/hycodev.png"}
+            src={"/images/icons/hycodev.png"}
             width={132}
             height={110}
             quality={100}
@@ -112,66 +114,115 @@ export default function Home() {
           ></Image>
           <h1
             className={
-              typography.heading_primary__white + " " + utilities.bot_margin
+              typography.heading_primary__white + " " + styles.disable__mobile
             }
           >
             HyCoDeV Lab
           </h1>
-
           <h1 className={styles.mobile_heading + " " + utilities.bot_margin}>
             Hybrid Systems: Control, Design and Verification Lab
           </h1>
-          <p
-            className={typography.paragraph__white + " " + utilities.bot_margin}
-          >
+          <p className={styles.paragraph_slide + " " + utilities.bot_margin}>
             Where we research about formal methods for control, design and
             verification of hybrid systems.
           </p>
           <div style={width < 900 ? { display: "none" } : { display: "block" }}>
-            {/*<p*/}
-            {/*  className={*/}
-            {/*    typography.paragraph__small__lighter +*/}
-            {/*    " " +*/}
-            {/*    utilities.bot_margin__small*/}
-            {/*  }*/}
-            {/*>*/}
-            {/*  In association with*/}
-            {/*</p>*/}
-            {/*<div*/}
-            {/*  className={*/}
-            {/*    styles.container__text__logos + " " + utilities.bot_margin*/}
-            {/*  }*/}
-            {/*>*/}
-            {/*  <Image*/}
-            {/*    src={"/../public/images/home/mpi-sws-white.png"}*/}
-            {/*    width={350 / 1.75}*/}
-            {/*    height={60 / 1.75}*/}
-            {/*    quality={100}*/}
-            {/*    key={"/../public/images/home/mpi-sws.png"}*/}
-            {/*    alt={"Max Planck Institute for Software Systems logo"}*/}
-            {/*  />*/}
-            {/*</div>*/}
+            <p className={typography.paragraph__small__lighter}>
+              In association with
+            </p>
+            <div
+              className={
+                styles.container__text__logos + " " + utilities.bot_margin
+              }
+            >
+              <Image
+                src={"/images/home/mpi-sws-white.png"}
+                width={350 / 1.75}
+                height={60 / 1.75}
+                quality={100}
+                key={"/images/home/mpi-sws.png"}
+                alt={"Max Planck Institute for Software Systems logo"}
+              />
+            </div>
           </div>
         </div>
+        {/*<div className={styles.button}>*/}
+        {/*  <span className={styles.arrow}></span>*/}
+        {/*</div>*/}
       </div>
+      <Swiper
+        navigation={true}
+        modules={[Navigation]}
+        className={"mySwiper" + " " + styles.slider_mobile}
+        style={width < 900 ? {} : { display: "none" }}
+      >
+        {homeImages.map((slide, index) => {
+          return (
+            <SwiperSlide className={styles.slider_mobile__slide} key={index}>
+              <div className={styles.slider_mobile__backdrop}></div>
+              <div className={styles.slider_mobile__text}>
+                <h1
+                  className={styles.heading_slide + " " + utilities.bot_margin}
+                >
+                  {slide.title}
+                </h1>
+                <p
+                  className={
+                    styles.paragraph_slide + " " + utilities.bot_margin__small
+                  }
+                >
+                  {slide.text}
+                </p>
+                <p
+                  className={
+                    styles.paragraph_slide + " " + utilities.bot_margin__small
+                  }
+                ></p>
+                <a
+                  href={slide.link}
+                  className={styles.topic__link + " " + typography.paragraph}
+                >
+                  Lean more
+                </a>
+              </div>
+              <Image
+                className={styles.slide}
+                src={slide.image}
+                fill={true}
+                quality={100}
+                alt={"energy"}
+              />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
       <div className={styles.container__news}>
-        <h2
-          className={typography.heading_primary}
-          style={{ alignSelf: "center" }}
-        >
-          News
-        </h2>
-        <div className={styles.container__news__items}>
-          {News_Items.map((item, id) => {
-            return (
-              <NewsItem
-                title={item.title}
-                description={item.description}
-                link={item.link}
-                date={item.date}
-              ></NewsItem>
-            );
-          })}
+        <div className={styles.wrapper__news}>
+          <h2
+            className={typography.heading_primary}
+            style={{ alignSelf: "center" }}
+          >
+            News
+          </h2>
+          <div className={styles.container__news__items}>
+            {News_Items.slice(0, width < 1250 ? 2 : 4).map((item, id) => {
+              return (
+                <NewsItem
+                  title={item.title}
+                  description={item.description}
+                  link={item.link}
+                  date={item.date}
+                ></NewsItem>
+              );
+            })}
+          </div>
+          <a
+            className={typography.paragraph__underlined}
+            style={{ alignSelf: "center" }}
+            href={"/news"}
+          >
+            See All
+          </a>
         </div>
       </div>
       {/*<a*/}
@@ -185,7 +236,7 @@ export default function Home() {
       {/*>*/}
       {/*  Explore our research areas*/}
       {/*  <Image*/}
-      {/*    src={"/../public/images/icons/arrow.png"}*/}
+      {/*    src={"/images/icons/arrow.png"}*/}
       {/*    width={40}*/}
       {/*    height={10}*/}
       {/*    style={{ aspectRatio: "2.15/1", scale: "0.75" }}*/}
@@ -193,53 +244,6 @@ export default function Home() {
       {/*    alt={"Arrow Icon"}*/}
       {/*  ></Image>*/}
       {/*</a>*/}
-      {/*<Swiper*/}
-      {/*  navigation={true}*/}
-      {/*  modules={[Navigation]}*/}
-      {/*  className={"mySwiper" + " " + styles.slider_mobile}*/}
-      {/*  style={width < 900 ? {} : { display: "none" }}*/}
-      {/*>*/}
-      {/*  {homeImages.map((slide, index) => {*/}
-      {/*    return (*/}
-      {/*      <SwiperSlide className={styles.slider_mobile__slide} key={index}>*/}
-      {/*        <div className={styles.slider_mobile__backdrop}></div>*/}
-      {/*        <div className={styles.slider_mobile__text}>*/}
-      {/*          <h1*/}
-      {/*            className={styles.heading_slide + " " + utilities.bot_margin}*/}
-      {/*          >*/}
-      {/*            {slide.title}*/}
-      {/*          </h1>*/}
-      {/*          <p*/}
-      {/*            className={*/}
-      {/*              styles.paragraph_slide + " " + utilities.bot_margin__small*/}
-      {/*            }*/}
-      {/*          >*/}
-      {/*            {slide.text}*/}
-      {/*          </p>*/}
-      {/*          <p*/}
-      {/*            className={*/}
-      {/*              styles.paragraph_slide + " " + utilities.bot_margin__small*/}
-      {/*            }*/}
-      {/*          ></p>*/}
-      {/*          <a*/}
-      {/*            href={slide.link}*/}
-      {/*            className={styles.topic__link + " " + typography.paragraph}*/}
-      {/*          >*/}
-      {/*            Lean more*/}
-      {/*          </a>*/}
-      {/*        </div>*/}
-      {/*        <Image*/}
-      {/*          className={styles.slide}*/}
-      {/*          src={slide.image}*/}
-      {/*          // style={slide.style}*/}
-      {/*          fill={true}*/}
-      {/*          quality={100}*/}
-      {/*          alt={"energy"}*/}
-      {/*        />*/}
-      {/*      </SwiperSlide>*/}
-      {/*    );*/}
-      {/*  })}*/}
-      {/*</Swiper>*/}
     </div>
   );
 }

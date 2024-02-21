@@ -10,7 +10,7 @@ const Footer = () => {
         <div className={styles.container__site}>
           <a className={styles.container__logo + " " + styles.logo} href={"/"}>
             <Image
-              src={"/../public/images/icons/hycodev.png"}
+              src={"/images/icons/hycodev.png"}
               width={66}
               height={55}
               quality={100}
@@ -58,11 +58,11 @@ const Footer = () => {
 
         <a href={"https://www.mpi-sws.org/"} target={"_blank"}>
           <Image
-            src={"/../public/images/home/mpi-sws.png"}
+            src={"/images/home/mpi-sws.png"}
             width={175}
             height={30}
             quality={100}
-            key={"/../public/images/home/mpi-sws.png"}
+            key={"/images/home/mpi-sws.png"}
             alt={"Max Planck Institute for Software Systems Logo"}
           ></Image>
         </a>
@@ -71,7 +71,7 @@ const Footer = () => {
           <div className={styles.container__icons}>
             <a href={"https://twitter.com/hycodev1"} target={"_blank"}>
               <Image
-                src={"/../public/images/icons/icon_twitter.png"}
+                src={"/images/icons/icon_twitter.png"}
                 width={28}
                 height={28}
                 quality={100}
@@ -83,7 +83,7 @@ const Footer = () => {
               target={"_blank"}
             >
               <Image
-                src={"/../public/images/icons/icon_youtube.png"}
+                src={"/images/icons/icon_youtube.png"}
                 width={28}
                 height={28}
                 quality={100}
@@ -95,7 +95,7 @@ const Footer = () => {
               target={"_blank"}
             >
               <Image
-                src={"/../public/images/icons/icon_linkedin.png"}
+                src={"/images/icons/icon_linkedin.png"}
                 width={28}
                 height={28}
                 quality={100}
