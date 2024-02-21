@@ -1,0 +1,9 @@
+.container {
+  &__news {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 4rem;
+    margin: 8rem 0;
+  }
+}
