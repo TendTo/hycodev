@@ -1,16 +1,7 @@
-"use server";
-
 const { writeFile } = require("node:fs");
 const { getJson } = require("serpapi");
-const schedule = require("node-schedule");
 
-//Scheduler Config
-const rule = new schedule.RecurrenceRule();
-rule.day = 0;
-rule.tz = "Etc/UTC";
-
-//Run Scheduler
-const articles = schedule.scheduleJob(rule, async function () {
+const articles = async function () {
   // SerpAPI Has a constraint for a max of 100 results per call, thus the 2 calls.
   const publications_1 = await getJson({
     engine: "google_scholar_author",
@@ -21,7 +12,6 @@ const articles = schedule.scheduleJob(rule, async function () {
     start: "0",
     num: "100",
   });
-
   const publications_2 = await getJson({
     engine: "google_scholar_author",
     hl: "en",
@@ -31,16 +21,14 @@ const articles = schedule.scheduleJob(rule, async function () {
     start: "100",
     num: "100",
   });
-
   const combined_list = JSON.stringify(
     publications_1.articles.concat(publications_2.articles)
   );
-
-  writeFile("publications.json", combined_list, (err) => {
+  writeFile("../assets/publications.json", combined_list, (err) => {
     if (err) {
       console.log("failure");
     } else {
       console.log("success");
     }
   });
-});
+};

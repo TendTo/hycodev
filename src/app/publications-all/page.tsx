@@ -6,7 +6,7 @@ import PublicationBox from "../../components/publication-box";
 import typography from "../../../scss/base/_typography.module.scss";
 import utilities from "../../../scss/base/_utilities.module.scss";
 import { useState } from "react";
-import publications from "../../assets/sadegh.json";
+import publications from "../../assets/publications.json";
 import { Menu, MenuButton, MenuList, MenuItem, Button } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 export default function PublicationsAll() {
@@ -25,15 +25,13 @@ export default function PublicationsAll() {
   const str = JSON.stringify(publications);
   const conv = JSON.parse(str);
   const [selectedYear, setSelectedYear] = useState("");
-  const splitYears = conv.articles.flatMap((article) => article.year);
+  const splitYears = conv.flatMap((article) => article.year);
   const years = Array.from(new Set(splitYears)).sort().reverse();
   // const sort = document.getElementById("sort_filter");
-  let filteredPublications = conv.articles;
+  let filteredPublications = conv;
   filteredPublications = selectedYear
-    ? conv.articles.filter((publication) =>
-        publication.year.includes(selectedYear)
-      )
-    : conv.articles;
+    ? conv.filter((publication) => publication.year.includes(selectedYear))
+    : conv;
   return (
     <div className={styles.container}>
       <CustomBanner
