@@ -63,10 +63,19 @@ const TheTeamSadegh = () => {
                   <PopoverArrow />
                   <PopoverBody
                     className={
-                      typography.paragraph + " " + utilities.padding_all
+                      typography.paragraph +
+                      " " +
+                      utilities.padding_all +
+                      " " +
+                      styles.container__email
                     }
                   >
-                    sadegh@mpi-sws.org
+                    <Image
+                      src="/images/sadegh.png"
+                      fill={true}
+                      alt="Sadegh Soudjani Email"
+                    />
+                    {/*sadegh@mpi-sws.org*/}
                   </PopoverBody>
                 </PopoverContent>
               </Popover>

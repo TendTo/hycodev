@@ -10,12 +10,16 @@
     flex-flow: row wrap;
     @include respond(phone) {
       justify-content: center;
+      margin: 4rem 2rem;
     }
   }
   &__text {
-    margin: 4rem 8rem 0rem 8rem;
+    margin: 4rem 8rem 0 8rem;
     display: flex;
     flex-flow: wrap column;
+    @include respond(phone) {
+      margin: 2rem 4rem 0 4rem;
+    }
   }
 }
 

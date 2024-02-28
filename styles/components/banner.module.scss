@@ -9,7 +9,7 @@
   align-items: center;
   filter: drop-shadow(0 0.25rem 0.5rem rgb($color-black, 0.25));
   @include respond(phone) {
-    margin-top: 10rem;
+    margin-top: 8rem;
     justify-content: flex-start;
     align-items: center;
   }

@@ -13,12 +13,24 @@
     align-items: center;
     flex-flow: column wrap;
   }
+  &__email {
+    position: relative;
+    padding: 1rem;
+    width: calc(6.45rem * 2.5);
+    height: calc(1rem * 2.5);
+    align-self: center;
+  }
 }
 
 .contact_wrapper {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+  @include respond(phone) {
+    flex-flow: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
+  }
 }
 
 .image_wrapper {
@@ -51,12 +63,13 @@
   border-radius: 0.5rem;
   padding: 2rem;
   gap: 2rem;
+
+  @include respond(phone) {
+    flex-flow: row wrap;
+    max-width: 45rem;
+  }
   @include respond(tab) {
     max-width: 56rem;
-  }
-  @include respond(phone) {
-    padding: 0;
-    max-height: 80rem;
   }
   &__text {
     display: flex;
@@ -67,17 +80,15 @@
     width: 60rem;
     max-height: 40rem;
     @include respond(phone) {
-      width: 45rem;
+      max-width: 60rem;
+      max-height: unset;
+      height: auto;
+      width: auto;
       flex-flow: row wrap;
       padding: 2rem;
     }
     @include respond(big-desktop) {
       width: 75rem;
     }
-  }
-  @include respond(phone) {
-    flex-flow: row wrap;
-    height: 90rem;
-    width: 45rem;
   }
 }
