@@ -8,6 +8,9 @@
   @include respond(phone) {
     font-size: 3.2rem;
   }
+  @include respond(big-desktop) {
+    font-size: 4.8rem;
+  }
   &__white {
     @extend .heading_primary;
     color: $color-white;
@@ -96,10 +99,10 @@
 
   &__small {
     @extend .paragraph;
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
     color: $color-dark-grey;
     @include respond(big-desktop) {
-      font-size: 1.56rem;
+      font-size: 1.56rem !important;
     }
     &__lighter {
       @extend .paragraph__small;
