@@ -24,7 +24,7 @@ jobs:
           git clone https://github.com/xQuazor/hycodev.git
           cd hycodev
           npm i
-          npm build
+          npm run build
           pm2 kill 0
           pm2 start npm --name "hycodev" -- start
         
