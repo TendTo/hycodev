@@ -60,12 +60,19 @@
   }
   &_image {
     margin-left: 4rem;
-    //filter: drop-shadow(2px 4px 2px rgb($color-black, 0.25));
     transition: 0.2s;
+    height: 4rem;
+    width: 16rem;
+    scale: 1;
     &:hover {
       scale: 1.05;
       transition: 0.2s;
     }
+    @include respond(big-desktop) {
+      height: 5rem;
+      width: 20rem;
+    }
+
     @media screen and (max-width: 800px) {
       margin: 2.5rem 2rem;
     }

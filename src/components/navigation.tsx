@@ -59,15 +59,11 @@ const Navigation = () => {
   };
   return (
     <nav className={styles.container}>
-      <a href={"/home"}>
+      <a href={"/home"} className={styles.navbar_image}>
         <Image
           src="/images/logo-hycodev.png"
           alt={"hycodev logo"}
-          width={width < 800 ? imageSizeMobile.width : imageSizeDesktop.width}
-          height={
-            width < 800 ? imageSizeMobile.height : imageSizeDesktop.height
-          }
-          className={styles.navbar_image}
+          fill={true}
         />
       </a>
       <div

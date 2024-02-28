@@ -102,12 +102,21 @@
       width: 100vw;
       margin: 24rem 0 0 0;
     }
+    @include respond(big-desktop) {
+      width: 40rem;
+    }
 
     &__logos {
       display: flex;
       align-content: center;
       transform: translateX(-7%);
       justify-content: center;
+      height: 3rem;
+      width: calc(3rem * 5.83);
+      @include respond(big-desktop) {
+        height: 3.75rem;
+        width: calc(3.75rem * 5.83);
+      }
     }
   }
 }
@@ -211,6 +220,12 @@
 .mobile_logo {
   animation: 3s infinite float;
   display: block;
+  width: calc(11.95rem * 1.1);
+  height: calc(10rem * 1.1);
+  @include respond(big-desktop) {
+    width: calc(11.95rem * 1.375);
+    height: calc(10rem * 1.375);
+  }
 }
 .heading_slide {
   font-size: 4rem;

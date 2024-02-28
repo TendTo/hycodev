@@ -104,14 +104,16 @@ export default function Home() {
           ))}
         </div>
         <div className={styles.container__text}>
-          <Image
-            src={"/images/icons/hycodev.png"}
-            width={132}
-            height={110}
-            quality={100}
+          <div
             className={styles.mobile_logo + " " + utilities.bot_margin__small}
-            alt={"HyCoDeV logo"}
-          ></Image>
+          >
+            <Image
+              src={"/images/icons/hycodev.png"}
+              alt={"HyCoDeV logo"}
+              quality={100}
+              fill={true}
+            ></Image>
+          </div>
           <h1
             className={
               typography.heading_primary__white + " " + styles.disable__mobile
@@ -137,8 +139,7 @@ export default function Home() {
             >
               <Image
                 src={"/images/home/mpi-sws-white.png"}
-                width={350 / 1.75}
-                height={60 / 1.75}
+                fill={true}
                 quality={100}
                 key={"/images/home/mpi-sws.png"}
                 alt={"Max Planck Institute for Software Systems logo"}
