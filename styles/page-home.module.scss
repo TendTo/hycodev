@@ -84,10 +84,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    @include respond(big-desktop) {
-      width: 60rem;
-      min-height: 75rem;
-    }
+    //@include respond(big-desktop) {
+    //  width: 60rem;
+    //  min-height: 75rem;
+    //}
     @media screen and (max-width: 900px) {
       margin: 20rem 2rem 0 2rem;
       position: relative;
@@ -144,7 +144,7 @@
     transition: 0.75s ease-in-out;
     z-index: 2;
     @include respond(big-desktop) {
-      height: 75rem;
+      height: calc(100vh - 10rem);
       width: calc(100vw / 6);
     }
     @media screen and (max-width: 900px) {
