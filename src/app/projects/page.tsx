@@ -22,7 +22,7 @@ export default function Projects() {
     <div className={styles.container}>
       <CustomBanner
         title={"Projects"}
-        source={"/images/software_new.jpg"}
+        source={"/images/banners/software_new.jpg"}
         size={size}
         backdrop={backdrop}
       ></CustomBanner>

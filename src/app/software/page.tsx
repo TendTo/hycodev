@@ -17,7 +17,7 @@ export default function Software() {
     <div className={styles.container}>
       <CustomBanner
         title={"Software"}
-        source={"/images/softwaree.jpg"}
+        source={"/images/banners/softwaree.jpg"}
         size={size}
         backdrop={backdrop}
         alt={"Photograph of blurred out code on a computer screens"}

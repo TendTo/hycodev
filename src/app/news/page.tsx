@@ -1,7 +1,4 @@
 import styles from "./page.module.scss";
-import Image from "next/image";
-import typography from "../../../scss/base/_typography.module.scss";
-import utilities from "../../../scss/base/_utilities.module.scss";
 import { News_Items } from "../../assets/news";
 import NewsItem from "../../components/news-item";
 import React from "react";
@@ -21,7 +18,7 @@ export default function News() {
     <div className={styles.container}>
       <CustomBanner
         title={"News"}
-        source={"/images/news_backdrop.jpg"}
+        source={"/images/banners/news_backdrop.jpg"}
         size={size}
         backdrop={backdrop}
         alt={"Photograph of many books"}

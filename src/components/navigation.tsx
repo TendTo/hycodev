@@ -18,14 +18,6 @@ const Navigation = () => {
     setWindowWidth(width);
   };
   const [isOpen, setIsOpen] = useState(false);
-  const imageSizeDesktop = {
-    width: (392 / 3) * 1.25,
-    height: (100 / 3) * 1.25,
-  };
-  const imageSizeMobile = {
-    width: 392 / 2.5,
-    height: 100 / 2.5,
-  };
   const checkHandler = () => {
     setIsOpen(!isOpen);
   };
@@ -62,7 +54,7 @@ const Navigation = () => {
     <nav className={styles.container}>
       <a href={"/home"} className={styles.navbar_image}>
         <Image
-          src="/images/logo-hycodev.png"
+          src="/images/icons/logo-hycodev.png"
           alt={"hycodev logo"}
           fill={true}
         />
