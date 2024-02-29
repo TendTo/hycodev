@@ -35,7 +35,6 @@ const TheTeamSadegh = () => {
               Associate Professor
             </h3>
           </div>
-
           <p className={typography.paragraph + " " + utilities.bot_margin}>
             My research aim is to develop an integrated environment for
             programming, verifying, and designing high-performance and scalable
@@ -75,7 +74,6 @@ const TheTeamSadegh = () => {
                       fill={true}
                       alt="Sadegh Soudjani Email"
                     />
-                    {/*sadegh@mpi-sws.org*/}
                   </PopoverBody>
                 </PopoverContent>
               </Popover>

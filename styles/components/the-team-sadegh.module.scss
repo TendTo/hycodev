@@ -46,6 +46,10 @@
     width: 28rem;
     margin-right: 0;
   }
+  @include respond(big-desktop) {
+    height: 50rem;
+    width: 40rem;
+  }
 }
 
 .category {
@@ -71,6 +75,9 @@
   @include respond(tab) {
     max-width: 56rem;
   }
+  @include respond(big-desktop) {
+    min-height: 55rem;
+  }
   &__text {
     display: flex;
     justify-content: space-around;
@@ -89,6 +96,7 @@
     }
     @include respond(big-desktop) {
       width: 75rem;
+      max-height: 50rem;
     }
   }
 }
