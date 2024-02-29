@@ -1,6 +1,6 @@
 ![HyCoDev Logo](public/images/icons/logo-hycodev.png)
 
-## Installation
+## Installation 
 
 This website is built in NextJs with Node Modules to set up your development
 environment please execute the following steps
@@ -67,8 +67,7 @@ The GitHub action script will connect to the remote server, send over files, bui
 and queue a process to run it on the web. 
 \
 \
-[Workflows/webpack.yml](./.github/workflows/webpack.yml) is the 
-script responsible for this feature. Inside the script you can find the sequence of linux commands to for the update 
+[Workflows/webpack.yml](./.github/workflows/webpack.yml) is the script responsible for this feature. Inside the script you can find the sequence of linux commands to for the update 
 in case needed.
 \
 \
