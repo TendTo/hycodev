@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "../../styles/components/navigation.module.scss";
+import typography from "../../scss/base/_typography.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -99,7 +100,7 @@ const Navigation = () => {
         animate={isOpen ? "open" : "closed"}
         variants={variants}
       >
-        <Link href="/home" className={styles.navbar_item}>
+        <Link href="/home" className={styles.navbar_item + " " + typography}>
           Home
         </Link>
         <Link href="/the-team" className={styles.navbar_item}>
@@ -132,7 +133,12 @@ const Navigation = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Link href="/home" className={styles.navbar_item}>
+            <Link
+              href="/home"
+              className={
+                styles.navbar_item + " " + typography.heading_secondary
+              }
+            >
               Home
             </Link>
           </motion.li>
@@ -141,7 +147,12 @@ const Navigation = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Link href="/the-team" className={styles.navbar_item}>
+            <Link
+              href="/the-team"
+              className={
+                styles.navbar_item + " " + typography.heading_secondary
+              }
+            >
               The Team
             </Link>
           </motion.li>
@@ -150,7 +161,12 @@ const Navigation = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Link href="/publications-all" className={styles.navbar_item}>
+            <Link
+              href="/publications-all"
+              className={
+                styles.navbar_item + " " + typography.heading_secondary
+              }
+            >
               Publications
             </Link>
           </motion.li>
@@ -159,7 +175,12 @@ const Navigation = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Link href="/projects" className={styles.navbar_item}>
+            <Link
+              href="/projects"
+              className={
+                styles.navbar_item + " " + typography.heading_secondary
+              }
+            >
               Projects
             </Link>
           </motion.li>
@@ -168,7 +189,12 @@ const Navigation = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Link href="/software" className={styles.navbar_item}>
+            <Link
+              href="/software"
+              className={
+                styles.navbar_item + " " + typography.heading_secondary
+              }
+            >
               Software
             </Link>
           </motion.li>
@@ -177,7 +203,12 @@ const Navigation = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Link href="/join-us" className={styles.navbar_item}>
+            <Link
+              href="/join-us"
+              className={
+                styles.navbar_item + " " + typography.heading_secondary
+              }
+            >
               Join Us
             </Link>
           </motion.li>

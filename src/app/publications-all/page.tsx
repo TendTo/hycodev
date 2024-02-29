@@ -69,6 +69,7 @@ export default function PublicationsAll() {
                   as={Button}
                   rightIcon={<ChevronDownIcon />}
                   style={{ width: "20rem" }}
+                  className={typography.paragraph}
                 >
                   Year
                 </MenuButton>

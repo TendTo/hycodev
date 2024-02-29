@@ -17,6 +17,10 @@
   @include respond(phone) {
     max-height: 20rem;
   }
+  @include respond(big-desktop) {
+    max-width: 80rem;
+    max-height: 20rem;
+  }
   &:nth-child(odd) .news_box__side {
     background-color: $color-dark-green;
   }

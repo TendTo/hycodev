@@ -8,11 +8,13 @@ const Footer = () => {
     <footer className={styles.container}>
       <div className={styles.container__top}>
         <div className={styles.container__site}>
-          <a className={styles.container__logo + " " + styles.logo} href={"/"}>
+          <a
+            className={styles.container__logo + " " + styles.hycodev_logo}
+            href={"/"}
+          >
             <Image
               src={"/images/icons/hycodev.png"}
-              width={66}
-              height={55}
+              fill={true}
               quality={100}
               alt={"HyCoDeV Logo"}
             ></Image>
@@ -24,7 +26,12 @@ const Footer = () => {
               justifyContent: "space-around",
             }}
           >
-            <h3 className={typography.paragraph_highlighted}>
+            <h3
+              className={typography.paragraph_highlighted}
+              style={{
+                textAlign: "center",
+              }}
+            >
               Hybrid Systems: Control, Design and Verification Lab
             </h3>
             <div className={styles.container__links}>
@@ -56,11 +63,14 @@ const Footer = () => {
           </div>
         </div>
 
-        <a href={"https://www.mpi-sws.org/"} target={"_blank"}>
+        <a
+          href={"https://www.mpi-sws.org/"}
+          target={"_blank"}
+          className={styles.mpi_logo}
+        >
           <Image
             src={"/images/home/mpi-sws.png"}
-            width={175}
-            height={30}
+            fill={true}
             quality={100}
             key={"/images/home/mpi-sws.png"}
             alt={"Max Planck Institute for Software Systems Logo"}
@@ -69,11 +79,14 @@ const Footer = () => {
         <div className={styles.container__socialmedia}>
           <h3 className={typography.paragraph_highlighted}>Follow us</h3>
           <div className={styles.container__icons}>
-            <a href={"https://twitter.com/hycodev1"} target={"_blank"}>
+            <a
+              href={"https://twitter.com/hycodev1"}
+              target={"_blank"}
+              className={styles.image_social}
+            >
               <Image
                 src={"/images/icons/icon_twitter.png"}
-                width={28}
-                height={28}
+                fill={true}
                 quality={100}
                 alt={"Twitter Logo"}
               />
@@ -81,11 +94,11 @@ const Footer = () => {
             <a
               href={"https://www.youtube.com/@hycodevlab8736/featured"}
               target={"_blank"}
+              className={styles.image_social}
             >
               <Image
                 src={"/images/icons/icon_youtube.png"}
-                width={28}
-                height={28}
+                fill={true}
                 quality={100}
                 alt={"Youtube Logo"}
               />
@@ -93,11 +106,11 @@ const Footer = () => {
             <a
               href={"https://www.linkedin.com/company/96187475"}
               target={"_blank"}
+              className={styles.image_social}
             >
               <Image
                 src={"/images/icons/icon_linkedin.png"}
-                width={28}
-                height={28}
+                fill={true}
                 quality={100}
                 alt={"LinkedIn Logo"}
               />
@@ -106,10 +119,7 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.container__bottom}>
-        <p
-          className={typography.paragraph__white}
-          style={{ fontSize: "1.1rem !important" }}
-        >
+        <p className={typography.paragraph__small__white}>
           Copyright ©2023 All rights reserved
         </p>
       </div>
