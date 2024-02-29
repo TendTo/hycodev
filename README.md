@@ -60,9 +60,16 @@ To preview server build type in the terminal the following commands
 `npm run build` and then `npm run start`. Once again the server will be hosted at `http://localhost:3000`,
 unless configured otherwise.
 
-The repository is configured to automatically push project files to the host server, build project and queue
-a process to run it on the web. [Workflows/webpack.yml](./.github/workflows/webpack.yml) contains the script for this features.
-Inside the script you can find the sequence of linux commands to for the update in case needed.
+The repository is configured to automatically push project files to the host server when there's a push to 
+the ```master``` branch in GitHub. 
+\
+The GitHub action script will connect to the remote server, send over files, build project
+and queue a process to run it on the web. 
+\
+\
+[Workflows/webpack.yml](./.github/workflows/webpack.yml) is the 
+script responsible for this feature. Inside the script you can find the sequence of linux commands to for the update 
+in case needed.
 \
 \
 SSH logins can be found under repository secrets or in Hostinger.
