@@ -4,6 +4,9 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 const Footer = () => {
+  const date = new Date();
+  const current_year = date.getFullYear();
+
   return (
     <footer className={styles.container}>
       <div className={styles.container__top}>
@@ -120,7 +123,7 @@ const Footer = () => {
       </div>
       <div className={styles.container__bottom}>
         <p className={typography.paragraph__small__white}>
-          Copyright ©2023 All rights reserved
+          Copyright ©{current_year} All rights reserved
         </p>
       </div>
     </footer>

@@ -2,6 +2,10 @@
 
 .container {
   margin-bottom: 8rem;
+  min-height: calc(100vh - 43rem);
+  @include respond(phone) {
+    min-height: unset;
+  }
   &__cards {
     margin: 4rem 8rem;
     display: flex;
@@ -47,6 +51,9 @@
     );
     transition: 0.25s;
     line-height: 2.25rem;
+    @include respond(big-desktop) {
+      height: 24rem;
+    }
     &:hover {
       backdrop-filter: blur(0.25rem) brightness(60%);
       transition: 0.25s;
@@ -61,5 +68,13 @@
     padding: 2rem;
     display: flex;
     justify-content: flex-end;
+    @include respond(big-desktop) {
+      height: 5rem;
+    }
+  }
+  @include respond(big-desktop) {
+    height: 25rem;
+    width: 40rem;
+    border-radius: 1.25rem;
   }
 }
