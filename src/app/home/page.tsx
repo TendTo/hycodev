@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../../../styles/page-home.module.scss";
+import styles from "./page.module.scss";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import typography from "../../../scss/base/_typography.module.scss";
@@ -10,7 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { News_Items } from "../../assets/news";
 import NewsItem from "../../components/news-item";
 
-// Import Swiper styles
+// Import Swiper scss
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -147,8 +147,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/*<div className={styles.button}>*/}
-        {/*  <span className={styles.arrow}></span>*/}
+        {/*<div className={scss.button}>*/}
+        {/*  <span className={scss.arrow}></span>*/}
         {/*</div>*/}
       </div>
       <Swiper
@@ -228,7 +228,7 @@ export default function Home() {
       </div>
       {/*<a*/}
       {/*  href={"/publications-all"}*/}
-      {/*  className={styles.button + " " + typography.paragraph_highlighted}*/}
+      {/*  className={scss.button + " " + typography.paragraph_highlighted}*/}
       {/*  style={*/}
       {/*    hover === -1*/}
       {/*      ? { opacity: 1, transitionDuration: "0.25s" }*/}

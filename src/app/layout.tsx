@@ -1,5 +1,5 @@
 import Navigation from "../components/navigation";
-import global from "../../styles/globals.scss";
+import global from "./globals.scss";
 import { Providers } from "./providers";
 import type { NextWebVitalsMetric } from "next/app";
 import React from "react";

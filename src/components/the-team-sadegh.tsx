@@ -1,4 +1,4 @@
-import styles from "../../styles/components/the-team-sadegh.module.scss";
+import styles from "../../scss/components/the-team-sadegh.module.scss";
 import Image from "next/image";
 import typography from "../../scss/base/_typography.module.scss";
 import utilities from "../../scss/base/_utilities.module.scss";
@@ -121,7 +121,7 @@ const TheTeamSadegh = () => {
             </Button>
           </div>
         </div>
-        {/*<div className={styles.sadegh_box__text__small}>*/}
+        {/*<div className={scss.sadegh_box__text__small}>*/}
         {/*  <div>*/}
         {/*    <h2 className={typography.heading_secondary}>Research Interests</h2>*/}
         {/*  </div>*/}

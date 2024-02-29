@@ -2,7 +2,7 @@
 
 import typography from "../../../scss/base/_typography.module.scss";
 import utilities from "../../../scss/base/_utilities.module.scss";
-import styles from "../../../styles/page-join-us.module.scss";
+import styles from "./page.module.scss";
 import { OpenPositions } from "../../assets/open-positions";
 import Image from "next/image";
 import {
@@ -100,7 +100,7 @@ export default function joinUs() {
         {/*>*/}
         {/*  Closed Calls*/}
         {/*</h2>*/}
-        {/*<div className={styles.container_accordion}>*/}
+        {/*<div className={scss.container_accordion}>*/}
         {/*  <Accordion style={{ width: "100%" }} allowToggle>*/}
         {/*    {OpenPositions.map((position, id) => {*/}
         {/*      return (*/}

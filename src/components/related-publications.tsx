@@ -1,5 +1,5 @@
 "use client";
-import styles from "../../styles/components/related-publications.module.scss";
+import styles from "../../scss/components/related-publications.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
 import utilities from "../../scss/base/_utilities.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";

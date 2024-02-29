@@ -1,4 +1,4 @@
-import styles from "../../../../styles/page-research.module.scss";
+import styles from "./page.module.scss";
 import typography from "../../../../scss/base/_typography.module.scss";
 import { IntroductionArticles } from "../../../assets/research";
 import ProjectBox from "../../../components/project-box";

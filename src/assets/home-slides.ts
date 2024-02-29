@@ -1,4 +1,23 @@
+// in
+// style: {
+//   objectPosition: "67% 50%",
+//
+// },
+// the values offset the image by x and y percent respectively.
+
 export const homeImages = [
+  // {
+  //   id: "",
+  //   image: "",
+  //   title: "",
+  //   link: "",
+  //   text: ""
+  //   alt: "",
+  //   style: {
+  //   objectPosition: "67% 50%",
+  //       scale: "1.25",
+  // },
+  //},
   {
     id: "0",
     image: "/images/home/fundamental.jpg",

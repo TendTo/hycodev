@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../../styles/components/article-research.module.scss";
+import styles from "../../scss/components/article-research.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
 import utilities from "../../scss/base/_utilities.module.scss";
 import Image from "next/image";

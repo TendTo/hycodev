@@ -1,4 +1,4 @@
-import styles from "../../../styles/page-news.module.scss";
+import styles from "./page.module.scss";
 import Image from "next/image";
 import typography from "../../../scss/base/_typography.module.scss";
 import utilities from "../../../scss/base/_utilities.module.scss";

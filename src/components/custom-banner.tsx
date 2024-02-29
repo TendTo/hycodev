@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../../styles/components/banner.module.scss";
+import styles from "../../scss/components/banner.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
 import React from "react";
 

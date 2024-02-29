@@ -1,6 +1,6 @@
 import SoftwareBox from "../../components/software-box";
 import CustomBanner from "../../components/custom-banner";
-import styles from "../../../styles/page-software.module.scss";
+import styles from "./page.module.scss";
 import { software } from "../../assets/software";
 
 export default function Software() {

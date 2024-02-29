@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../../styles/components/navigation.module.scss";
+import styles from "../../scss/components/navigation.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
 import Image from "next/image";
 import Link from "next/link";

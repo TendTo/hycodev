@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../../styles/components/researcher-box-research.module.scss";
+import styles from "../../scss/components/researcher-box-research.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
 import utilities from "../../scss/base/_utilities.module.scss";
 export default function ResearcherBoxResearch({ people }) {

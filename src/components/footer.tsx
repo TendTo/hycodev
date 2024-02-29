@@ -1,4 +1,4 @@
-import styles from "../../styles/components/footer.module.scss";
+import styles from "../../scss/components/footer.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
 import Image from "next/image";
 import React from "react";

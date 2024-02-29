@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../../styles/components/news.module.scss";
+import styles from "../../scss/components/news.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
 const NewsItem = ({ title, description, link, date }) => {
   return (

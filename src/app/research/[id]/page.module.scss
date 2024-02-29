@@ -1,4 +1,4 @@
-@import "../scss/abstracts/_mixins.module";
+@import "../../../../scss/abstracts/mixins.module";
 
 .container {
   display: flex;
@@ -51,7 +51,7 @@
   }
 }
 .banner {
-  padding: 0 0rem;
+  padding: 0;
   display: flex;
   flex-flow: row;
   justify-content: center;
@@ -63,7 +63,7 @@
 }
 
 .image {
-  background-image: url("../public/images/background.png");
+  background-image: url("../../../../public/images/background.png");
   background-repeat: repeat-x;
   background-size: cover;
   background-attachment: scroll;

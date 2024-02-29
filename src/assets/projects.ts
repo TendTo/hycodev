@@ -61,10 +61,19 @@ export const ProjectArticles = [
       },
     ],
     links: [
-      { name: "Published Paper", link: "sadasd" },
-      { name: "Virtual Capsule", link: "sadasd" },
-      { name: "Case Study", link: "sadasd" },
-      { name: "Participation in Competition", link: "sadasd" },
+      {
+        name: "Published Paper",
+        link: "https://dl.acm.org/doi/abs/10.1145/3575870.3587123",
+      },
+      {
+        name: "Virtual Capsule",
+        link: "https://codeocean.com/capsule/1170779/tree/v2",
+      },
+      { name: "Case Study", link: "https://arxiv.org/abs/2304.07428" },
+      {
+        name: "Participation in Competition",
+        link: "https://easychair.org/publications/paper/Nzr4",
+      },
     ],
     papers: [
       {

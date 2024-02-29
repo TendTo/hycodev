@@ -1,7 +1,7 @@
-@import "../scss/abstracts/_mixins.module.scss";
-@import "../scss/abstracts/_variables.module.scss";
-@import "../scss/base/typography.module.scss";
-@import "../scss/base/_resets.module.scss";
+@import "../../scss/abstracts/mixins.module";
+@import "../../scss/abstracts/variables.module";
+@import "../../scss/base/typography.module";
+@import "../../scss/base/resets.module";
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
@@ -13,7 +13,7 @@
   font-style: normal;
   font-weight: 100 1000;
   font-stretch: 0% 200%;
-  src: url("../public/fonts/OpenSans.ttf") format("truetype");
+  src: url("../../public/fonts/OpenSans.ttf") format("truetype");
   //https://hycodev.com/_next/public/fonts/OpenSans.ttf
 }
 
@@ -81,7 +81,7 @@ body {
 }
 @font-face {
   font-family: sansCond;
-  src: url("../public/fonts/sansCond.ttf");
+  src: url("../../public/fonts/sansCond.ttf");
 }
 .swiper-pagination-bullet-active {
   background-color: $color-light-blue !important;

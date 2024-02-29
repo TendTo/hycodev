@@ -1,5 +1,5 @@
-@import "../scss/abstracts/variables.module";
-@import "../scss/abstracts/mixins.module";
+@import "../../../scss/abstracts/variables.module";
+@import "../../../scss/abstracts/mixins.module";
 .container {
   padding: 2rem 4rem;
   @include respond(phone) {

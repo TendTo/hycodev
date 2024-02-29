@@ -1,4 +1,4 @@
-import styles from "../../styles/components/splash-screen.module.scss";
+import styles from "../../scss/components/splash-screen.module.scss";
 import React from "react";
 
 const SplashScreen = () => {

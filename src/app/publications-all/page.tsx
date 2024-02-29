@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../../../styles/publications-all.module.scss";
+import styles from "./page.module.scss";
 import CustomBanner from "../../components/custom-banner";
 import PublicationBox from "../../components/publication-box";
 import typography from "../../../scss/base/_typography.module.scss";

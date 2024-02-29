@@ -1,9 +1,9 @@
 "use client";
 
-import styles from "../../styles/publication-article.module.scss";
+import styles from "../../scss/components/publication-article.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
 import utilities from "../../scss/base/_utilities.module.scss";
-import button from "../../styles/components/button.module.scss";
+import button from "../../scss/components/button.module.scss";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";

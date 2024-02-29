@@ -11,8 +11,8 @@ import {
   Box,
   Button,
 } from "@chakra-ui/react";
-import button from "../../../styles/components/button.module.scss";
-import styles from "../../../styles/page-sadegh-soudjani.module.scss";
+import button from "../../../scss/components/button.module.scss";
+import styles from "./page.module.scss";
 import Image from "next/image";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 

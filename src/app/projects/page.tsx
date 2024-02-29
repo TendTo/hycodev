@@ -1,5 +1,5 @@
 "use client";
-import styles from "../../../styles/page-projects.module.scss";
+import styles from "./page.module.scss";
 import typography from "../../../scss/base/_typography.module.scss";
 import Image from "next/image";
 import CustomBanner from "../../components/custom-banner";

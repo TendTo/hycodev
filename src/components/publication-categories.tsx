@@ -1,4 +1,4 @@
-import styles from "../../styles/publications-all.module.scss";
+import styles from "../app/publications-all/page.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
 import { PublicationArticles } from "../assets/projects";
 

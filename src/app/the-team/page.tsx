@@ -6,7 +6,7 @@ import {
   PastMembers,
 } from "../../assets/hycodev-members";
 
-import styles from "../../../styles/page-the-team.module.scss";
+import styles from "./page.module.scss";
 import PersonBox from "../../components/person-profile";
 import TheTeamSadegh from "../../components/the-team-sadegh";
 import typography from "../../../scss/base/_typography.module.scss";
