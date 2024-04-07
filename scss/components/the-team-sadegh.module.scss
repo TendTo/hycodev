@@ -74,6 +74,8 @@
   }
   @include respond(tab) {
     max-width: 56rem;
+    flex-flow: column wrap;
+    align-items: center;
   }
   @include respond(big-desktop) {
     min-height: 55rem;

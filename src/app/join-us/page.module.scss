@@ -32,11 +32,16 @@
   }
   &_accordion {
     display: flex;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
     flex-shrink: 0;
+    max-width: 110rem;
     width: 110rem;
+    @include respond(tab) {
+      max-width: 60rem;
+      width: 60rem;
+    }
     @include respond(phone) {
-      min-width: 30rem;
+      max-width: 40rem;
     }
   }
   &_calls {

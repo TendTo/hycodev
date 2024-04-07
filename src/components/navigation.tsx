@@ -4,8 +4,9 @@ import styles from "../../scss/components/navigation.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import useOnclickOutside from "react-cool-onclickoutside";
 const Navigation = () => {
   const [width, setWindowWidth] = useState(0);
   useEffect(() => {
@@ -50,6 +51,9 @@ const Navigation = () => {
       },
     },
   };
+  const ref = useOnclickOutside(() => {
+    setIsOpen(false);
+  });
   return (
     <nav className={styles.container}>
       <a href={"/home"} className={styles.navbar_image}>
@@ -112,6 +116,7 @@ const Navigation = () => {
         </Link>
       </div>
       <motion.nav
+        ref={ref}
         className={styles.links}
         style={
           isOpen && width < 800 ? { display: "block" } : { display: "none" }

@@ -51,6 +51,7 @@ export default function Projects() {
                     fill={true}
                     src={article.image[0].link}
                     style={{ objectFit: "cover" }}
+                    alt={"project image"}
                   ></Image>
                   <div className={styles.card__header}>
                     {article.external === "true" ? (
