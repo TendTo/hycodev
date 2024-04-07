@@ -4,7 +4,7 @@ import styles from "../../scss/components/navigation.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import useOnclickOutside from "react-cool-onclickoutside";
 const Navigation = () => {
