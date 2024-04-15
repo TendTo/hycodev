@@ -70,7 +70,7 @@ const TheTeamSadegh = () => {
                     }
                   >
                     <Image
-                      src="/images/sadegh.png"
+                      src="/images/sadegh/sadegh_email.jpg"
                       fill={true}
                       alt="Sadegh Soudjani Email"
                     />
@@ -106,8 +106,8 @@ const TheTeamSadegh = () => {
                 <PopoverContent>
                   <PopoverArrow />
                   <PopoverBody className={typography.paragraph}>
-                    6.035, Urban Sciences Building, 1 Science Square, Newcastle
-                    Upon Tyne, NE4 5TG, United Kingdom
+                    Room 213, Building G 26, Paul-Ehrlich-Strasse,D-67663
+                    Kaiserslautern, Germany
                   </PopoverBody>
                 </PopoverContent>
               </Popover>
