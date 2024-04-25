@@ -25,6 +25,7 @@ export default function Sadegh() {
             src="/images/people/sadegh_soudjani.jpg"
             fill={true}
             objectFit={"cover"}
+            alt={"Sadegh Soudjani"}
           />
         </div>
         <div className={styles.sadegh_box__text}>
@@ -35,24 +36,27 @@ export default function Sadegh() {
                 typography.paragraph__lighter + " " + utilities.bot_margin
               }
             >
-              Research group leader of HyCoDeV and Associate Professor at
-              Newcastle University.
+              Senior Research Group Leader at Max Planck Institute for Software
+              Systems
             </h3>
           </div>
 
           <p className={typography.paragraph + " " + utilities.bot_margin}>
-            I am currently an Associate Professor in Cyber-Physical Systems at
-            Newcastle University, United Kingdom. My research aim is to develop
-            an integrated environment for programming, verifying, and designing
-            high-performance and scalable CPSs perceiving and acting in the
-            uncertain physical world. I have developed and shaped my research
-            vision on formal synthesis, abstraction, and verification (over
-            probabilistic temporal specifications) of complex dynamical systems
-            with application in cyber-physical systems (CPSs) particularly
-            involving energy networks and autonomous systems. I have a BSc in
-            Pure Mathematics, a BSc in Electrical Engineering, an MSc in Control
-            Engineering, and a PhD in Systems & Control, all with distinction. I
-            built my background in Computer Science during my PhD studies and
+            I am currently a Senior Research Group Leader at Max Planck
+            Institute for Software Systems since December 2023. Prior to this, I
+            was the director of the AMBER group and a Reader (full professor) in
+            Cyber-Physical Systems at Newcastle University, United Kingdom. My
+            research aim is to develop an integrated environment for
+            programming, verifying, and designing high-performance and scalable
+            cyber-physical systems perceiving and acting in the uncertain
+            physical world. I have developed and shaped my research vision on
+            formal synthesis, abstraction, and verification (over probabilistic
+            temporal specifications) of complex dynamical systems with
+            application in cyber-physical systems particularly involving energy
+            networks and autonomous systems. I have a BSc in Pure Mathematics, a
+            BSc in Electrical Engineering, an MSc in Control Engineering, and a
+            PhD in Systems & Control, all with distinction. I built my
+            background in Computer Science during my PhD studies and
             postdoctoral experiences at TU Delft, Oxford University, and the Max
             Planck Institute for Software Systems.
           </p>
