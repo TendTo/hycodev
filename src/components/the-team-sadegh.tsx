@@ -77,23 +77,23 @@ const TheTeamSadegh = () => {
                   </PopoverBody>
                 </PopoverContent>
               </Popover>
-              <Popover>
-                <PopoverTrigger>
-                  <Button
-                    className={typography.paragraph}
-                    leftIcon={<PhoneIcon />}
-                  >
-                    Phone
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent>
-                  <PopoverArrow />
+              {/*<Popover>*/}
+              {/*  <PopoverTrigger>*/}
+              {/*    <Button*/}
+              {/*      className={typography.paragraph}*/}
+              {/*      leftIcon={<PhoneIcon />}*/}
+              {/*    >*/}
+              {/*      Phone*/}
+              {/*    </Button>*/}
+              {/*  </PopoverTrigger>*/}
+              {/*  <PopoverContent>*/}
+              {/*    <PopoverArrow />*/}
 
-                  <PopoverBody className={typography.paragraph}>
-                    +44 191 208 7856
-                  </PopoverBody>
-                </PopoverContent>
-              </Popover>
+              {/*    <PopoverBody className={typography.paragraph}>*/}
+              {/*      +44 191 208 7856*/}
+              {/*    </PopoverBody>*/}
+              {/*  </PopoverContent>*/}
+              {/*</Popover>*/}
               <Popover>
                 <PopoverTrigger>
                   <Button

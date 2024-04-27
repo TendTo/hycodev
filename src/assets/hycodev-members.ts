@@ -6,12 +6,13 @@ export const Staff = [
   //     image: "",
   //     role: "",
   // },
+
   {
-    name: "Zhi Zhang",
-    title: "Postdoctoral Researcher",
-    link: "https://www.researchgate.net/profile/Zhi-Zhang-48",
-    image: "/images/people/zhi_zhang.jpg",
-    role: "Researchers",
+    name: "Mahdi Nazeri",
+    title: "PhD Student on MPI-Oxford program",
+    link: "",
+    image: "/images/people/empty_profile.png",
+    role: "PhDs",
   },
   {
     name: "Arash Bahari Kordabad",
@@ -55,20 +56,6 @@ export const Staff = [
     title: "PhD Student",
     link: "https://marco-lewis.github.io/",
     image: "/images/people/marco_lewis.jpg",
-    role: "PhDs",
-  },
-  {
-    name: "Chenyu Ma",
-    title: "PhD Student",
-    link: "",
-    image: "/images/people/chenyu_ma.jpg",
-    role: "PhDs",
-  },
-  {
-    name: "Mahdieh Zaker",
-    title: "PhD Student",
-    link: "",
-    image: "/images/people/mahdieh_zaker.png",
     role: "PhDs",
   },
   {
@@ -130,6 +117,20 @@ export const Staff = [
     image: "/images/people/birgit_van_huijgevoort.jpg",
     role: "Researchers",
   },
+  {
+    name: "Arabinda Ghosh",
+    title: "Postdoctoral Researcher",
+    link: "https://sites.google.com/view/arabindaghosh/",
+    image: "/images/people/arabinda_ghosh.jpg",
+    role: "Researchers",
+  },
+  {
+    name: "Weijie Dong",
+    title: "Visiting PhD Student",
+    link: "",
+    image: "/images/people/weijie_dong.jpg",
+    role: "PhDs",
+  },
 ];
 
 export const PastMembers = [
@@ -161,19 +162,11 @@ export const PastMembers = [
     image: "/images/people/ben_wooding.png",
     role: "Past Members",
   },
-
   {
     name: "Milad Kazemi",
     title: "Now a Postdoctoral Researcher at King's College London",
     link: "",
     image: "/images/people/milad_kazemi.jpg",
-    role: "Past Members",
-  },
-  {
-    name: "Mahdi Nazeri",
-    title: "Now a PhD Student at Newcastle University",
-    link: "",
-    image: "/images/people/empty_profile.png",
     role: "Past Members",
   },
   {
@@ -187,8 +180,15 @@ export const PastMembers = [
     name: "Behrad Samari",
     title: "Now a PhD Student at Newcastle University",
     link: "",
-    image: "/images/people/empty_profile.png",
+    image: "/images/people/behrad_samari.jpg",
     role: "Past Members",
+  },
+  {
+    name: "Chenyu Ma",
+    title: "Now PhD Student at Newcastle University",
+    link: "",
+    image: "/images/people/chenyu_ma.jpg",
+    role: "PhDs",
   },
 ];
 
@@ -199,6 +199,13 @@ export const Collaborators = [
     link: "https://scholar.google.co.uk/citations?user=yskbfM4AAAAJ&hl=en",
     image: "/images/people/allesandro_abate.jpg",
     role: "Collaborators",
+  },
+  {
+    name: "Mahdieh Zaker",
+    title: "Now PhD Student at Newcastle University",
+    link: "",
+    image: "/images/people/mahdieh_zaker.png",
+    role: "PhDs",
   },
   {
     name: "Ben Wooding",
@@ -277,11 +284,12 @@ export const Collaborators = [
     image: "/images/people/paolo_zuliani.jpg",
     role: "Collaborators",
   },
+
   {
-    name: "Arabinda Ghosh",
-    title: "Max Planck Institute for Software Systems, GER",
-    link: "https://sites.google.com/view/arabindaghosh/",
-    image: "/images/people/arabinda_ghosh.jpg",
+    name: "Zhi Zhang",
+    title: "Postdoctoral Researcher",
+    link: "https://www.researchgate.net/profile/Zhi-Zhang-48",
+    image: "/images/people/zhi_zhang.jpg",
     role: "Researchers",
   },
 ];
