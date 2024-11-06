@@ -1,11 +1,11 @@
-export const News_Items = [
-  // {
-  //   title: "",
-  //   description:
-  //       '',
-  //   link: "",
-  //   date: "",
-  // },
+type NewsItem = {
+  title: string;
+  description: string;
+  link?: string;
+  date: string;
+};
+
+export const News_Items: NewsItem[] = [
   {
     title: "Paper Presentation",
     description:
@@ -37,4 +37,4 @@ export const News_Items = [
       "Sadegh Soudjani and Thomas Gross have been successful in securing a £500k Innovate UK research grant for doing feasibility studies on quantum computing applications. The grant will enable to conduct research in quantum optimization of aircraft container loading. They will soon be looking for a Research Associate to join this project.",
     date: "May 2023",
   },
-];
+] as const;

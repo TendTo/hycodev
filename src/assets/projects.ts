@@ -1,32 +1,37 @@
-export const ProjectArticles = [
-  // {
-  //   id: "",
-  //   title: "",
-  //   category: "",
-  //   year: "",
-  //   image: [
-  //     {
-  //       link: "",
-  //       alt: "",
-  //     },
-  //   ],
-  //   relatedArticles: "",
-  //   researchers: [
-  //     {
-  //       name: "",
-  //       role: "",
-  //       image: "",
-  //     },
-  //   ],
-  //   sections: [
-  //     {
-  //       sectionHeading: "",
-  //       paragraphs: [
-  //         "",
-  //       ],
-  //     },
-  //   ],
-  // },
+type BaseProject = {
+  id: string;
+  external: string;
+  title: string;
+  category: string;
+  year: string;
+  image: {
+    link: string;
+    alt: string;
+  }[];
+};
+
+type ExternalProject = BaseProject & {
+  link: string;
+};
+
+type LocalProject = BaseProject & {
+  sections: {
+    sectionHeading: string;
+    paragraphs: string[];
+  }[];
+  links?: {
+    name: string;
+    link: string;
+  }[];
+  papers: {
+    name: string;
+    link: string;
+  }[];
+};
+
+type Project = ExternalProject | LocalProject;
+
+export const ProjectArticles: Project[] = [
   {
     id: "syscore",
     external: "false",
@@ -165,4 +170,4 @@ export const ProjectArticles = [
       },
     ],
   },
-];
+] as const;

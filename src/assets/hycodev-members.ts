@@ -1,12 +1,12 @@
-export const Staff = [
-  // {
-  //     name: "",
-  //     title: "",
-  //     link: "",
-  //     image: "",
-  //     role: "",
-  // },
+type Member = {
+  name: string;
+  title: string;
+  link: string;
+  image: string;
+  role: string;
+};
 
+export const Staff: Member[] = [
   {
     name: "Mahdi Nazeri",
     title: "PhD Student on MPI-Oxford program",
@@ -131,9 +131,9 @@ export const Staff = [
     image: "/images/people/weijie_dong.jpg",
     role: "PhDs",
   },
-];
+] as const;
 
-export const PastMembers = [
+export const PastMembers: Member[] = [
   {
     name: "Akshay Gupta",
     title: "Now at Newcastle University",
@@ -190,7 +190,7 @@ export const PastMembers = [
     image: "/images/people/chenyu_ma.jpg",
     role: "PhDs",
   },
-];
+] as const;
 
 export const Collaborators = [
   {
@@ -292,4 +292,4 @@ export const Collaborators = [
     image: "/images/people/zhi_zhang.jpg",
     role: "Researchers",
   },
-];
+] as const;

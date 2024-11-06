@@ -1,23 +1,17 @@
-// in
-// style: {
-//   objectPosition: "67% 50%",
-//
-// },
-// the values offset the image by x and y percent respectively.
+type HomeImage = {
+  id: string;
+  image: string;
+  title: string;
+  link: string;
+  text: string;
+  alt: string;
+  style: {
+    objectPosition: string; // Offset the image by x and y percent respectively.
+    scale?: string;
+  };
+};
 
-export const homeImages = [
-  // {
-  //   id: "",
-  //   image: "",
-  //   title: "",
-  //   link: "",
-  //   text: ""
-  //   alt: "",
-  //   style: {
-  //   objectPosition: "67% 50%",
-  //       scale: "1.25",
-  // },
-  //},
+export const homeImages: HomeImage[] = [
   {
     id: "0",
     image: "/images/home/fundamental.jpg",
@@ -87,4 +81,4 @@ export const homeImages = [
       objectPosition: "50% 50%",
     },
   },
-];
+] as const;

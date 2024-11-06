@@ -1,13 +1,15 @@
-export const software = [
-  // {
-  //     id: "",
-  //     image: "/images/software/",
-  //     heading: "",
-  //     category: "",
-  //     text: "",
-  //     linkPaper: "",
-  //     linkDownload: "",
-  // },
+type Software = {
+  id: string;
+  image: string;
+  heading: string;
+  category: string;
+  text: string;
+  linkPaper: string;
+  linkDownload: string | string[];
+  reverse: boolean;
+};
+
+export const software: Software[] = [
   {
     id: "2",
     image: "/images/software/oliver.gif",
@@ -69,4 +71,4 @@ export const software = [
     linkDownload: "https://sourceforge.net/projects/faust2/",
     reverse: false,
   },
-];
+] as const;

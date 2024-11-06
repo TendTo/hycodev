@@ -1,14 +1,15 @@
-export const OpenPositions = [
-  // {
-  //   id: "",
-  //   title: " ",
-  //   level: "",
-  //   location: "",
-  //   deadline: "",
-  //   paragraph1: "",
-  //   paragraph2: "",
-  //   paragraph3: "",
-  // },
+type Position = {
+  id: string;
+  title: string;
+  level: string;
+  location: string;
+  deadline: string;
+  paragraph1: string;
+  paragraph2: string;
+  paragraph3: string;
+};
+
+export const OpenPositions: Position[] = [
   {
     id: "0",
     title: "PhD/Postdoctoral position",
@@ -28,8 +29,8 @@ export const OpenPositions = [
     paragraph3:
       "The interested candidate should contact Dr Sadegh Soudjani, the SymAware Coordinator, at sadegh@mpi-sws.org with their full application materials.",
   },
-];
-export const ClosedPositons = [
+] as const;
+export const ClosedPositons: Position[] = [
   {
     id: "0",
     title: "Data-Driven Abstractions for Safety-Critical Systems",
@@ -45,4 +46,4 @@ export const ClosedPositons = [
     paragraph3:
       "To apply, click the button below and select the project Data-Driven Abstractions for Safety-Critical Systems. ",
   },
-];
+] as const;

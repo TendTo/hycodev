@@ -1,46 +1,34 @@
-export const IntroductionArticles = [
-  // {
-  //   id: "",
-  //   title: "",
-  //   category: "",
-  //   year: "",
-  //   image: [
-  //     {
-  //       link: "",
-  //       alt: "",
-  //     },
-  //   ],
-  //   relatedArticles: "",
-  //   researchers: [
-  //     {
-  //       name: "",
-  //       role: "",
-  //       image: "",
-  //     },
-  //   ],
-  //   sections: [
-  //     {
-  //       sectionHeading: "",
-  //       paragraphs: [
-  //         "",
-  //       ],
-  //     },
-  //   ],
-  //   projects: [
-  //     {
-  //       image: "",
-  //       title: "",
-  //       paragraph: "",
-  //       researchers: "",
-  //       papers: [
-  //         {
-  //           title: "",
-  //           link: "",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+type IntroductionArticle = {
+  id: string;
+  category: string;
+  white: string;
+  image: {
+    link: string;
+    alt: string;
+  }[];
+  relatedArticles: string;
+  researchers: {
+    name: string;
+    role: string;
+    contact: string;
+    image: string;
+  }[];
+  sections: {
+    paragraphs: string[];
+  }[];
+  projects?: {
+    image: string;
+    title: string;
+    paragraph: string;
+    researchers: string;
+    papers: {
+      title: string;
+      link: string;
+    }[];
+  }[];
+};
+
+export const IntroductionArticles: IntroductionArticle[] = [
   {
     id: "communication-systems",
     category: "Communication Systems",
@@ -317,4 +305,4 @@ export const IntroductionArticles = [
       },
     ],
   },
-];
+] as const;
