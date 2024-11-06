@@ -3,20 +3,22 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "/home",
-        permanent: true,
-      },
-    ];
-  },
+  // async redirects() { // Can't use redirects with static site generation
+  //   return [
+  //     {
+  //       source: "/",
+  //       destination: "/home",
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
   images: {
     domains: ["localhost"],
+    unoptimized: true, // Needed for exporting a static site
     // loader: "",
   },
-  // output: "export",
+
+  output: "export", // Needed to build static site
 };
 
 module.exports = nextConfig;
