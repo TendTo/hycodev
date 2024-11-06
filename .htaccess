@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+# Redirect empty URL to home
+RewriteCond %{REQUEST_FILENAME} ^/?$
+RewriteRule ^/?$ home [NC,L]
+# Redirect projects (special case)
+RewriteRule ^projects/?$ projects.html [NC,L]
+# Remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ $1 [NC]
+# Redirect to .html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+</IfModule>
