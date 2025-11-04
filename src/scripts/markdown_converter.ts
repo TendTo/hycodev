@@ -7,7 +7,16 @@ import { cwd } from "process";
 
 const postsDirectory = cwd() + "/src/posts";
 
-export async function getPostData(id: string) {
+type PostData = {
+  id: string;
+  contentHtml: string;
+  title: string;
+  banner: string;
+  date: string;
+  tags: string[];
+};
+
+export async function parseMarkdown(id: string): Promise<PostData> {
   const fullPath = path.join(postsDirectory, `${id}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
 
@@ -20,10 +29,22 @@ export async function getPostData(id: string) {
     .process(matterResult.content);
   const contentHtml = processedContent.toString();
 
+  for (const field of ["title", "banner"]) {
+    if (!(field in matterResult.data)) {
+      throw new Error(
+        `Post ${id} is missing the ${field} field in its front matter`
+      );
+    }
+  }
+
   // Combine the data with the id and contentHtml
   return {
     id,
     contentHtml,
+    title: matterResult.data.title,
+    banner: matterResult.data.banner,
+    date: matterResult.data.date ?? "",
+    tags: matterResult.data.tags ?? [],
     ...matterResult.data,
   };
 }

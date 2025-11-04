@@ -1,4 +1,9 @@
-# BarrierBench
+---
+title: "BarrierBench"
+banner: "/images/banners/softwaree.jpg"
+date: "2024-06-10"
+tags: ["dataset", "benchmark", "safety verification", "barrier certificates", "dynamical systems"]
+---
 
 A Benchmark Dataset for Safety Verification of Dynamical Systems
 
@@ -21,7 +26,6 @@ The dataset contains dynamical systems spanning continuous-time ODEs, discrete-t
 
 The dataset is provided as a JSON file with structured entries for solved and unsolved problems.
 
-
 ```json
 {
   "solved_problems": [90 problems with solutions],
@@ -36,17 +40,17 @@ Each problem entry follows this structure:
   "problem": {
     "dynamics": "mathematical equations",
     "initial_set": {"type", "radius"/"bounds", "center"},
-    "unsafe_set": {"type", "radius"/"bounds", "complement"}, 
+    "unsafe_set": {"type", "radius"/"bounds", "complement"},
     "controller_parameters": "control inputs (if applicable)"
   },
   "barrier": "barrier function polynomial",
-  "controllers": "control law expressions", 
+  "controllers": "control law expressions",
   "template_type": "solution classification"
 }
 ```
 
 > Example
-> 
+>
 > ```json
 > {
 >   "problem": {
@@ -59,7 +63,7 @@ Each problem entry follows this structure:
 >     "unsafe_set": {
 >       "type": "ball",
 >       "radius": 1.5,
->       "center": [0, 0], 
+>       "center": [0, 0],
 >       "complement": true
 >     },
 >     "controller_parameters": "u0, u1"
@@ -133,6 +137,7 @@ You can download the complete BarrierBench dataset as a compressed file.
 [Download Dataset](Barrier_Bench.zip)
 
 ## Contact
+
 For any questions or inquiries regarding the BarrierBench dataset, please contact:
 
 [Sadegh Soudjani](mailto:sadegh@mpi-sws.org)
