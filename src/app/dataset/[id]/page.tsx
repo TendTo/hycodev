@@ -1,6 +1,7 @@
 import CustomBanner from "../../../components/custom-banner";
 import { parseMarkdown } from "../../../scripts/markdown_converter";
 import styles from "./page.module.scss";
+import "highlight.js/styles/github.css";
 
 export async function generateStaticParams() {
   return [{ id: "barrierbench" }];
@@ -22,7 +23,6 @@ async function getPost(params: Promise<DatasetProps>) {
 }
 
 export default async function Dataset(params: Promise<DatasetProps>) {
-  console.log("Params:", await params);
   const {
     props: { postData },
   } = await getPost(params);
@@ -39,6 +39,7 @@ export default async function Dataset(params: Promise<DatasetProps>) {
     <div className={styles.container}>
       <CustomBanner
         title={postData.title}
+        subtitle={postData.subtitle}
         source={postData.banner}
         size={size}
         backdrop={backdrop}

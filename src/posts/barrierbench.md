@@ -1,11 +1,10 @@
 ---
 title: "BarrierBench"
+subtitle: "A Benchmark Dataset for Safety Verification of Dynamical Systems"
 banner: "/images/banners/softwaree.jpg"
 date: "2024-06-10"
 tags: ["dataset", "benchmark", "safety verification", "barrier certificates", "dynamical systems"]
 ---
-
-A Benchmark Dataset for Safety Verification of Dynamical Systems
 
 _Empowering research in control theory, AI safety, and formal verification_
 
@@ -16,11 +15,11 @@ _Empowering research in control theory, AI safety, and formal verification_
 Dataset Contents
 The dataset contains dynamical systems spanning continuous-time ODEs, discrete-time systems, and controlled systems across various dimensions (**2D to 8D**). Problems include linear systems, nonlinear systems, chaotic attractors, and complex transcendental systems. Each problem specifies:
 
-- System dynamics equations
-- Initial safe region
-- Unsafe region to avoid
-- Verified barrier certificate (for solved problems)
-- Control law (for controlled systems)
+- ⚙️ System dynamics equations
+- 🛡️ Initial safe region
+- 🚫 Unsafe region to avoid
+- ✅ Verified barrier certificate (for solved problems)
+- 🎮 Control law (for controlled systems)
 
 ## Data Format
 
@@ -49,7 +48,7 @@ Each problem entry follows this structure:
 }
 ```
 
-> Example
+> **Example**
 >
 > ```json
 > {
@@ -77,6 +76,8 @@ Each problem entry follows this structure:
 ## Usage
 
 Loading dataset in Python or MATLAB.
+
+::: code-group labels=[Python, MATLAB]
 
 ```python
 import json
@@ -130,14 +131,16 @@ if isfield(problem, 'controllers')
 end
 ```
 
+:::
+
 ## Download Dataset
 
 You can download the complete BarrierBench dataset as a compressed file.
 
-[Download Dataset](Barrier_Bench.zip)
+[Download Dataset](/data/barrier_dataset.json)
 
 ## Contact
 
 For any questions or inquiries regarding the BarrierBench dataset, please contact:
 
-[Sadegh Soudjani](mailto:sadegh@mpi-sws.org)
+- 📧 [Sadegh Soudjani](mailto:sadegh@mpi-sws.org)

@@ -3,7 +3,14 @@ import styles from "../../scss/components/banner.module.scss";
 import typography from "../../scss/base/_typography.module.scss";
 import React from "react";
 
-const CustomBanner = ({ title, source, size, backdrop, alt }) => {
+const CustomBanner = ({
+  title,
+  subtitle = "",
+  source,
+  size,
+  backdrop,
+  alt,
+}) => {
   return (
     <div className={styles.container} style={size.size}>
       <div
@@ -17,9 +24,12 @@ const CustomBanner = ({ title, source, size, backdrop, alt }) => {
         quality={100}
         alt={alt}
       />
-      <h1 className={typography.heading_primary__white + " " + styles.heading}>
-        {title}
-      </h1>
+      <div className={typography.heading_primary__white + " " + styles.heading}>
+        <h1 className={typography.heading_primary__white}>{title}</h1>
+        {subtitle && (
+          <p className={typography.heading_secondary__white}>{subtitle}</p>
+        )}
+      </div>
     </div>
   );
 };
