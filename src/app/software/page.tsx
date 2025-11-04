@@ -33,6 +33,7 @@ export default function Software() {
               text={article.text}
               linkPaper={article.linkPaper}
               linkDownload={article.linkDownload}
+              linkDetails={article.linkDetails}
               reverse={article.reverse}
             />
           </div>

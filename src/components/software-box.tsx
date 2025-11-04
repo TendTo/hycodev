@@ -6,6 +6,19 @@ import utilities from "../../scss/base/_utilities.module.scss";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Button } from "@chakra-ui/react";
+
+type SoftwareBoxProps = {
+  reverse: boolean;
+  image: string;
+  heading: string;
+  category: string;
+  text: string;
+  linkPaper?: string;
+  linkDownload: string | string[];
+  linkDetails?: string;
+  alt?: string;
+};
+
 const SoftwareBox = ({
   reverse,
   image,
@@ -14,18 +27,10 @@ const SoftwareBox = ({
   text,
   linkPaper,
   linkDownload,
+  linkDetails,
   alt,
-}) => {
-  let flexWrapSetting;
-  if (reverse) {
-    flexWrapSetting = {
-      flexWrap: "wrap-reverse",
-    };
-  } else {
-    flexWrapSetting = {
-      flexWrap: "wrap",
-    };
-  }
+}: SoftwareBoxProps) => {
+  const flexWrapSetting = { flexWrap: reverse ? "wrap-reverse" : "wrap" };
   const [width, setWindowWidth] = useState(0);
 
   useEffect(() => {
@@ -44,7 +49,9 @@ const SoftwareBox = ({
       style={width < 600 ? {} : flexWrapSetting}
     >
       <div className={styles.container__image}>
-        <Image src={image} fill={true} quality={100} alt={alt}></Image>
+        {image && (
+          <Image src={image} fill={true} quality={100} alt={alt}></Image>
+        )}
       </div>
       <div className={styles.container__text}>
         <h1 className={typography.heading_primary} style={{ lineHeight: 1.1 }}>
@@ -59,15 +66,28 @@ const SoftwareBox = ({
           {text}
         </p>
         <div className={styles.container__buttons}>
-          <Button
-            size="lg"
-            style={{ textDecoration: "none" }}
-            className={typography.paragraph}
-          >
-            <a target="_blank" href={linkPaper}>
-              Read the paper
-            </a>
-          </Button>
+          {linkDetails && (
+            <Button
+              size="lg"
+              style={{ textDecoration: "none" }}
+              className={typography.paragraph}
+            >
+              <a target="_blank" href={linkDetails}>
+                View details
+              </a>
+            </Button>
+          )}
+          {linkPaper && (
+            <Button
+              size="lg"
+              style={{ textDecoration: "none" }}
+              className={typography.paragraph}
+            >
+              <a target="_blank" href={linkPaper}>
+                Read the paper
+              </a>
+            </Button>
+          )}
           {typeof linkDownload === "object" && linkDownload !== null ? (
             linkDownload.map((link, id) => {
               return (

@@ -4,12 +4,23 @@ type Software = {
   heading: string;
   category: string;
   text: string;
-  linkPaper: string;
+  linkPaper?: string;
   linkDownload: string | string[];
+  linkDetails?: string;
   reverse: boolean;
 };
 
 export const software: Software[] = [
+    {
+    id: "6",
+    image: "",
+    heading: "BarrierBench",
+    category: "Dataset",
+    text: "BarrierBench is a comprehensive benchmark dataset that contains 100 test cases for evaluating safety verification algorithms and barrier certificate synthesis methods. The dataset includes 90 solved problems with verified barrier certificates and controllers, along with 10 unsolved challenging problems that serve as open benchmarks.",
+    linkDownload: "data/barrier_dataset.json",
+    linkDetails: "dataset/barrierbench",
+    reverse: false,
+  },
   {
     id: "2",
     image: "/images/software/oliver.gif",
