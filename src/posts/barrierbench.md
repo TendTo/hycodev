@@ -15,11 +15,11 @@ _Empowering research in control theory, AI safety, and formal verification_
 Dataset Contents
 The dataset contains dynamical systems spanning continuous-time ODEs, discrete-time systems, and controlled systems across various dimensions (**2D to 8D**). Problems include linear systems, nonlinear systems, chaotic attractors, and complex transcendental systems. Each problem specifies:
 
-- ⚙️ System dynamics equations
-- 🛡️ Initial safe region
-- 🚫 Unsafe region to avoid
-- ✅ Verified barrier certificate (for solved problems)
-- 🎮 Control law (for controlled systems)
+- System dynamics equations
+- Initial safe region
+- Unsafe region to avoid
+- Verified barrier certificate (for solved problems)
+- Control law (for controlled systems)
 
 ## Data Format
 
