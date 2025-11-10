@@ -3,7 +3,14 @@ title: "BarrierBench"
 subtitle: "A Benchmark Dataset for Safety Verification of Dynamical Systems"
 banner: "/images/banners/softwaree.jpg"
 date: "2024-06-10"
-tags: ["dataset", "benchmark", "safety verification", "barrier certificates", "dynamical systems"]
+tags:
+  [
+    "dataset",
+    "benchmark",
+    "safety verification",
+    "barrier certificates",
+    "dynamical systems",
+  ]
 ---
 
 _Empowering research in control theory, AI safety, and formal verification_
@@ -12,14 +19,15 @@ _Empowering research in control theory, AI safety, and formal verification_
 
 **BarrierBench** is a comprehensive benchmark dataset that contains **100 test cases** for evaluating safety verification algorithms and barrier certificate synthesis methods. The dataset includes **90 solved problems** with verified barrier certificates and controllers, along with **10 unsolved challenging problems** that serve as open benchmarks.
 
-Dataset Contents
-The dataset contains dynamical systems spanning continuous-time ODEs, discrete-time systems, and controlled systems across various dimensions (**2D to 8D**). Problems include linear systems, nonlinear systems, chaotic attractors, and complex transcendental systems. Each problem specifies:
+The dataset contains various dynamical systems including continuous-time, discrete-time, and both controlled and autonomous systems across various dimensions 1D to 8D.
+They include linear, nonlinear systems, with initial sets in different topologies like balls and rectangles and unsafe sets represented as balls, rectangles, or unions of rectangles.
+Each problem specifies:
 
-- ⚙️ System dynamics equations
-- 🛡️ Initial safe region
-- 🚫 Unsafe region to avoid
-- ✅ Verified barrier certificate (for solved problems)
-- 🎮 Control law (for controlled systems)
+- System dynamics equations
+- Initial safe region
+- Unsafe region to avoid
+- Verified barrier certificate (for solved problems)
+- Control law (for controlled systems)
 
 ## Data Format
 
@@ -143,4 +151,4 @@ You can download the complete BarrierBench dataset as a compressed file.
 
 For any questions or inquiries regarding the BarrierBench dataset, please contact:
 
-- 📧 [Sadegh Soudjani](mailto:sadegh@mpi-sws.org)
+- [Sadegh Soudjani](mailto:sadegh@mpi-sws.org)
