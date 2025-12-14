@@ -145,7 +145,7 @@ end
 
 You can download the complete BarrierBench dataset as a compressed file.
 
-[Download Dataset](/data/barrier_dataset.json)
+[Download Dataset](/data/BarrierBench.json)
 
 ## Contact
 

@@ -17,7 +17,7 @@ export const software: Software[] = [
     heading: "BarrierBench",
     category: "Dataset",
     text: "BarrierBench is a comprehensive benchmark dataset that contains 100 test cases for evaluating safety verification algorithms and barrier certificate synthesis methods. The dataset includes 90 solved problems with verified barrier certificates and controllers, along with 10 unsolved challenging problems that serve as open benchmarks.",
-    linkDownload: "data/barrier_dataset.json",
+    linkDownload: "data/BarrierBench.json",
     linkDetails: "dataset/barrierbench",
     reverse: false,
   },
