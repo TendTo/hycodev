@@ -36,80 +36,13 @@ export default function Sadegh() {
                 typography.paragraph__lighter + " " + utilities.bot_margin
               }
             >
-              Senior Research Group Leader at Max Planck Institute for Software
-              Systems
+              Full Professor and Chair in Cyber-Physical Systems, University of Birmingham, UK
             </h3>
           </div>
 
           <p className={typography.paragraph + " " + utilities.bot_margin}>
-            I am currently a Senior Research Group Leader at Max Planck
-            Institute for Software Systems since December 2023. Prior to this, I
-            was the director of the AMBER group and a Reader (full professor) in
-            Cyber-Physical Systems at Newcastle University, United Kingdom. My
-            research aim is to develop an integrated environment for
-            programming, verifying, and designing high-performance and scalable
-            cyber-physical systems perceiving and acting in the uncertain
-            physical world. I have developed and shaped my research vision on
-            formal synthesis, abstraction, and verification (over probabilistic
-            temporal specifications) of complex dynamical systems with
-            application in cyber-physical systems particularly involving energy
-            networks and autonomous systems. I have a BSc in Pure Mathematics, a
-            BSc in Electrical Engineering, an MSc in Control Engineering, and a
-            PhD in Systems & Control, all with distinction. I built my
-            background in Computer Science during my PhD studies and
-            postdoctoral experiences at TU Delft, Oxford University, and the Max
-            Planck Institute for Software Systems.
+Sadegh Soudjani is Full Professor and Chair in Cyber-Physical Systems, and Director of Global Engagement at the University of Birmingham, United Kingdom. He is also a Senior Research Group Leader at the Max Planck Institute for Software Systems, Germany. Previously, he was the Director of the Advanced Model-Based Engineering & Reasoning (AMBER) Group at Newcastle University (40+ members), United Kingdom. Prior to being a faculty member, Sadegh was a postdoctoral researcher at Oxford University (UK) and the Max Planck Institute (Germany). He got his Ph.D. degree from the Delft Centre for Systems and Control, TU Delft, the Netherlands. Sadegh's research addresses Safe Autonomy and AI challenges using symbolic and formal techniques with the goal of developing an integrated environment for programming, verifying, and designing high-performance cyber-physical systems perceiving and acting in the uncertain physical world. He is the recipient of the ERC Consolidator Grant (Auto-CyPheR), and is the coordinator and principal investigator of the SymAware Project funded by the European Innovation Council. He has also received the EPSRC New Investigator Award, Newcastle Teaching Award, the Best Paper Award from QEST, and the DISC Best PhD Thesis Award.
           </p>
-        </div>
-      </div>
-      <div className={styles.container_introduction}>
-        <div className={styles.fact_box}>
-          <h3
-            className={
-              typography.heading_secondary + " " + utilities.bot_margin__small
-            }
-          >
-            Projects
-          </h3>
-          <p className={typography.paragraph}>MoVeS (2010-2013)</p>
-          <p className={typography.paragraph}>SymAware (2022-2025)</p>
-          <p className={typography.paragraph}>CodeCPS (2021-2024)</p>
-          <p className={typography.paragraph}>Safe-CPS (2016-2017)</p>
-          <p className={typography.paragraph}>AMBI (2014-2015)</p>
-        </div>
-        <div className={styles.fact_box}>
-          <h3
-            className={
-              typography.heading_secondary + " " + utilities.bot_margin__small
-            }
-          >
-            Research interests
-          </h3>
-
-          <p className={typography.paragraph}>Formal Synthesis</p>
-          <p className={typography.paragraph}>
-            Abstraction and Verification (over probabilistic temporal
-            specifications)
-          </p>
-          <p className={typography.paragraph}>Cyber-Physical Systems</p>
-          <p className={typography.paragraph}>Stochastic Hybrid Systems</p>
-          <p className={typography.paragraph}>Smart Grids</p>
-          <p className={typography.paragraph}>Power and Energy Networks</p>
-          <p className={typography.paragraph}>Transportation Systems</p>
-          <p className={typography.paragraph}>Systems Biology</p>
-        </div>
-        <div className={styles.fact_box}>
-          <h3
-            className={
-              typography.heading_secondary + " " + utilities.bot_margin__small
-            }
-          >
-            Publications
-          </h3>
-          <p className={typography.paragraph}>
-            46 contributions at conferences.
-          </p>
-          <p className={typography.paragraph}>24 contributions in journals.</p>
         </div>
       </div>
       <Accordion
