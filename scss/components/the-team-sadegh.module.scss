@@ -87,7 +87,7 @@
     border-radius: 0.5rem;
     padding: 2.25rem 4rem;
     width: 60rem;
-    max-height: 40rem;
+    max-height: 60rem;
     @include respond(phone) {
       max-width: 60rem;
       max-height: unset;

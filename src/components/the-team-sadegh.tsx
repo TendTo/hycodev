@@ -32,20 +32,11 @@ const TheTeamSadegh = () => {
                 typography.paragraph__lighter + " " + utilities.bot_margin
               }
             >
-              Associate Professor
+              Full Professor and Chair in Cyber-Physical Systems, University of Birmingham, UK
             </h3>
           </div>
           <p className={typography.paragraph + " " + utilities.bot_margin}>
-            My research aim is to develop an integrated environment for
-            programming, verifying, and designing high-performance and scalable
-            CPSs perceiving and acting in the uncertain physical world. I have
-            developed and shaped my research vision on formal synthesis,
-            abstraction, and verification (over probabilistic temporal
-            specifications) of complex dynamical systems with application in
-            cyber-physical systems (CPSs) particularly involving energy networks
-            and autonomous systems. I have a BSc in Pure Mathematics, a BSc in
-            Electrical Engineering, an MSc in Control Engineering, and a PhD in
-            Systems & Control, all with distinction.
+            Sadegh Soudjani is Full Professor and Chair in Cyber-Physical Systems, and Director of Global Engagement at the University of Birmingham, United Kingdom. He is also a Senior Research Group Leader at the Max Planck Institute for Software Systems, Germany. Previously, he was the Director of the Advanced Model-Based Engineering & Reasoning (AMBER) Group at Newcastle University (40+ members), United Kingdom. Prior to being a faculty member, Sadegh was a postdoctoral researcher at Oxford University (UK) and the Max Planck Institute (Germany). He got his Ph.D. degree from the Delft Centre for Systems and Control, TU Delft, the Netherlands. Sadegh's research addresses Safe Autonomy and AI challenges using symbolic and formal techniques with the goal of developing an integrated environment for programming, verifying, and designing high-performance cyber-physical systems perceiving and acting in the uncertain physical world. He is the recipient of the ERC Consolidator Grant (Auto-CyPheR), and is the coordinator and principal investigator of the SymAware Project funded by the European Innovation Council. He has also received the EPSRC New Investigator Award, Newcastle Teaching Award, the Best Paper Award from QEST, and the DISC Best PhD Thesis Award.
           </p>
           <div className={styles.contact_wrapper}>
             <div className={styles.contact_wrapper}>
