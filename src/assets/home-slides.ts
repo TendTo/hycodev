@@ -59,10 +59,10 @@ export const homeImages: HomeImage[] = [
   },
   {
     id: "2",
-    image: "/images/home/glassbrain.jpg",
-    title: "Brain Modelling & Control",
-    link: "/research/brain-modelling-and-control",
-    text: "Epilepsy is a common neurological condition estimated to have lifetime prevalence of 0.76% worldwide. The condition is life-limiting and occasionally life-threatening. First line treatment is pharmacological, but side effects are common, and it is estimated that up to a third of patients will not be seizure free on medication. Some of these patients may be suitable for resection surgery, if a suitable surgical target can be identified with sufficient confidence. Other modalities include electrical stimulation of the vagus nerve (VNS) and, to a lesser extent, direct stimulation of the brain itself.",
+    image: "/images/home/robots.png",
+    title: "Multi-Agent Systems and Robotics",
+    link: "/research/multi-agent-systems-and-robotics",
+    text: "We develop intelligent robotic and AI-agent ecosystems capable of perception, coordination, and autonomous decision-making. By combining robotics, distributed intelligence, and machine learning, we create scalable solutions for collaborative autonomy in real-world environments, from smart industries to next-generation autonomous systems.",
     alt: "Sci-fi Illustration of a Human Brain",
     style: {
       objectPosition: "50% 50%",

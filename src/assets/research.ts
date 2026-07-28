@@ -186,6 +186,33 @@ export const IntroductionArticles: IntroductionArticle[] = [
     ],
   },
   {
+    id: "multi-agent-systems-and-robotics",
+    category: "Multi-Agent Systems and Robotics",
+    white: "true",
+    image: [
+      {
+        link: "/images/home/robots.png",
+        alt: "Robots",
+      },
+    ],
+    relatedArticles: "",
+    researchers: [
+      {
+        name: "Sadegh Soudjani",
+        role: "Researcher",
+        contact: "",
+        image: "/images/people/sadegh_soudjani_square.jpg",
+      },
+    ],
+    sections: [
+      {
+        paragraphs: [
+          "We develop intelligent robotic and AI-agent ecosystems capable of perception, coordination, and autonomous decision-making. By combining robotics, distributed intelligence, and machine learning, we create scalable solutions for collaborative autonomy in real-world environments, from smart industries to next-generation autonomous systems.",
+        ],
+      },
+    ],
+  },
+  {
     id: "brain-modelling-and-control",
     category: "Brain Modelling and Control",
     white: "true",
