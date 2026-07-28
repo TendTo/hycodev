@@ -209,7 +209,7 @@ export default function theTeam() {
                 link={researcher.link}
               />
             ))}
-          </div>
+          {/* </div>
           <Divider class={utilities.bot_margin + utilities.top_margin} />
           <h3
             className={
@@ -226,7 +226,7 @@ export default function theTeam() {
                 role={researcher.title}
                 link={researcher.link}
               />
-            ))}
+            ))} */}
           </div>
         </div>
       </div>

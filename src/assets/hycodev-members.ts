@@ -8,6 +8,34 @@ type Member = {
 
 export const Staff: Member[] = [
   {
+    name: "Zahra Shahbazi",
+    title: "Postdoctoral Researcher at MPI-SWS",
+    link: "https://www.linkedin.com/in/zahra-shahbazi7979/",
+    image: "/images/people/zahra_shahbazi.jpg",
+    role: "PhDs",
+  },
+  {
+    name: "Ouldouz Neysari",
+    title: "Postdoctoral Researcher at MPI-SWS",
+    link: "https://www.mpi-sws.org/people/oneysari/",
+    image: "/images/people/ouldouz_neysari.jpg",
+    role: "Researchers",
+  },
+  {
+    name: "Jianing Zhao",
+    title: "Postdoctoral Researcher at MPI-SWS",
+    link: "https://jnzhaooo.github.io/",
+    image: "/images/people/jianing_zhao.jpg",
+    role: "Researchers",
+  },
+  {
+    name: "Nikhil Singh",
+    title: "Postdoctoral Researcher at MPI-SWS",
+    link: "https://scholar.google.com/citations?user=9-CsZfUAAAAJ&hl=en",
+    image: "/images/people/nikhil_singh.jpg",
+    role: "Researchers",
+  },
+  {
     name: "Mahdi Nazeri",
     title: "PhD Student on MPI-Oxford program",
     link: "",
@@ -22,50 +50,12 @@ export const Staff: Member[] = [
     role: "Researchers",
   },
   {
-    name: "Mahmoud Salamati",
-    title: "Postdoctoral Researcher",
-    link: "",
-    image: "/images/people/mahmoud_salamati.jpeg",
-    role: "Researchers",
-  },
-
-  {
-    name: "Oliver Schön",
-    title: "PhD Student",
-    link: "https://oliverschon.com/",
-    image: "/images/people/oliver_schon.jpg",
-    role: "PhDs",
-  },
-
-  {
-    name: "John Ingham",
-    title: "PhD Student",
-    link: "",
-    image: "/images/people/john_ingham.jpg",
-    role: "PhDs",
-  },
-  {
-    name: "Anna Laino",
-    title: "PhD Student",
-    link: "",
-    image: "/images/people/anna_laino.jpg",
-    role: "PhDs",
-  },
-  {
-    name: "Marco Lewis",
-    title: "PhD Student",
-    link: "https://marco-lewis.github.io/",
-    image: "/images/people/marco_lewis.jpg",
-    role: "PhDs",
-  },
-  {
     name: "Ernesto Casablanca",
     title: "PhD Student",
-    link: "https://github.com/TendTo",
+    link: "https://tendto.github.io/en/",
     image: "/images/people/ernesto_casablanca.jpg",
     role: "PhDs",
   },
-
   {
     name: "Negar Monir",
     title: "PhD Student",
@@ -73,26 +63,14 @@ export const Staff: Member[] = [
     image: "/images/people/negar_monir.png",
     role: "PhDs",
   },
-  {
-    name: "Viktorija Bezganovic",
-    title: "Intern",
-    link: "",
-    image: "/images/people/viktorija_bezganovic.jpg",
-    role: "Interns",
-  },
+] as const;
+
+export const PastMembers: Member[] = [
   {
     name: "Andrew Wright",
     title: "Intern",
     link: "",
     image: "/images/people/andrew_wright.jpg",
-    role: "Interns",
-  },
-
-  {
-    name: "Odette Mejia",
-    title: "Intern",
-    link: "",
-    image: "/images/people/odette_mejia.jpg",
     role: "Interns",
   },
   {
@@ -103,13 +81,47 @@ export const Staff: Member[] = [
     role: "Interns",
   },
   {
-    name: "Andrea Da Col",
+    name: "Oliver Schön",
+    title: "PhD Student",
+    link: "https://oliverschon.com/",
+    image: "/images/people/oliver_schon.jpg",
+    role: "PhDs",
+  },
+  {
+    name: "Mahmoud Salamati",
+    title: "Postdoctoral Researcher",
+    link: "",
+    image: "/images/people/mahmoud_salamati.jpeg",
+    role: "Researchers",
+  },
+  {
+    name: "Odette Mejia",
     title: "Intern",
-    link: "https://github.com/andreadacol98",
-    image: "/images/people/andrea_da_col.jpg",
+    link: "",
+    image: "/images/people/odette_mejia.jpg",
     role: "Interns",
   },
-
+  {
+    name: "Marco Lewis",
+    title: "PhD Student",
+    link: "https://marco-lewis.github.io/",
+    image: "/images/people/marco_lewis.jpg",
+    role: "PhDs",
+  },
+  {
+    name: "Anna Laino",
+    title: "PhD Student",
+    link: "",
+    image: "/images/people/anna_laino.jpg",
+    role: "PhDs",
+  },
+  {
+    name: "John Ingham",
+    title: "PhD Student",
+    link: "",
+    image: "/images/people/john_ingham.jpg",
+    role: "PhDs",
+  },
   {
     name: "Birgit van Huijgevoort",
     title: "Postdoctoral Researcher",
@@ -131,15 +143,26 @@ export const Staff: Member[] = [
     image: "/images/people/weijie_dong.jpg",
     role: "PhDs",
   },
-] as const;
-
-export const PastMembers: Member[] = [
+  // {
+  //   name: "Akshay Gupta",
+  //   title: "Now at Newcastle University",
+  //   link: "",
+  //   image: "/images/people/akshay_gupta.jpg",
+  //   role: "Past Members",
+  // },
   {
-    name: "Akshay Gupta",
-    title: "Now at Newcastle University",
+    name: "Andrea Da Col",
+    title: "Intern",
+    link: "https://github.com/andreadacol98",
+    image: "/images/people/andrea_da_col.jpg",
+    role: "Interns",
+  },
+  {
+    name: "Viktorija Bezganovic",
+    title: "Intern",
     link: "",
-    image: "/images/people/akshay_gupta.jpg",
-    role: "Past Members",
+    image: "/images/people/viktorija_bezganovic.jpg",
+    role: "Interns",
   },
   {
     name: "Isaac Matthews",
@@ -169,27 +192,27 @@ export const PastMembers: Member[] = [
     image: "/images/people/milad_kazemi.jpg",
     role: "Past Members",
   },
-  {
-    name: "Omid Akbarzadeh",
-    title: "Now a PhD Student at Newcastle University",
-    link: "https://scholar.google.com/citations?user=k-k51eUAAAAJ&hl=en",
-    image: "/images/people/omid_akbarzadeh.png",
-    role: "Past Members",
-  },
-  {
-    name: "Behrad Samari",
-    title: "Now a PhD Student at Newcastle University",
-    link: "",
-    image: "/images/people/behrad_samari.jpg",
-    role: "Past Members",
-  },
-  {
-    name: "Chenyu Ma",
-    title: "Now PhD Student at Newcastle University",
-    link: "",
-    image: "/images/people/chenyu_ma.jpg",
-    role: "PhDs",
-  },
+  // {
+  //   name: "Omid Akbarzadeh",
+  //   title: "Now a PhD Student at Newcastle University",
+  //   link: "https://scholar.google.com/citations?user=k-k51eUAAAAJ&hl=en",
+  //   image: "/images/people/omid_akbarzadeh.png",
+  //   role: "Past Members",
+  // },
+  // {
+  //   name: "Behrad Samari",
+  //   title: "Now a PhD Student at Newcastle University",
+  //   link: "",
+  //   image: "/images/people/behrad_samari.jpg",
+  //   role: "Past Members",
+  // },
+  // {
+  //   name: "Chenyu Ma",
+  //   title: "Now PhD Student at Newcastle University",
+  //   link: "",
+  //   image: "/images/people/chenyu_ma.jpg",
+  //   role: "PhDs",
+  // },
 ] as const;
 
 export const Collaborators = [
