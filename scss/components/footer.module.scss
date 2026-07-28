@@ -154,3 +154,13 @@
     width: 17.5rem;
   }
 }
+
+.birmingham_logo {
+  height: 5rem;
+  width: 5rem;
+  position: relative;
+  @include respond(big-desktop) {
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+}

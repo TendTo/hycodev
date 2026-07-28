@@ -67,6 +67,19 @@ const Footer = () => {
         </div>
 
         <a
+          href={"https://www.birmingham.ac.uk/"}
+          target={"_blank"}
+          className={styles.birmingham_logo}
+        >
+          <Image
+            src={"/images/home/birmingham.svg"}
+            fill={true}
+            quality={100}
+            key={"/images/home/birmingham.svg"}
+            alt={"University of Birmingham Logo"}
+          ></Image>
+        </a>
+        {/* <a
           href={"https://www.mpi-sws.org/"}
           target={"_blank"}
           className={styles.mpi_logo}
@@ -78,7 +91,7 @@ const Footer = () => {
             key={"/images/home/mpi-sws.png"}
             alt={"Max Planck Institute for Software Systems Logo"}
           ></Image>
-        </a>
+        </a> */}
         <div className={styles.container__socialmedia}>
           <h3 className={typography.paragraph_highlighted}>Follow us</h3>
           <div className={styles.container__icons}>
