@@ -28,7 +28,7 @@ jobs:
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
-          server: "194.36.184.54"
+          server: ftp.hycodev.com
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
